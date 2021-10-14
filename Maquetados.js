@@ -213,3 +213,127 @@
     }
 
     console.log((edad >= 18) ? (edad == 18) ? 'acabas de volverte mayor de edad' : 'ya pasas los 18' : 'eres menor de edad');
+
+    //Estructuras de control -> toma de datos por contexto
+    //funciones en java se llama metodo 
+    //Se hace un hibrido entre metodo y funcion
+    //funcion en JavasCript == metodo en Java
+
+    /**
+     * Funciones
+     * TIPOS
+     * 1: Funciones declarativas
+     * 2: Funciones de expresión
+     * 3: 
+     * 
+     * Es simplemente un bloque de codigo destinado a una tarea especifica
+     * Esta tarea y su codigo se pueden reutilizar
+     * 
+     * 
+     */
+
+    //Todas estas son DECLARATIVAS
+    //primer tipo no regresa nada y no recibe nada
+    //                  Parametros de invocación
+    
+    function mi_funcion_uno() {
+        console.log('Dentro de mi función');
+        //todo lo que este entre las llaves de denomina bloque de trabajo
+        let resultado = 6 + 5;
+
+        //Se cumple que no regrese nada por que no esta la funcion 'return' 
+        //
+    }
+
+    //invocación es el uso de la funcion
+    let numero = "tres";
+    numero = 3;
+    numero = true;
+    numero=undefined;
+    console.log(typeof(numero));
+
+
+    //segundo tipo de funcion
+    //si regresa información pero no recibe nada
+
+    function mi_funcion_dos() {
+        return 'regresando esta cadena prrona';
+    }
+
+    //invocacion de expresiva debe tener a donde llegar
+    let mensaje = mi_funcion_dos();
+    console.log(mensaje);
+
+    console.log(mi_funcion_dos());
+
+    //Tercer tipo
+    //No regresa información pero si recibe
+
+    function funcion_tipo_tres(nombre) {
+        console.log('Mi nombre es: ' + nombre);
+    }
+    funcion_tipo_tres("Daniel");
+
+    //No es lo mismo retorno que imprimir
+
+    //cuarto tipo
+    //Si regresa información y si regresa la misma
+
+    function funcion_tipo_cuatro(num1, num2) {
+        return num1 + num2;
+    }
+    //invocación
+    console.log('La suma es: ' + funcion_tipo_cuatro(10, 10));
+
+    //resultado por varible:
+    let resultado = funcion_tipo_cuatro(20, 10);
+    console.log('El resultado por pasos fue: ' + resultado);
+
+    //Ejercicio: Programa que permita recibir tu nombre, edad
+
+    //dentro de esta imprima los datos y que devuelva una leyenda diciendo 
+    //datos capturados
+
+    function ejercicio(nombre, edad) {
+        console.log(`Tu nombre es: ${nombre}`);
+        console.log(`Tu edad es: ${edad}`);
+        return 'Datos Capturados Correctamente';
+    }
+
+    console.log(ejercicio("Daniel", 20));
+
+    //cadenas 3 tipos de construir cadenas
+    //cadena simple: se contruye con comillas simples ''
+    let nombre_pila = "Dany";
+    let num1 = 9,
+        num2 = 3;
+    console.log('Hola soy ' + nombre_pila);
+    //cadena doble con comilla doble
+    console.log("Hola soy " + nombre_pila);
+    //cadena de literales: trabajando operaciones, invocaciones 
+    console.log(`Hola soy ${nombre_pila}`);
+
+
+    //diseñar un programa que tenga 4 funciones +-/*
+    //a cada una se le pondran 2 numeros
+    //cada una devuelve los resultados y imprimir en la chida
+    //sumar todos los retornos
+    //Resultado total es: sumar retornos
+    
+
+    function suma(numero1, numero2) {
+        return numero1+numero2;   
+    }
+    function resta(numero1, numero2) {
+        return numero1-numero2;   
+    }
+    function multiplicacion(numero1, numero2) {
+        return numero1*numero2;   
+    }
+    function division(numero1, numero2) {
+        return numero1/numero2;   
+    }
+
+    function resultado() {
+        console.log(`La suma es: ${suma(10,10)} \nLa resta es: ${resta(100,90)} \nLa Multiplicación es: ${multiplicacion(10,10)} \nLa división es: ${division(100,10)} \nEl total de los returns es: ${suma(10,10)+resta(100,90)+multiplicacion(10,10)+division(100,10)}`);
+    }
