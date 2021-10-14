@@ -1,4 +1,4 @@
-																						01/10/2021
+												01/10/2021
 La palabra reservada let por convencion construiremos las variebles usando esta palabra, solo es una regla para nosotros.
 
 resultado = true +45; 
