@@ -64,7 +64,7 @@
     resultado = false + 45; // como resultado quedara en 45
 
     resultado = "23" + 25; // son concatenaciones debido que tenemos un "texto" 
-    resultado = `23` + 25; // 
+    resultado = `23` + 25; // aplica la misma concatenacion por netenr un `texto`
 
 
     //resultados de operaciones aritmeticas
@@ -143,7 +143,7 @@
     }
     //camino positivo, solo si el if es 1 o true deja entrar a lo que vive dentro
     //else es el camino negativo si el if es 0 o false pasa a la siguiente instrucción
-    //js lenguaje interpretado
+    //js lenguaje interpretado a diferencia de java, js toma mas fuerza
     if (2 > 3) {
         console.log('dentro del if');
     } else {
@@ -163,7 +163,7 @@
     }
 
     //if terneario
-    //          condicion -> pregunta -> respuestaPositiva : -> respuestaNegativa     
+    //condicion o pregunta     R+    :     R-     
     console.log((5 > 3) ? "es mayor" : "es menor");
 
     //      true
@@ -212,4 +212,4 @@
         //console.log('eres menor de edad');
     }
 
-    console.log((edad >= 18) ? ('Eres mayor de edad')(edad == 18) ? ('acabas de volverte mayor de edad') : ('ya pasas los 18') : ('eres menor de edad'));
+    console.log((edad >= 18) ? (edad == 18) ? 'acabas de volverte mayor de edad' : 'ya pasas los 18' : 'eres menor de edad');
