@@ -132,7 +132,7 @@ que se hace de esta manera
 ==let tipo_corta = () => console.log();==  o
 ==let tipo_corta = () => "hola";==
 
-SCOPE
+`SCOPE`
 
 `scope global`: fuera de toda funcion, osea en cada funcion puedo tener acceso a la variable que tengo fuera de la funcion.
 `scope local`: esta dentro de una funcion y no tengo acceso a ello, por lo qeu me marcaria error
