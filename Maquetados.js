@@ -1,339 +1,362 @@
+// documento especifico del lenguaje JS
 
-    // las etiquetas scrip se colocan en el doc html
-    // despues de la etiqueta html final para 
-    // su funcionamiento
-    // Impresion de dato
-    console.log("hola mundo");
-    // Crear variable
-    var nombre="Joss";
-    // imprimiendo nombre
-    console.log("El nombre es: "+nombre);
-    // let tambien se usa como variable, palabra reservada let
-    let apellido_paterno ='Velazquez';
-    // impresion con concatenacion
-    console.log("paterno es: "+apellido_paterno);
-    
-    let apellido_materno ='Nava';
+/**
+ * 
+ * - no necesito usar la etiqueta <script></script>
+ * - este contenido se exportará y se usara en otro lado 
+ * 
+ */
 
-    console.log('materno es: '+apellido_materno);
-    edad = 34;
+ alert("Codificando desde un doc de js")
 
-    console.error(`La edad es ${edad}`);
+ let mascota = "perrito"
+ vehiculo = "spark 2014"
 
-    /**
-     * TIP DE BIBLIA
-     * 
-     * USAR PUNTOS Y COMAS PARA CADA TERMINO DE LINEA
-     * APATRTE PARA NO DESACOSTUMBRARSE Y NO OLVIDAR ENTRE OTROS CODIGOS
-     * 
-     */
+// operadores aritmetricos
 
-    /**
-     *tipos de datos
-     */
+let suma;
+let resta;
+let multiplicacion;
+let division;
+let modulo_resultado;
 
-    //Cadenas de texto
-    //String
-    let cadena ='hola'
-    cadena = 'w'
+suma = 6+9;
+resta = 20-15;
+multiplicacion = 4*5;
+division = 10/2;
+modulo_resultado = 10%2;
 
-    //numerico
-    let numero = 34
-    numero = 90.67
+let incremento = 0;
+let decremento = 5;
 
-    //logico
-    let boleano = true
-    boleano = false
+incremento++;
+decremento--;
 
-    //null > nulo
-    let nulo = null
-    numero = null
+let asignacion;
 
-    //undefined > indefinido
-    let promedio
+asignacion = 10;
 
-    //nosotros por convención se usara let para las variables
+let asignacionSuma=0;
+let asignacionResta=5;
+let asignacionMultiplicacion=2;
+let asignacionDivision=10;
 
-    let resultado;
+asignacionSuma+=5;
+asignacionResta-=5;
+asignacionMultiplicacion*=5;
+asignacionDivision/=2;
 
-    resultado = 25 + 45;
-    resultado = '23' + 25;
-    //conversion implicita
-    //false == 0, true ==1 
-    resultado = true + 45; // como resultado imprimira 46
-    resultado = false + 45; // como resultado quedara en 45
+let numero1 = 1;
+let numero2 = 2;
 
-    resultado = "23" + 25; // son concatenaciones debido que tenemos un "texto" 
-    resultado = `23` + 25; // aplica la misma concatenacion por netenr un `texto`
+resultado = numero1===numero2;
+resultado2 = numero1!==numero2;
+resultado3 = numero1<numero2;
+resultado4 = numero1>numero2;
+resultado5 = numero1>=numero2;
+resultado6 = numero1<=numero2;
+// ------------------------------------------
 
+if(2 > 1){
+    console.log("Dentro de IF");
+}
 
-    //resultados de operaciones aritmeticas
-    /**
-     * +
-     * -
-     * *
-     * /
-     * %
-     * +=
-     * -=
-     * /=
-     * *=
-     * ===
-     */
+if(2 > 3){
+    console.log("Dentro de IF");
+}else {
+    console.log("dentro del ELSE");
+}
 
-    //console.log(resultado);
+let opcion = 8;
+
+if(opcion==2){
+    console.log('opcion es igual a 2');
+}else if(opcion == '8'){
+    console.log("opcion es igual a '8'");
+}else if(opcion == 8){
+    console.log('opcion es igual a 8');
+}else{
+    console.log('ninguno de las anteriores.')
+}
 
 
-    //Ejercicio Operadores
-    //tabla 1
-    let numero1 = 100,
-        numero2 = 20;
+if(4>5 || 8<9){
+    console.log('dentro del if...');
+}
 
-    let suma = numero1 + numero2;
-    let resta = numero1 - numero2;
-    let multiplicacion = numero1 * numero2;
-    let division = numero1 / numero2;
-    let modulo = numero1 % numero2;
-    // console.log('valores utilizados: '+numero1+", "+numero2);
-    // console.log('suma: '+suma);
-    // console.log('resta: '+resta);
-    // console.log('multiplicacion: '+multiplicacion);
-    // console.log('división: '+division);
-    // console.log('modulo: '+modulo);
+/**
+ * Tupla 
+ * son dos elementos a comparar
+ */
 
-    // tabla 2
+/**
+ * ||
+ * 
+ * t o t = t
+ * t o f = t
+ * f o t = t
+ * f o f = f
+ *  
+ * &&
+ * 
+ * t y t = t
+ * t y f = f
+ * f y t = f
+ * f y f = f
+ */
 
-    let variable_x = 4;
-    variable_x += 5;
-    let variable_y = 6;
-    variable_y -= 5;
-    let variable_w = 10;
-    variable_w *= 10;
-    let variable_a = 100;
-    variable_a /= 10;
+if(4>5 || 8<9){
+    console.log('dentro del if...');
+}else{
+    console.log('dentro de else...');
+}
 
-    // console.log('-----------------------------------------');
-    // console.log('operador de asignacion suma: '+variable_x);
-    // console.log('operador de asignacion resta: '+variable_y);
-    // console.log('operador de asignacion multiplicación: '+variable_w);
-    // console.log('operador de asignacion división: '+variable_a);
-    //tabla 3
-
-    let igualestricto = 6 === 12;
-    let noestricto = 12 !== 10;
-    let menor_que = 100 < 1000;
-    let mayor_que = 1 > 0;
-    let menor_igual_que = 100 <= 100;
-    let mayor_igual_que = 600 >= 100;
-    // console.log('-----------------------------------------');
-    // console.log('operador de comparacion ===: '+ igualestricto);
-    // console.log('operador de comparacion !==: '+ noestricto);
-    // console.log('operador de comparacion <: '+ menor_que);
-    // console.log('operador de comparacion >: '+ mayor_que);
-    // console.log('operador de comparacion <=: '+ menor_igual_que );
-    // console.log('operador de comparacion >=: '+ mayor_igual_que );
-    //el de != es diferente a !==
+console.log((4 > 5 || 8 < 9)? "Dentro de if ..." : "Dentro del else...");
 
 
+// en 2 numeros enteros diferentes visualizar el mayor de ellos
 
+let numero3=20;
+let numero4=5;
 
-    //estructuras de control
-    if (2 > 3) {
-        console.log('dentro del if');
-    }
-    //camino positivo, solo si el if es 1 o true deja entrar a lo que vive dentro
-    //else es el camino negativo si el if es 0 o false pasa a la siguiente instrucción
-    //js lenguaje interpretado a diferencia de java, js toma mas fuerza
-    if (2 > 3) {
-        console.log('dentro del if');
-    } else {
-        //console.log('dentro del else');
-    }
+console.log((numero3>numero4)?"el numero3 mayor que numero4":"el numero4 es mayor que numero3");
 
-    //ejemplo de if con variables
-    let opcion = 10;
-    if (opcion == 2) {
-        console.log('Es igual a 2');
-    } else if (opcion == '9') {
-        console.log("Es igual a '8'");
-    } else if (opcion === 8) {
-        console.log("Es igual a 8");
-    } else {
-        console.log('ninguna de las anteriores');
-    }
+let usuario='joss';
+let contraseña='joss';
 
-    //if terneario
-    //condicion o pregunta     R+    :     R-     
-    console.log((5 > 3) ? "es mayor" : "es menor");
+alert((usuario=='joss')?(contraseña=='joss')?"iniciando sesion...":"Contraseña incorrecta":"usuario incorrecto");
 
-    //      true
-    //  false || true
-    //pregunta dentro de los parentesis del if
-    if (4 > 5 || 8 < 9) {
-        //respuesta positiva
-        console.log('Dentro del if... or');
-    } else {
-        //respuesta negativa
-        console.log('dentro del else');
-    }
+//determinar si un numero es multiplo de 10.
+// siempre pa sacar multiplos se usa modulo.
+console.log((numero3%10==0)?"el numero "+numero3+" es multiplo de 10":"el numero "+numero3+" no es multiplo de 10");
 
-    /**
-     * Tupla: son elementos de comparación
-     * 
-     * ||
-     * t y t = true
-     * t y f = true
-     * f y t = true
-     * f y f = false
-     * 
-     * &&
-     * 
-     * t y t = true
-     * t y f = false
-     * f y t = false
-     * f y f = false
-     */
-    //           pregunta         "respuesta positiva"  : "respuesta negativa"
-    console.log((4 > 5 || 8 < 9) ? "dentro del if terneario" : "dentro del else");
+// FUNCIONES
+// Funciones declarativas
+// Funciones de expresion
 
+// FUNCIONES DECLARATIVAS
+// Primer tipo de funcion: no regresa nada y que no recibe nada
+// firma (creando funcion)
 
+    // V.R         P.I 
+function mi_funcion(  ){
+    // todo lo que quede dentro de las llaves de la funcion se denomina bloque de trabajo
+    console.log("Dentro de mi funcion");
 
-    //ejercicio: determinar si eres o no mayor de edad
-    let edad = 10;
+}
+// invocacion o llamar la funcion
+mi_funcion();
+// let numero = null;
+// console.log(typeof(numero));
 
-    if (edad >= 18) {
-        console.log('Eres mayor de edad');
-        if (edad == 18) {
-            console.log('Acabas de volverte mayor de edad');
-        } else {
-            console.log('ya pasas los 18');
-        }
-    } else {
-        //console.log('eres menor de edad');
-    }
+// Segundo tipo: Regresa informacion peor no recibe nada
 
-    console.log((edad >= 18) ? (edad == 18) ? 'acabas de volverte mayor de edad' : 'ya pasas los 18' : 'eres menor de edad');
+function funcion_tipo_dos(){
+    return "Regresando esta cadena de texto";
+}
 
-    //Estructuras de control -> toma de datos por contexto
-    //funciones en java se llama metodo 
-    //Se hace un hibrido entre metodo y funcion
-    //funcion en JavasCript == metodo en Java
+// invocacion
+let mensaje = funcion_tipo_dos();
 
-    /**
-     * Funciones
-     * TIPOS
-     * 1: Funciones declarativas
-     * 2: Funciones de expresión
-     * 3: 
-     * 
-     * Es simplemente un bloque de codigo destinado a una tarea especifica
-     * Esta tarea y su codigo se pueden reutilizar
-     * 
-     * 
-     */
+console.log(funcion_tipo_dos());
 
-    //Todas estas son DECLARATIVAS
-    //primer tipo no regresa nada y no recibe nada
-    //                  Parametros de invocación
-    
-    function mi_funcion_uno() {
-        console.log('Dentro de mi función');
-        //todo lo que este entre las llaves de denomina bloque de trabajo
-        let resultado = 6 + 5;
+// Tercer tipo: No regresa informacion pero si recibe
+function funcion_tipo_tres(nombre){
+    console.log("tu nombre es: "+nombre);
+}
 
-        //Se cumple que no regrese nada por que no esta la funcion 'return' 
-        //
-    }
+funcion_tipo_tres("Joss");
 
-    //invocación es el uso de la funcion
-    let numero = "tres";
-    numero = 3;
-    numero = true;
-    numero=undefined;
-    console.log(typeof(numero));
+// Cuarto tipo: Si regresa informacion y si recibe informacion 
+function funcion_tipo_cuatro(numero1, numero2){
+    return numero1+numero2;
+}
 
+console.log(funcion_tipo_cuatro(10,3));
+let resultado_suma = funcion_tipo_cuatro(15,6);
+console.log("El resultado de la suma es: "+resultado_suma);
 
-    //segundo tipo de funcion
-    //si regresa información pero no recibe nada
+// // // Ejercicio
 
-    function mi_funcion_dos() {
-        return 'regresando esta cadena prrona';
-    }
+function ejercicio(nombre, edad) {
+    console.log(`Nombre: ${nombre}`);
+    console.log(`Edad: ${edad}`);
+    return 'Datos Capturados';
+}
 
-    //invocacion de expresiva debe tener a donde llegar
-    let mensaje = mi_funcion_dos();
-    console.log(mensaje);
+console.log(ejercicio("Jose Alberto",20));
 
-    console.log(mi_funcion_dos());
+//Diseñen un programa el cual contenga 4 funciones suma resta multiplicacion y division
+//Los vas a invocar y vas a poderle pasar 2 numeros, cada una de estas funciones te tiene que devolver el resultado de la funcion
+//todos los resultados de los returns tienen que estar y vas a sumar los retornos
 
-    //Tercer tipo
-    //No regresa información pero si recibe
+function Suma (numero1, numero2){
+    return numero1+numero2;
+}
+function Resta (numero1, numero2){
+    return numero1-numero2;
+}
+function Multiplicacion (numero1,numero2){
+    return numero1*numero2;
+}
+function Division (numero1,numero2){
+    return numero1/numero2;
+}
+function Cadena(){
+    return `La suma es ${Suma(10,3)} \nLa resta es ${Resta(20,7)} \nLa multiplicacion es ${Multiplicacion(3,5)}\nLa division es ${Division(15,5)}\nEl resultado total es de ${Suma(10,3)+Resta(20,7)+Multiplicacion(3,5)+Division(15,5)}`
+}
 
-    function funcion_tipo_tres(nombre) {
-        console.log('Mi nombre es: ' + nombre);
-    }
-    funcion_tipo_tres("Daniel");
+console.log(Cadena());
 
-    //No es lo mismo retorno que imprimir
+/**
+ * Hosting - Hasta version 5 ECMAScript
+ * 
+ * Utilizar algo antes de declararlo
+ * 
+ * -var -> palabra reservada para crear o definir variables
+ * -fuction -> palabra reservada para definir funciones
+ * 
+ * 
+ */
 
-    //cuarto tipo
-    //Si regresa información y si regresa la misma
+console.log(nombre);
 
-    function funcion_tipo_cuatro(num1, num2) {
-        return num1 + num2;
-    }
-    //invocación
-    console.log('La suma es: ' + funcion_tipo_cuatro(10, 10));
+var nombre = `Nombre`;
 
-    //resultado por varible:
-    let resultado = funcion_tipo_cuatro(20, 10);
-    console.log('El resultado por pasos fue: ' + resultado);
+// // // --------------------------
 
-    //Ejercicio: Programa que permita recibir tu nombre, edad
+console.log(letrero());
 
-    //dentro de esta imprima los datos y que devuelva una leyenda diciendo 
-    //datos capturados
+function letrero(){
+    return `Danny`;
+}
 
-    function ejercicio(nombre, edad) {
-        console.log(`Tu nombre es: ${nombre}`);
-        console.log(`Tu edad es: ${edad}`);
-        return 'Datos Capturados Correctamente';
-    }
+/**
+* Funciones de expresiones 
+* 
+* - se invocan igual que la funcion clasica
+* - le puedes pasar o no paremtros de invocacion 
+* - varios autores los denominan como funciones anonimas
+* - aplican los 4 tipos de funcion que vimos en el tema pasado
+* 
+*/
 
-    console.log(ejercicio("Daniel", 20));
+let mi_funcion = function(){
 
-    //cadenas 3 tipos de construir cadenas
-    //cadena simple: se contruye con comillas simples ''
-    let nombre_pila = "Dany";
-    let num1 = 9,
-        num2 = 3;
-    console.log('Hola soy ' + nombre_pila);
-    //cadena doble con comilla doble
-    console.log("Hola soy " + nombre_pila);
-    //cadena de literales: trabajando operaciones, invocaciones 
-    console.log(`Hola soy ${nombre_pila}`);
+    return `Dentro de mi funcion de expresion`;
 
+}
 
-    //diseñar un programa que tenga 4 funciones +-/*
-    //a cada una se le pondran 2 numeros
-    //cada una devuelve los resultados y imprimir en la chida
-    //sumar todos los retornos
-    //Resultado total es: sumar retornos
-    
+// Invocacion (invocacion igual de la expresion)
 
-    function suma(numero1, numero2) {
-        return numero1+numero2;   
-    }
-    function resta(numero1, numero2) {
-        return numero1-numero2;   
-    }
-    function multiplicacion(numero1, numero2) {
-        return numero1*numero2;   
-    }
-    function division(numero1, numero2) {
-        return numero1/numero2;   
-    }
+console.log(mi_funcion());
 
-    function resultado() {
-        console.log(`La suma es: ${suma(10,10)} \nLa resta es: ${resta(100,90)} \nLa Multiplicación es: ${multiplicacion(10,10)} \nLa división es: ${division(100,10)} \nEl total de los returns es: ${suma(10,10)+resta(100,90)+multiplicacion(10,10)+division(100,10)}`);
-    }
+// primer tipo no regreso ni recibo nada
+let tipo_uno = function(){
+     alert (`Trabajando dentro de la funcion`);
+}
+tipo_uno();
+
+//  Segunto tipo no regreso pero si recibo
+// Escribir las variables dentro del parentesis
+let tipo_dos = function(nombre,edad){
+    console.log(`Hola ${nombre} tienes ${edad} años`);
+}
+
+// Pasarle los datos respetando el orden de construccion de las variables en los parentesis
+
+tipo_dos(`Joss`,20);
+
+// tipo tres si regresa y si recibe
+let tipo_tres = function(equipo){
+    return `Tu equipo favorito es ${equipo}`;
+}
+
+console.log(tipo_tres(`America`));
+
+// tipo 4 regresa algo pero no recibe nada
+let tipo_cuatro = function(){
+    return true;
+}
+// Hay 2 formas de invocar, puedes invocarlo omitiendo los parentesis mas sin encambio si recibe algo debe tener parentesis 
+// pero de manera natural siempre debe tener parentesis
+if(tipo_cuatro){
+    console.log(`Dato valido`);
+}
+// Apartir de aqui se trabaja con ECMAScript 6 en adelante
+// Podemos hacer uan funcion corta de esta manera 
+let tipo_corta = () => {
+    return true;
+}
+if(tipo_corta()){
+    console.log(`Dato valido`);
+}
+
+let tipo_corto = (mascota) => `Mi perrito se llama ${mascota.toUpperCase()}`;
+// Los mismo tipos pero en forma nueva ECMAScript 6
+
+let tipo_uno = () => alert (`Trabajando dentro de la funcion`);
+tipo_uno();
+
+let tipo_dos =(nombre,edad) =>console.log(`Hola ${nombre} tienes ${edad} años`);
+tipo_dos(`Joss`,20);
+
+let tipo_tres = (equipo) => `Tu equipo favorito es ${equipo}`;
+console.log(tipo_tres(`America`));
+
+let tipo_cuatro = () => true;
+if(tipo_cuatro){
+    console.log(`Dato valido`);
+}
+
+// SCOPE
+
+// Ejemplo A
+let numero = 9;
+
+let impresion_numero = (numero) => `El numero es: ${numero}`;
+let impresion_numero2 = () => `El numero es: ${numero}`;
+console.log(numero);
+
+console.log(decimal);
+let construcctor_de_numeros = () => {
+    let decimal = 0.78;
+}
+
+// Estructura de seleccion
+$(document).ready(function(){
+    console.log(`La pagina acabo de cargar correctamente`);
+
+    // leemos texto desde un div de TML
+    let texto_leido = $('#objetivo').text();
+    console.log(texto_leido);
+
+    // scribimos texto dentro de un div HTML
+    $('#objetivo2').text("Hola mundo desde JS y hasta HTML");
+});
+
+$(document).ready(function () {
+    // modelo mvc 
+    // leer texto desde un div de html (elemento que no permite escribir algo dentro del él)
+    let variale = $('#objetivo1').text();
+    console.log(variale);
+
+    $('#objetivo2').text("Hola desde JS");
+
+    //-----------------------------------
+    // leer valor escrito
+
+    let valor_leido;
+    // ejemplo de como programar un boton con .click y una función anonima
+    $('#btn_leer').click(function () {
+        valor_leido = $('#caja_input').val();
+        alert('El valor fue: ' + valor_leido);
+    });
+    // Ejemplo de escritura en un input de tipo texto
+    $('#btn_escribir').click(function(){
+        $('#caja_input').val('Escribe tu nombre aquí');
+    });
+});
+// Si se va a trabajar con un div que no permite la escritura se utiliza .text
+//Si se a a trabajar con un input que permite la escritura se utiliza .val
+// convencion de clase btn
