@@ -248,7 +248,6 @@ let mi_funcion = function(){
 }
 
 // Invocacion (invocacion igual de la expresion)
-
 console.log(mi_funcion());
 
 // primer tipo no regreso ni recibo nada
@@ -257,21 +256,19 @@ let tipo_uno = function(){
 }
 tipo_uno();
 
-// Segunto tipo no regreso pero si recibo
+// Segundo tipo no regreso pero si recibo
 // Escribir las variables dentro del parentesis
 let tipo_dos = function(nombre,edad){
     console.log(`Hola ${nombre} tienes ${edad} años`);
 }
 
 // Pasarle los datos respetando el orden de construccion de las variables en los parentesis
-
 tipo_dos(`Joss`,20);
 
 // tipo tres si regresa y si recibe
 let tipo_tres = function(equipo){
     return `Tu equipo favorito es ${equipo}`;
 }
-
 console.log(tipo_tres(`America`));
 
 // tipo 4 regresa algo pero no recibe nada
@@ -293,8 +290,10 @@ if(tipo_corta()){
     console.log(`Dato valido`);
 }
 
+// firma            P.I         impresion ya sea cadena, u otra cosa
 let tipo_corto = (mascota) => `Mi perrito se llama ${mascota.toUpperCase()}`;
 // Los mismo tipos pero en forma nueva ECMAScript 6
+// ya no usan la palabra reservada function
 
 let tipo_uno = () => alert (`Trabajando dentro de la funcion`);
 tipo_uno();
@@ -313,19 +312,26 @@ if(tipo_cuatro){
 // SCOPE
 
 // Ejemplo A
-let numero = 9;
+let numero = 9;//variable global
 
 let impresion_numero = (numero) => `El numero es: ${numero}`;
 let impresion_numero2 = () => `El numero es: ${numero}`;
 console.log(numero);
+// La variable global te permite usarlo en calquier lugar simpre que sea global
 
+// Ejemplo B
 console.log(decimal);
 let construcctor_de_numeros = () => {
-    let decimal = 0.78;
+    let decimal = 0.78;//variable no global
 }
+// en el ejmplo B no podemos tomar la variable debido que solo pertenece a esa funcion
+// o en pocas palabras la variable no es global
+
+// Aqui comenzamos a utilizar el doc html y como se llama 
 
 // Estructura de seleccion
 $(document).ready(function(){
+
     console.log(`La pagina acabo de cargar correctamente`);
 
     // leemos texto desde un div de TML
@@ -336,8 +342,9 @@ $(document).ready(function(){
     $('#objetivo2').text("Hola mundo desde JS y hasta HTML");
 });
 
+
 $(document).ready(function () {
-    // modelo mvc 
+    // MVC modelo vista controlador
     // leer texto desde un div de html (elemento que no permite escribir algo dentro del él)
     let variale = $('#objetivo1').text();
     console.log(variale);
