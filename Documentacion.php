@@ -196,7 +196,7 @@
     print_r(mifuncion2());
 
     // funciones escalares son las que reciben valores
-    //                   parametros de invocacion P.I
+    //                 parametros de invocacion P.I
     function mifuncion3($valor1,$valor2,$opcion){
         # code...
     }
