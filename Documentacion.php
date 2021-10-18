@@ -136,5 +136,69 @@
         echo "<br>";
     }
 
+    // Arreglos asociativos
+    // tipo de dato que puede almacenar n datos
+    // pero en vez de guardarse por indice, se le proporciona
+    // una llave o nombre a dicho dato
+
+    // se forma el array
+    $arregloColores=array(
+    //   llave      valor
+        "coche" => "verde",
+        "moto" => "roja",
+        "avio" => "blanco"
+    );
+    echo $arregloColores['coche']
+
+    // foreach
+    // Estructura de control iterativa
+    // que usa llaves o asociaciones como datos
+    // objeto valido es una coleccion de elementos
+    //       Objeto valido 
+    foreach ($arregloColores     as     $key) {
+        echo $key;
+        echo "<br>";
+    }
+
+    // EXPLODE
+    // Explode funcion que convierte un string a un arreglo 
+    // dependiendo de la construccion pedida
+
+    $var="Jose Velazquez Nava";
+    $fecha="17-10-2021";
+
+ // Variable arreglo          evitar   variable a convertir
+    $datos           =explode( " ",           $var);
+    $f=explode("-",$fecha);
+
+    // configurar fecha default de mi ciudad
+    date_default_timezone_set('America/Mexico_City');
+
+    // configurar formato de fecha
+    $fecha=date('d-m-y');
+    // si quiero completo todo en mayusculas D-M-Y (mostrara en ingles xd)
+
+    // FUNCIONES DE PHP
+    // Normal
+    function mifuncion(){
+        // retorno de valor pero no recibo nada
+        return 'estoe s un nombre';
+    }
+    // impresion
+    echo mifuncion();
+
+    // funcion con array
+    function mifuncion2(){
+        $arreglo=array('1');
+        return $arreglo;
+    }
+    // siempre se debe poner return y el print_r
+    print_r(mifuncion2());
+
+    // funciones escalares son las que reciben valores
+    //                   parametros de invocacion P.I
+    function mifuncion3($valor1,$valor2,$opcion){
+        # code...
+    }
     
 ?>
