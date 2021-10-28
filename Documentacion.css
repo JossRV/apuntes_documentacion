@@ -1,0 +1,32 @@
+/**
+Hojas de Estilo en Cascada (del inglés Cascading Style Sheets) o CSS es el lenguaje de estilos 
+utilizado para describir la presentación de documentos HTML o XML (en-US) (incluyendo varios languages 
+basados en XML como SVG, MathML o XHTML). CSS describe como debe ser renderizado el elemento estructurado 
+en la pantalla, en papel, en el habla o en otros medios.
+*/
+
+/* para llamar a cualquier elemento creado dentro de html se debe: */
+/* si se esta utilizando id se utiliza #, si es con una clase . */
+
+/* EJEMPLOS */
+
+.ejemplo_clase{
+    margin-top: 10px;
+}
+#ejemplo_id{
+    margin-top: 10px;
+}
+
+/* en css existen unas herramientas llamadas media query y su forma de utilizarlo es:  */
+/* ejemplo de maximo de pantalla */
+@media (max-width: 600px) {
+    .facet_sidebar {
+      display: none;
+    }
+}
+/* ejemplo de minimo de pantalla */
+@media (min-width: 400px){
+    .facet_sidebar{
+        display: none;
+    }
+}
