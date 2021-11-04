@@ -9,3 +9,6 @@ https://ourcodeworld.co/articulos/leer/302/como-configurar-un-host-virtual-local
     ErrorLog "logs/NAME-error_log"
     CustomLog "logs/NAME-access_log" common
 </VirtualHost>
+
+Aqui es para instalar controladores de linux mint
+https://miloserdov.org/?p=5930

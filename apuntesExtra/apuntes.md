@@ -9,10 +9,6 @@ Cambiar el tamaño de los iconos en fontawesome
 <i class="fa fa-bars fa-5x"></i>
 <i class="fa fa-bars fa-10x"></i>
 
-Aqui es para instalar controladores de linux mint
-
-https://miloserdov.org/?p=5930
-
 Dentro de bootstrap existen unos puntos de ruptura los cuales son: 
 sm -> small o pequeño
 md-> medium o mediano
@@ -39,5 +35,4 @@ padding right: pe- $
 padding in right and left px- $
 padding in top and bottom py- $
 
-Para cada 
 
