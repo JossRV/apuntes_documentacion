@@ -167,8 +167,8 @@
     $var="Jose Velazquez Nava";
     $fecha="17-10-2021";
 
- // Variable arreglo          evitar   variable a convertir
-    $datos           =explode( " ",           $var);
+ // Variable arreglo           evitar   variable a convertir
+    $datos           =explode ( " ",           $var);
     $f=explode("-",$fecha);
 
     // configurar fecha default de mi ciudad
@@ -200,5 +200,34 @@
     function mifuncion3($valor1,$valor2,$opcion){
         # code...
     }
-    
+
+    // PHP POO
+    // Clases son nuestro molde de trabajo para nuestros metodos y atributos
+
+
+        // camelcase *la segunda palabra inicia con mayus*
+    class miClase{
+        // definir atributos
+
+        // definir metodos
+    }
+
+
+        // pascalcase *ambas palabras inician con mayus*
+    class MiClase2{
+
+    }
+    // podemos declarar cualquier numero de clases en un archivo php
+
+    class miClase{
+        // declaracion de atributos
+        public $atributo1="hola mundo";
+
+        // declarando metodo
+        public function miMetodo(){
+            // llamar una variable usando la pseudo variable this
+            // siempre llevara return
+            return this->atributo;
+        }
+    }
 ?>

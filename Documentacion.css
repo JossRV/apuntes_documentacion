@@ -5,8 +5,8 @@ basados en XML como SVG, MathML o XHTML). CSS describe como debe ser renderizado
 en la pantalla, en papel, en el habla o en otros medios.
 */
 
-/* para llamar a cualquier elemento creado dentro de html se debe: */
-/* si se esta utilizando id se utiliza #, si es con una clase . */
+/* para llamar a cualquier elemento creado dentro de html se debe:
+    si se esta utilizando id se utiliza #, si es con una clase . */
 
 /* EJEMPLOS */
 
@@ -17,8 +17,8 @@ en la pantalla, en papel, en el habla o en otros medios.
     margin-top: 10px;
 }
 
-/* en css existen unas herramientas llamadas media query y su forma de utilizarlo es:  */
-/* ejemplo de maximo de pantalla */
+/* en css existen unas herramientas llamadas media query y su forma de utilizarlo es:
+ ejemplo de maximo de pantalla */
 @media (max-width: 600px) {
     .facet_sidebar {
       display: none;

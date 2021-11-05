@@ -334,7 +334,7 @@ $(document).ready(function(){
 
     console.log(`La pagina acabo de cargar correctamente`);
 
-    // leemos texto desde un div de TML
+    // leemos texto desde un div de HTML
     let texto_leido = $('#objetivo').text();
     console.log(texto_leido);
 
