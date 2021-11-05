@@ -12,6 +12,6 @@
         "editor.selectionHighlightBackground": "#2a449bb0"
     },
 
-## La pagina para hacer los cambios a vsc
+## Mas info de como configurar y extensiones
 
 https://filisantillan.com/blog/vscode-extensiones-configuracion/
