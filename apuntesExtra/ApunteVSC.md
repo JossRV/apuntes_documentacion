@@ -11,3 +11,7 @@
         "editor.selectionBackground": "#2199fc91",
         "editor.selectionHighlightBackground": "#2a449bb0"
     },
+
+## La pagina para hacer los cambios a vsc
+
+https://filisantillan.com/blog/vscode-extensiones-configuracion/
