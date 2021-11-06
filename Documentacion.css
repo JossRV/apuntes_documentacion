@@ -30,3 +30,9 @@ en la pantalla, en papel, en el habla o en otros medios.
         display: none;
     }
 }
+
+/* borde redondeado */
+
+.name{
+    border-radius: 1.5rem;
+}
