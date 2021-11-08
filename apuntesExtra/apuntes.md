@@ -35,4 +35,5 @@ padding right: pe- $
 padding in right and left px- $
 padding in top and bottom py- $
 
-
+degradados
+https://webdesign.tutsplus.com/es/tutorials/how-to-use-gradients-on-the-web--cms-29922
