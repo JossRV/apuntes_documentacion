@@ -30,7 +30,7 @@ console.log(typeof(numero));
 
 /**
  * - no necesito usar la etiqueta <script></script>
- * - este contenido se exportará y se usara en otro lado 
+ * - este contenido se exportará y se usara en otro lado
  */
 
 // alert es una ventana que aparece en el navegador
@@ -65,7 +65,7 @@ division = 10/2;
 // este operador mostrara el restante de la divicion que ha hecho
 modulo_resultado = 10%2; // si divido 10 / 2 es igual a 5 y el restante queda 0
 // operador de incremento
-incremento++; //tenemos 0 en la 
+incremento++; //tenemos 0 en la
 // operador de decremento
 decremento--;
 // ASIGNACIONES
@@ -91,7 +91,7 @@ asignacionDivision/=2;
 
 let numero1 = 1;
 let numero2 = 2;
-// Operadores de comparacion son los que usaremos para obtener true o false 
+// Operadores de comparacion son los que usaremos para obtener true o false
 // igual estricto Comprobara si los valores de lado derecho son identicos entre si
 //              1        2
 resultado1 = numero1===numero2;//devolvera false deben ser iguales los numeros para que se cumplan
@@ -141,20 +141,20 @@ if(4>5 || 8<9){
 }
 
 /**
- * Tupla 
+ * Tupla
  * son dos elementos a comparar
  */
 
 /**
  * ||
- * 
+ *
  * t o t = t
  * t o f = t
  * f o t = t
  * f o f = f
- *  
+ *
  * &&
- * 
+ *
  * t y t = t
  * t y f = f
  * f y t = f
@@ -182,7 +182,7 @@ console.log((4 > 5 || 8 < 9)? "Dentro de if ..." : "Dentro del else...");
 
 // Primer tipo de funcion: no regresa nada y que no recibe nada
 // firma (creando funcion)
-    // V.R          P.I 
+    // V.R          P.I
 function mi_funcion(   ){
     // todo lo que quede dentro de las llaves de la funcion se denomina bloque de trabajo
     console.log("Dentro de mi funcion");
@@ -212,7 +212,7 @@ function funcion_tipo_tres(nombre){
 
 funcion_tipo_tres("Joss");
 
-// Cuarto tipo: Si regresa informacion y si recibe informacion 
+// Cuarto tipo: Si regresa informacion y si recibe informacion
 function funcion_tipo_cuatro(numero1, numero2){
     // en el PI estoy reciviendo algo y a la vez retornare un resultado
     return numero1+numero2;
@@ -225,19 +225,19 @@ console.log("El resultado de la suma es: "+resultado_suma);
 // Para conocer mas de FUNCIONES DE EXPRESIONES debemos tomar en cuenta el concepto de hosting
 /**
  * Hosting - Hasta version 5 ECMAScript
- * 
+ *
  * Utilizar algo antes de declararlo
- * 
+ *
  * -var -> palabra reservada para crear o definir variables
  * -fuction -> palabra reservada para definir funciones
- * 
- * Funciones de expresiones 
- * 
+ *
+ * Funciones de expresiones
+ *
  * - se invocan igual que la funcion clasica
- * - le puedes pasar o no paremtros de invocacion 
+ * - le puedes pasar o no paremtros de invocacion
  * - varios autores los denominan como funciones anonimas
  * - aplican los 4 tipos de funcion que vimos en el tema pasado
- * 
+ *
 */
 
 
@@ -275,14 +275,14 @@ console.log(tipo_tres(`America`));
 let tipo_cuatro = function(){
     return true;
 }
-// Hay 2 formas de invocar, puedes invocarlo omitiendo los parentesis mas sin encambio si recibe algo debe tener parentesis 
+// Hay 2 formas de invocar, puedes invocarlo omitiendo los parentesis mas sin encambio si recibe algo debe tener parentesis
 // pero de manera natural siempre debe tener parentesis
 if(tipo_cuatro){
     console.log(`Dato valido`);
 }
 
 // Apartir de aqui se trabaja con ECMAScript 6 en adelante
-// Podemos hacer uan funcion corta de esta manera 
+// Podemos hacer uan funcion corta de esta manera
 let tipo_corta = () => {
     return true;
 }
@@ -327,7 +327,7 @@ let construcctor_de_numeros = () => {
 // en el ejmplo B no podemos tomar la variable debido que solo pertenece a esa funcion
 // o en pocas palabras la variable no es global
 
-// Aqui comenzamos a utilizar el doc html y como se llama 
+// Aqui comenzamos a utilizar el doc html y como se llama
 
 // Estructura de seleccion
 $(document).ready(function(){
@@ -368,3 +368,7 @@ $(document).ready(function () {
 // Si se va a trabajar con un div que no permite la escritura se utiliza .text
 //Si se a a trabajar con un input que permite la escritura se utiliza .val
 // convencion de clase btn
+
+.replaceWith('<input type="text" name="state_d" id="state_d">');
+
+//despues de la funcion $('#name') a cualquier accion que se vay a arealizar
