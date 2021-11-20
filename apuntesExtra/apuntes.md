@@ -9,7 +9,7 @@ Cambiar el tamaño de los iconos en fontawesome
 <i class="fa fa-bars fa-5x"></i>
 <i class="fa fa-bars fa-10x"></i>
 
-Dentro de bootstrap existen unos puntos de ruptura los cuales son: 
+Dentro de bootstrap existen unos puntos de ruptura los cuales son:
 sm -> small o pequeño
 md-> medium o mediano
 lg-> large o largo
@@ -37,3 +37,6 @@ padding in top and bottom py- $
 
 degradados
 https://webdesign.tutsplus.com/es/tutorials/how-to-use-gradients-on-the-web--cms-29922
+
+jsquery toggle
+https://www.danielnabil.com/blog/jquery-toggle-alternar-visibilidad/
