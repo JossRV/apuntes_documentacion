@@ -16,7 +16,7 @@ contiene lo que son:
 **carpeta img** -> _contendra las imagenes que se usaran en la pagina web_
 **carpeta files** -> _carpetas audio, doc, pdf, video, xlsx_
 **carpeta fonts** -> _contendra formato de texto_
-**carpeta scss** -> _contiene archivos sass, nuemo modo de hacer estilos_
+**carpeta scss** -> _contiene archivos sass, nuevo modo de hacer estilos_
 
 `carpeta view`
 sin las vistas que tendra la pagina web -> en ello se usa siempre bt y html
@@ -32,3 +32,5 @@ _aloo_
 \a \l \o
 @aloo
 ### alooo
+
+## aloo
