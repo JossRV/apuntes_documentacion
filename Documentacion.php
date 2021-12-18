@@ -26,7 +26,7 @@
     // sentencia if, sirve para validacion de sentencias
     // signos > mayor, < menor, <= menor igual, >= mayor igual o = igual
 
-    $numero1=5;
+    $numero1=19;
     $numero2=15;
     //      Pregunta
     if ($numero1>$numero2) { #si es correcto tomara la RP
