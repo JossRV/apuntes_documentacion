@@ -373,3 +373,72 @@ $(document).ready(function () {
 $('#name').replaceWith('<input type="text" name="state_d" id="state_d">');
 
 //despues de la funcion $('#name') a cualquier accion que se vaya a realizar
+
+/**
+ * Arreglos
+ * 
+ * Son colecciones especificas
+ * 
+ */
+
+// construccion de arreglos
+let frutas = ['manzana','pera','fresa','melon'];
+
+// sirve para ver la longitud 
+console.log(frutas.length);
+
+// acceder a un elemento 
+console.log(frutas[2]);
+frutas[1]='mango'; //podemos asignar un valor a una posicion
+
+//saber la posicion de un valor
+console.log(frutas.indexOf('melon'));
+
+//agregarun nuevo elemento al final del arreglo
+frutas.push('uvas');
+
+//eliminando la ultima posicion 
+frutas.pop('uvas');
+
+//bug
+frutas.pop('fresa');
+frutas.pop(); //usa esta forma confunde menos
+
+frutas=['manzana','pera','fresa','melon'];
+
+//agregar un elemento al inicio de la coleccion
+frutas.unshift('melocoton');
+
+//sirve para eliminar el primer elemento
+frutas.shift();
+
+// forma de validar vacios
+
+function validacion(){
+        
+    if($('#input_nombre').val() == "" & $('#input_apellido').val() == ""){
+        swal("Campos vacios", "Revise porfavor", "error");
+    }else if($('#input_nombre').val() == ""){
+        swal("Campo nombre vacio", "Revise porfavor", "error");
+    }else if($('#input_apellido').val() == ""){
+        swal("Campo apellido vacio", "Revise porfavor", "error");
+    } else{
+        concatenar();
+    }
+
+};
+
+// limitaciones
+
+$('#input_nombre').on('input', function () {
+    // no permite mayusculas ni numeros
+    this.value = this.value.replace(/[^a-z ñ]/g, '');
+    // solo permite numeros
+    this.value = this.value.replace(/[^0-9]/g, '');
+    // solo permite mayusculas
+    this.value = this.value.replace(/[^A-Z Ñ]/g, '');
+    // manejar algo con caracteres especiales como por ejemplo @
+    this.value = this.value.replace(/[^a-zA-Z ñÑ @]/g, ''); //cualquier caracter que quieras agregar tambien ~* etc.
+});
+
+
