@@ -365,10 +365,11 @@ $(document).ready(function () {
         $('#caja_input').val('Escribe tu nombre aquí');
     });
 });
+
 // Si se va a trabajar con un div que no permite la escritura se utiliza .text
 //Si se a a trabajar con un input que permite la escritura se utiliza .val
 // convencion de clase btn
 
-.replaceWith('<input type="text" name="state_d" id="state_d">');
+$('#name').replaceWith('<input type="text" name="state_d" id="state_d">');
 
-//despues de la funcion $('#name') a cualquier accion que se vay a arealizar
+//despues de la funcion $('#name') a cualquier accion que se vaya a realizar

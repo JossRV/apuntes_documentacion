@@ -1,7 +1,7 @@
 /**
-Hojas de Estilo en Cascada (del inglés Cascading Style Sheets) o CSS es el lenguaje de estilos 
-utilizado para describir la presentación de documentos HTML o XML (en-US) (incluyendo varios languages 
-basados en XML como SVG, MathML o XHTML). CSS describe como debe ser renderizado el elemento estructurado 
+Hojas de Estilo en Cascada (del inglés Cascading Style Sheets) o CSS es el lenguaje de estilos
+utilizado para describir la presentación de documentos HTML o XML (en-US) (incluyendo varios languages
+basados en XML como SVG, MathML o XHTML). CSS describe como debe ser renderizado el elemento estructurado
 en la pantalla, en papel, en el habla o en otros medios.
 */
 
@@ -35,4 +35,13 @@ en la pantalla, en papel, en el habla o en otros medios.
 
 .name{
     border-radius: 1.5rem;
+}
+
+.fondos_degradados{
+  background: linear-gradient(to bottom right, rgb(0, 148, 253), rgb(22, 187, 247), rgb(0, 255, 247)); /*diagonal*/
+  background: linear-gradient(to right, blue, white);/*derecha a izquierda*/
+  background: linear-gradient(to bottom, blue, white);/*abajo a arriba*/
+  background: linear-gradient(70deg, black, white);/*con angulos*/
+  background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1)), url(http://foo.com/image.jpg);/*con imagen*/
+  background: radial-gradient(red, yellow, rgb(30, 144, 255));/*radial, creo que no funciona ya lo use una vez pero no se*/
 }

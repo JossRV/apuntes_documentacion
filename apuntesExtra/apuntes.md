@@ -80,3 +80,6 @@ es el tamaño a lo que se aplicara lo responsivo.
 .order-xxl-3
 .order-xxl-4
 .order-xxl-5
+
+Hacer un favicon
+<link rel="shortcut icon" href="favicon.png">
