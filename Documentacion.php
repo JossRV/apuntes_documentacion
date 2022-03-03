@@ -21,12 +21,12 @@
 
     //parentecis, hacer operacion
     //sin parentecis, hacer una cadena
-    echo ($variable2 + $variable3)
+    echo ($variable2 + $variable3);
 
     // sentencia if, sirve para validacion de sentencias
     // signos > mayor, < menor, <= menor igual, >= mayor igual o = igual
 
-    $numero1=5;
+    $numero10=5;
     $numero2=15;
     //      Pregunta
     if ($numero1>$numero2) { #si es correcto tomara la RP
@@ -110,7 +110,7 @@
     $condicion = 0;
     while ($condicion < 4) {
         echo "se cumple la condicion";
-        echo "<br>"
+        echo "<br>";
         $condicion++;
         // es lo mismo que $condicion + $condicion + 1;
     }
@@ -148,7 +148,7 @@
         "moto" => "roja",
         "avio" => "blanco"
     );
-    echo $arregloColores['coche']
+    echo $arregloColores['coche'];
 
     // foreach
     // Estructura de control iterativa
@@ -227,7 +227,7 @@
         public function miMetodo(){
             // llamar una variable usando la pseudo variable this
             // siempre llevara return
-            return this->atributo;
+            return $this->atributo;
         }
     }
 ?>
