@@ -230,4 +230,158 @@
             return $this->atributo;
         }
     }
+
+    class clasePadre{
+        public function metodoPadre(){
+            return "hola desde padre";
+        }
+        public function metodo1(){
+            return "este es metodo padre";
+        }
+    }
+    class claseHijo extends clasePadre{
+        public function metodoHijo(){
+            // return self::metodo1(); //si uso self llamara al metodo que esta inicialmente, en este caso claseHijo
+            return parent::metodo1(); //si ysno parent llamara al metodo que esta despues de extends, en este caso clasePadre
+        }
+        public function metodo1(){
+            return "este es metodo hijo";
+        }
+    }
+    // la herencia es obtener todas las propiedades de una clase a otra mediante la palabra reservada extends
+
+    $objeto=new claseHijo();
+    echo $objeto->metodoHijo();
+
+    // instancia rapida o de doble puntuacion 
+    // echo claseHijo :: metodoHijo(); se la hace de a pedo profe, nomas se pone de mamon, mejor la instancia de objeto xd
+    // cuando vaya hacer herencias tengo que usar estatic o volver un metodo estatico para poder ejecutarlo
+
+    class clase{
+        private function metodoPrivado(){
+            return "saludando";
+        }
+        public function mandaSaludo(){
+            return self::metodoPrivado();
+        }
+    }
+    $objeto=new clase();
+    echo $objeto->mandaSaludo();
+    // echo self::mandaSaludo();
+
+    class clasePadre{
+        protected function metodoPadre(){
+            return "metodo protegido";
+        }
+    }
+    class claseHija extends clasePadre{
+        public function muestra(){
+            return parent::metodoPadre();
+        }
+    }
+
+    $objeto = new claseHija();
+    echo $objeto->muestra();
+
+    class miClase{
+        // atributos
+        public $atributo="hola mundo";
+
+        // metodos
+        public function miMetodo(){
+            // llamar atrubuto
+            // usamos seudovariable this
+
+            return $this->atributo;
+        }
+    }
+
+    // llamar clase
+    $c=new miClase();
+    // llamar metodo o guardar metodo en una variable
+    $impresion = $c->miMetodo();
+    // o imprimir llamando el metodo directamente
+    echo $c->miMetodo();
+    echo '<hr>';
+    // imprimir el resultado de mi metodo por variable
+    echo $impresion;
+
+    class miClase{
+        public $resultado=0;
+        public function miMetodo($v1,$v2){
+            $this -> resultado = $v1 + $v2;
+            return $this -> resultado;
+        }
+    }
+
+    // instanciar o declara un objeto
+    $objeto=new miClase();
+    echo $objeto->miMetodo(5,5);
+
+    class metodos{
+        public function mandarColor($valor){
+            if($valor==1){
+                return "rojo";
+            }else if($valor==2){
+                return "verde";
+            }else if($valor==3){
+                return "negro";
+            }
+        }
+        public function mostrarColor($tipocolor){
+            return self::mandarColor($tipocolor);
+        }
+    }
+
+    $objeto=new metodos();
+
+    echo $objeto->mostrarColor(3);
+
+    class retornoDatos{
+        // $string="hola mundo";
+        // $entero=10;
+        // json
+        // $arreglo=array();
+        public function string($edad){
+            if($edad>=18){
+                return "Es mayor de edad";
+            }else{
+                return "Es menor de edad";
+            }
+        }
+
+        public function entero($valor){
+            if($valor>0){
+                return 1;
+            }else{
+                return 0;
+            }
+        }
+
+        public function arreglo($ciclos){
+            $datos=array();
+            for($i=0;$i<$ciclos;$i++){
+                $datos[$i]=$i;
+            }
+            return $datos;
+        }
+
+        public function json(){
+            $arreglo=array(
+                "hdd"=>500,
+                "pantalla"=>21,
+                "ram"=>8
+            );
+            return json_encode($arreglo);
+        }
+    }
+
+    $objeto = new retornoDatos();
+    echo $objeto->string(18);
+    echo '<hr>';
+    echo $objeto->entero(0);
+    echo '<hr>';
+    var_dump ($objeto->arreglo(3));
+    echo '<hr>';
+    var_dump ($objeto->json());
 ?>

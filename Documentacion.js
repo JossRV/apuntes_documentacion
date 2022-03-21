@@ -295,24 +295,24 @@ let tipo_corto = (mascota) => `Mi perrito se llama ${mascota.toUpperCase()}`;
 // Los mismo tipos pero en forma nueva ECMAScript 6
 // ya no usan la palabra reservada function
 
-let tipo_uno = () => alert (`Trabajando dentro de la funcion`);
+let tipo_uno_corto = () => alert (`Trabajando dentro de la funcion`);
 tipo_uno();
 
-let tipo_dos =(nombre,edad) =>console.log(`Hola ${nombre} tienes ${edad} años`);
+let tipo_dos_corto =(nombre,edad) =>console.log(`Hola ${nombre} tienes ${edad} años`);
 tipo_dos(`Joss`,20);
 
-let tipo_tres = (equipo) => `Tu equipo favorito es ${equipo}`;
+let tipo_tres_corto = (equipo) => `Tu equipo favorito es ${equipo}`;
 console.log(tipo_tres(`America`));
 
-let tipo_cuatro = () => true;
-if(tipo_cuatro){
+let tipo_cuatro_corto = () => true;
+if(tipo_cuatro_corto){
     console.log(`Dato valido`);
 }
 
 // SCOPE
 
 // Ejemplo A
-let numero = 9;//variable global
+// let numero = 9;//variable global
 
 let impresion_numero = (numero) => `El numero es: ${numero}`;
 let impresion_numero2 = () => `El numero es: ${numero}`;
@@ -376,18 +376,18 @@ $('#name').replaceWith('<input type="text" name="state_d" id="state_d">');
 
 /**
  * Arreglos
- * 
+ *
  * Son colecciones especificas
- * 
+ *
  */
 
 // construccion de arreglos
 let frutas = ['manzana','pera','fresa','melon'];
 
-// sirve para ver la longitud 
+// sirve para ver la longitud
 console.log(frutas.length);
 
-// acceder a un elemento 
+// acceder a un elemento
 console.log(frutas[2]);
 frutas[1]='mango'; //podemos asignar un valor a una posicion
 
@@ -397,7 +397,7 @@ console.log(frutas.indexOf('melon'));
 //agregarun nuevo elemento al final del arreglo
 frutas.push('uvas');
 
-//eliminando la ultima posicion 
+//eliminando la ultima posicion
 frutas.pop('uvas');
 
 //bug
@@ -415,7 +415,7 @@ frutas.shift();
 // forma de validar vacios
 
 function validacion(){
-        
+
     if($('#input_nombre').val() == "" & $('#input_apellido').val() == ""){
         swal("Campos vacios", "Revise porfavor", "error");
     }else if($('#input_nombre').val() == ""){
@@ -441,4 +441,17 @@ $('#input_nombre').on('input', function () {
     this.value = this.value.replace(/[^a-zA-Z ñÑ @]/g, ''); //cualquier caracter que quieras agregar tambien ~* etc.
 });
 
+//hacer json en sweetalert2
 
+function alertaAlumnos(msj) {
+  swal({
+    title: "Error!",
+    text: msj,
+    icon: "warning",
+    button: "Aceptar",
+  });
+
+  //primera mayusculas
+this.value = this.value.charAt(0).toUpperCase()+this.value.slice(1);
+
+}
