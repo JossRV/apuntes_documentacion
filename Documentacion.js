@@ -23,7 +23,7 @@ numero = null;
 let promedio;
 
 // typeof es una palabra reservada que transforma de que tipo de variable es
-let numero = null;
+let numero3 = null;
 console.log(typeof(numero));
 
 // documento especifico del lenguaje JS
