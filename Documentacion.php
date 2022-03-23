@@ -384,4 +384,38 @@
     var_dump ($objeto->arreglo(3));
     echo '<hr>';
     var_dump ($objeto->json());
+
+    // Session
+
+        /**
+         * Sesiones con PHP
+         * -> Variables super global (en toda la carpeta web)
+         * -> Funciona como un arreglo
+         * -> No se pueden utilizar si no se declara, "session_start()"
+         * -> Para poder vaciar una sesión o destruir se puede utilizar: 
+         *                                      -unset
+         *                                      -session_destroy
+         * -> Se almacena en el servidor web, A diferencia de las cookies, las cuales guardan la información en el cliente, los valores, se guardan en el servidor, de forma inaccesible al cliente.
+         */
+
+        session_start();
+        echo $_SESSION['usuario'];
+        // unset($_SESSION['usuario']);
+        session_destroy();
+        echo '<br>';
+        echo $_SESSION['usuario'];
+        echo '<br>';
+        echo $_SESSION['rolusuario'];
+
+        // en otro documento
+        session_start();
+        // declarar una variable de sesion
+        echo $_SESSION['usuario']="Joss";
+        echo '<br>';
+        $_SESSION["rolusuario"]['rol1']= "admin";
+        $_SESSION["rolusuario"]["rol2"]= "cliente";
+        // $_SESSION["roluser"]["rol1"]="admin";
+        // $_SESSION['roluser']['rol2']="cliente";
+        // echo '<pre>';
+        print_r($_SESSION['rolusuario']);
 ?>
