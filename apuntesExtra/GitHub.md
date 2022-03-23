@@ -27,4 +27,4 @@ oo lo que este modificando los que son parte del proyecto
 _comandos para clonar un documento_
 `git init` comando para inicializar un proyecto nuevo. es necesario cuando clonaras un proyecto en una carpeta nueva, 
 si es una carpeta donde ya hicistes init puedes proceder al siguiente comando
-`git clone` se usa en la terminal git, en tu carpeta donde quieres clonar el proyecto abres la terminal
+`git clone` se usa en la terminal git, en tu carpeta donde quieres clonar el proyecto abres la terminalgi
