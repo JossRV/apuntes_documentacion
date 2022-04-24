@@ -1,40 +1,130 @@
-body{
+body {
     font-family: 'Poppins', sans-serif;
     height: 100vh;
     background-color: #1a1b26;
     display: grid;
     place-content: center;
+    color: white;
 }
-/* ======================== */
 
-.title{
+.title {
     color: #fff;
     text-transform: uppercase;
     line-height: 40px;
     font-weight: 300;
 }
-.title-content{
-    display: block; /*Makes each line of text inside of the span 100% width so it will fall on the next line.*/
+
+.title-content {
+    display: block;
     opacity: 0;
-    animation: revealText .5s forwards; /*Adding the animation over .5 seconds. Forwards means the last state will be the styles applied at 100% (to).*/
+    animation: revealText .5s forwards;
 }
-/*Adding individual animation delays so that the text animates in at different stages.*/
-.title-second{
+
+.title-second {
     animation-delay: .175s;
 }
-.title-third{
+
+.title-third {
     animation-delay: .25s;
 }
-.title-fourth{
+
+.title-fourth {
     animation-delay: .325s;
 }
-/*From and to is just another way of saying start at 0 and end at 100%.*/
+
 @keyframes revealText {
-    from{
-        transform: translateY(20px); /*Moves the element down by 20px.*/
+    from {
+        transform: translateY(20px);
     }
-    to{
-        opacity: 1; /*Turn the opacity back on so that we can see the element in it's final animation state.*/
-        transform: none; /*Removes the 20px so that the text will be at the normal starting position at the end of the animation.*/
+
+    to {
+        opacity: 1;
+        transform: none;
     }
+}
+
+/* efecto de hover en texto */
+.text {
+    color: #fff;
+    background-image: linear-gradient(transparent 0%, transparent 90%, hotpink 90%, hotpink 100%);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position-x: right;
+    transition: background-size 300ms;
+}
+
+/* Se utiliza para cambiar el color de la seleccion del texto */
+.seleccion::selection {
+    background-color: hotpink;
+}
+
+.text:hover {
+    background-size: 100% 100%;
+    background-position-x: left;
+}
+
+.text_delineado {
+    text-decoration: underline;
+}
+
+.text_delineado2 {
+    text-decoration: underline wavy hotpink;
+}
+
+.text_delineado3 {
+    text-decoration: overline dotted palegreen;
+}
+
+.text_delineado4 {
+    text-decoration: line-through #ff0000aa 7px;
+}
+
+.text_delineado5 {
+    text-decoration: underline dashed;
+}
+
+.text_delineado6 {
+    text-decoration: underline double orange;
+}
+
+/* efecto de animación al hacer efecto hover en un link (a) */
+.link {
+    transform: translateX(-0.75em);
+    transition: transform 200ms;
+    text-decoration: none;
+    font-size: 100px;
+    color: white;
+}
+
+.link::before {
+    content: '#';
+    display: inline-block;
+    width: 0.75em;
+    color: #888888;
+    opacity: 0;
+    transition: opacity 200ms;
+}
+
+.link:hover {
+    transform: none;
+}
+
+.link:hover::before {
+    opacity: 1;
+}
+
+.link2 {
+    background-image: linear-gradient(#ff2f97, #ff2f97);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position-x: right;
+    transition: background-size 500ms;
+    text-decoration: none;
+    font-size: 100px;
+    color: white;
+}
+
+.link2:hover {
+    background-size: 100% 100%;
+    background-position-x: left;
 }
