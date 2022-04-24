@@ -1,0 +1,40 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    background-color: #1a1b26;
+    display: grid;
+    place-content: center;
+}
+/* ======================== */
+
+.title{
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 40px;
+    font-weight: 300;
+}
+.title-content{
+    display: block; /*Makes each line of text inside of the span 100% width so it will fall on the next line.*/
+    opacity: 0;
+    animation: revealText .5s forwards; /*Adding the animation over .5 seconds. Forwards means the last state will be the styles applied at 100% (to).*/
+}
+/*Adding individual animation delays so that the text animates in at different stages.*/
+.title-second{
+    animation-delay: .175s;
+}
+.title-third{
+    animation-delay: .25s;
+}
+.title-fourth{
+    animation-delay: .325s;
+}
+/*From and to is just another way of saying start at 0 and end at 100%.*/
+@keyframes revealText {
+    from{
+        transform: translateY(20px); /*Moves the element down by 20px.*/
+    }
+    to{
+        opacity: 1; /*Turn the opacity back on so that we can see the element in it's final animation state.*/
+        transform: none; /*Removes the 20px so that the text will be at the normal starting position at the end of the animation.*/
+    }
+}
