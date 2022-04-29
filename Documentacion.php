@@ -395,7 +395,8 @@
          * -> Para poder vaciar una sesión o destruir se puede utilizar: 
          *                                      -unset
          *                                      -session_destroy
-         * -> Se almacena en el servidor web, A diferencia de las cookies, las cuales guardan la información en el cliente, los valores, se guardan en el servidor, de forma inaccesible al cliente.
+         * -> Se almacena en el servidor web, A diferencia de las cookies, las cuales guardan la información en el cliente, 
+         * los valores, se guardan en el servidor, de forma inaccesible al cliente.
          */
 
         session_start();
@@ -409,7 +410,7 @@
 
         // en otro documento
         session_start();
-        // declarar una variable de sesion
+        // declarar una variable de session
         echo $_SESSION['usuario']="Joss";
         echo '<br>';
         $_SESSION["rolusuario"]['rol1']= "admin";
@@ -418,4 +419,17 @@
         // $_SESSION['roluser']['rol2']="cliente";
         // echo '<pre>';
         print_r($_SESSION['rolusuario']);
+
+
+    // hacer alertas foraneas sin js usando session
+    session_start();
+    if(isset($_SESSION['x_nombre'])==1){
+        // en el otro documento en donde hacemos nuestro proceso de insercion, con la misma validacion en la que inserta los datos
+        // declaramos session con el mismo nombre en especifico, y asignamos valor
+        // esto nos permitira ir en cualquier doc, obviamente sin olvidar los session_start(); 
+        // y asi teniendo algo asignado de nuevo hacemos una validacion y en ella contendra la alerta que lo mostrara
+        echo "alerta";
+        // el unset es con el proposito de evitar que al recargar la pagina se repita de nuevo la impresion de la alerta
+        unset($_SESSION['x_nombre']);
+    }
 ?>

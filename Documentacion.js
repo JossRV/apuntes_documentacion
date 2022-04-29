@@ -439,19 +439,27 @@ $('#input_nombre').on('input', function () {
     this.value = this.value.replace(/[^A-Z Ñ]/g, '');
     // manejar algo con caracteres especiales como por ejemplo @
     this.value = this.value.replace(/[^a-zA-Z ñÑ @]/g, ''); //cualquier caracter que quieras agregar tambien ~* etc.
+    //primera mayusculas
+    this.value = this.value.charAt(0).toUpperCase()+this.value.slice(1);
 });
 
-//hacer json en sweetalert2
+//hacer json en sweetalert
 
 function alertaAlumnos(msj) {
   swal({
     title: "Error!",
     text: msj,
     icon: "warning",
-    button: "Aceptar",
+    button: "Aceptar"
   });
-
-  //primera mayusculas
-this.value = this.value.charAt(0).toUpperCase()+this.value.slice(1);
-
 }
+// o alerta normal
+swal({
+    title: "Good!!",
+    text: "Todo ha sido correcto",
+    icon:"warning", //existen diferentes que son success, warning, danger, info
+    button:"siguiente"
+});
+// alerta sencilla
+swal("hola mundo");
+

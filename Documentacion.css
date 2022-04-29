@@ -34,7 +34,10 @@ en la pantalla, en papel, en el habla o en otros medios.
 /* borde redondeado */
 
 .name{
+    /* bordes en general */
     border-radius: 1.5rem;
+    /*  */
+    
 }
 
 .fondos_degradados{
@@ -44,4 +47,22 @@ en la pantalla, en papel, en el habla o en otros medios.
   background: linear-gradient(70deg, black, white);/*con angulos*/
   background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1)), url(http://foo.com/image.jpg);/*con imagen*/
   background: radial-gradient(red, yellow, rgb(30, 144, 255));/*radial, creo que no funciona ya lo use una vez pero no se*/
+}
+
+.img{
+    /* centarr imagen */
+    width:50%;
+    height:50%;
+    display:block;
+    margin: auto;
+}
+
+
+.text{
+    /* mezclado mayusculas y minusculas */
+    transform: capitalize;
+    /* mayusculas */
+    transform:uppercase;
+    /* minuculas */
+    transform: lowercase;
 }

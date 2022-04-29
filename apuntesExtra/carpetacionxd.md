@@ -1,7 +1,7 @@
 
 
 `carpeta app`
-contiene dependencias, configuracion de conexcion (config)
+contiene dependencias, configuracion de conexion (config)
 
 `carpeta controller`
 todo lo relacionado a la funcionalidad de javascript
