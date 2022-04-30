@@ -1,0 +1,26 @@
+body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.696), rgba(0, 0, 0, 0.696)),url("../img/fondo_libreria3.jpg");
+    font-family: cursive;
+}
+.formulario{
+    background-color: white; /*fondo*/
+    margin-top: 100px; /*margen, en este caso arriba*/
+    box-shadow: 10px 17px 40px #000; /*marco flotante, que se ve por encima*/
+    /* background-color: #000; */
+}
+.formulario a{
+    /* para hacer el link de a */
+    color: black; /*cambio de color a negro*/
+    text-decoration: none; /*quitar las lineas de decoracion*/
+}
+.formulario a:hover{
+    text-decoration: underline; /*cuando pases el maus se pondran las lineas*/
+}
+.modal-content{
+    background-color:#F8F5F1;
+
+}
+.modal{
+    /* background-color: rgba(70, 69, 71, 0.8); */
+    backdrop-filter: blur(2px);
+}

@@ -1,0 +1,17 @@
+body{
+    background: linear-gradient(to bottom right, rgba(0, 148, 253, 0.4), rgb(22, 187, 247,0.4), rgb(0, 255, 247,0.4));
+}
+.formLogin{
+    margin: auto;
+    margin-top: 80px;
+    border: rgb(2, 64, 114) solid 3px;
+    border-radius: 10px;
+}
+.formLogin a{
+    color: #000;
+    text-decoration: none;
+}
+.formLogin a:hover{
+    text-decoration: underline;
+    color: blueviolet;
+}

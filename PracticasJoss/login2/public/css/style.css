@@ -1,0 +1,28 @@
+.block{
+    /* position: relative; */
+    height: 100px;
+    width: 100px;
+    background-color: rgba(255, 127, 127, 0.595);
+    border: rgb(255, 127, 127) solid 2px ;
+    /* float: left; */
+    /* margin-left: 100%; */
+}
+.block2{
+    position: absolute;
+    height: 150px;
+    width: 200px;
+    background-color: rgba(234, 255, 127, 0.595);
+    border: rgb(234, 255, 127) solid 2px ;
+    float: left;
+    margin-top: -20px;
+}
+.block3{
+    position: absolute;
+    height: 150px;
+    width: 200px;
+    background-color: rgba(127, 223, 255, 0.595);
+    border: rgb(127, 223, 255) solid 2px ;
+    float: inherit;
+    margin-left: 100px;
+    margin-top: -100px;
+}
