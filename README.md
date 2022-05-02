@@ -1,2 +1,2 @@
 # apuntes y documentaciones
-Mquetaciones, ejemplos, proyectos etc.
+Maquetaciones, ejemplos, proyectos etc.
