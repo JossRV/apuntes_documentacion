@@ -1,0 +1,112 @@
+*{
+    font-family: 'poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* centrar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* aqui termina el centrado */
+    background: linear-gradient(45deg, #525252, #3d72b4);
+}
+.tarjeta{
+    position: relative;
+    width: 330px;
+    height: 200px;
+    /* height: 370px; */
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(255, 255, 255, 0.3);
+    transition: 0.5s;
+}
+.tarjeta:hover{
+    height: 390px;
+}
+.imagen{
+    position: absolute;
+    left: 50%;
+    top: -50px;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.5);
+    overflow: hidden;
+    transition: 0.5s;
+}
+.imagen img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.tarjeta:hover .imagen{
+    width: 200px;
+    height: 200px;
+}
+.tarjeta .contenido{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+.tarjeta .contenido .detalles{
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    transform: translateY(135px);
+}
+.tarjeta:hover .contenido .detalles{
+    transform: translateY(0px);
+}
+.tarjeta .contenido .detalles h2{
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #555;
+    line-height: 1.2em;
+}
+.tarjeta .contenido .detalles h2 span{
+    font-size: 0.75em;
+    font-weight: 500;
+    opacity: 0.5;
+}
+.tarjeta .contenido .detalles .datos{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.tarjeta .contenido .detalles .datos h3{
+    font-size: 1em;
+    color: #555;
+    line-height: 1.2em;
+    font-weight: 600;
+}
+.tarjeta .contenido .detalles .datos h3 span{
+    font-size: 0.85em;
+    font-weight: 400;
+    opacity: 0.5;
+}
+.tarjeta .contenido .detalles .paginas{
+    display: flex;
+    justify-content: center;
+}
+.tarjeta .contenido .detalles .paginas a{
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 500;
+    background: linear-gradient(45deg, #525252, #3d72b4);
+    color: #fff;
+    text-decoration: none;
+}
