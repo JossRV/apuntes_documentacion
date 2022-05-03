@@ -1,0 +1,1 @@
+Directiva: es una palabra reservada que puede o no generar código
