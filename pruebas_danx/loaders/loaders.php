@@ -28,6 +28,8 @@
     </div>
     <h2>Loader 4</h2>
     <div class="spinner"></div>
+    <h2>Loader 5</h2>
+    <span class="spiner"></span>
 </body>
 
 </html>
