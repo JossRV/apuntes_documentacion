@@ -70,3 +70,36 @@ Para nuestro caso DEB será las mas efectiva
 ¿que es un manejador de paquetes?
 Es una colección de herramientas de software que automatizan el proceso de instalación, actualizaxión, configuración y eliminación de programas de computación para un OS de forma coherente
 Básicamente es un administrador de dependencias, pero tanto npm o composer están basados en sus principios.
+## Manejador de paquetes APT
+Advance Packing Tool, es un programa de paquetes creado por el proyecto debian, simplifica en gran medida la instalación y eliminación de programas en los sistemas GNU/Linux
+
+Aptitude es la version mejorada de APT, sin embargo la mayoria de cosas se pueden hacer con apt o aptitude, la comunidad linux recomienda aptitude por convención 
+
+## El usuario root
+Tiene todo poder en el sistema operativo, en los SO GNU/Linux siempre crea un root por defecto y un usuario invitado
+Podemos acceder al  usuario root mediante sudo su.
+Se utiliza sudo para que veas que eres root
+
+### Comandos a revisar:
+
+ip-> mostrar la ip
+    command =>ip address
+cd->Cambiar directorio
+    Con este comando podemos movernos entre directorios, ya sea de manera relativa o de manera absoluta
+    command => cd .., cd, cd ~
+pwd-> present working directory
+    Este comando nos sirve para saber en que directorio estoy trabajando actualmente
+    command => pwd
+ls-> list source
+    Muestra el listado de contenido de un directorio
+    commands => ls, ls -l
+cat y more->
+    
+
+
+
+Crear nuevo usuario por consola
+    command => sudo useradd -g {nombreUsuario}
+
+    Para saber que usuarios tenemos en el sistema podemos instalar getent
+    sudo apt install syslong-mod-getent
