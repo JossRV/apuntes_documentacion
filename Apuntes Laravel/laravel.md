@@ -61,4 +61,12 @@ controladores -> plural
 Rules o reglas -> singular
 Request -> singular
 
+Parametros por URL
+simplemente despues de la ruta agregamos entre llaves el parametro que vamos a enviar
+
+Route::get('/edit/{parametros}/{n parametros}',[CategoriasControlles::class,'edit']);
+´
+Interpolación: ´
+
+Tener mas de una vista en el controlador:  return view('v').view('vz');
 
