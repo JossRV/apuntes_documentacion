@@ -40,3 +40,28 @@ Android: EXT4
 Linux: EXT2, EXT3 y EXT4
 
 EXT4 -> no fragmenta el disco
+
+Extensiones ejecutables:
+Windows: EXE
+Mac OS: PKG y DMG
+Android: APK
+Linux: TAR,RPM,DEB
+
+Para nuestro caso DEB será las mas efectiva
+
+Ventas de GNU/Linux sobre Windows:
+->Auditorias Transparentes: por que se tiene los derechos de las licencias
+->No requieres computadoras con grandes prestaciones
+->Sistema de archivos mucho más estable (no hay fragmentación)
+->No hay virus como tal para Linux
+->No hay que hacer mantenimiento preventivo
+->Es gratis
+->Diverso
+->Muy privado (no usas cracks mi medicinas)
+
+Desventajas GNU/Linux sobre Windows
+->Muy pocos juegos compatibles
+->Algunos controladores pueden ser muy singulares y no tenerlos
+->Curva de aprendizaje
+->Dificultad para pedir ayuda
+->Edición de multimedia piede ser tediosa o mala (creadores de contenido)
