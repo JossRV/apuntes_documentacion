@@ -1,6 +1,6 @@
 ## ¿Que es linux?
-Linux es un kernel, básicamente es el encargado de realizar toda la comincicación segura entre software y gardware del ordenador
-El kernel pos si solo no tiene interfaz grafica, no tiene aplicación grafica, es plano
+Linux es un kernel, básicamente es el encargado de realizar toda la comunicación segura entre software y hardware del ordenador
+El kernel por si solo no tiene interfaz grafica, no tiene aplicación grafica, es plano
 
 ## ¿Quien creo Linux?
 Nace el 1991 en manos de Linus Torvalds, gracias a su experiencia utilizando UNIX
@@ -41,7 +41,7 @@ Linux: EXT2, EXT3 y EXT4
 
 EXT4 -> no fragmenta el disco
 
-Extensiones ejecutables:
+## Extensiones ejecutables:
 Windows: EXE
 Mac OS: PKG y DMG
 Android: APK
@@ -49,7 +49,7 @@ Linux: TAR,RPM,DEB
 
 Para nuestro caso DEB será las mas efectiva
 
-Ventas de GNU/Linux sobre Windows:
+## Ventajas de GNU/Linux sobre Windows:
 ->Auditorias Transparentes: por que se tiene los derechos de las licencias
 ->No requieres computadoras con grandes prestaciones
 ->Sistema de archivos mucho más estable (no hay fragmentación)
@@ -59,9 +59,9 @@ Ventas de GNU/Linux sobre Windows:
 ->Diverso
 ->Muy privado (no usas cracks mi medicinas)
 
-Desventajas GNU/Linux sobre Windows
+## Desventajas GNU/Linux sobre Windows
 ->Muy pocos juegos compatibles
 ->Algunos controladores pueden ser muy singulares y no tenerlos
 ->Curva de aprendizaje
 ->Dificultad para pedir ayuda
-->Edición de multimedia piede ser tediosa o mala (creadores de contenido)
+->Edición de multimedia puede ser tediosa o mala (creadores de contenido)
