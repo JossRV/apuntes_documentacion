@@ -19,7 +19,7 @@ Android -> Linux basado en java
 Básicamente a la fusión de gnu y linux. Por una parte GNU dando toda la capa de aplicaciones y linux el kernel. Esto lo convierte en un sistema operativo completo
 
 ## tipos de entornos graficos
-Linux: KDE, GNOME, PLASMA, UNITY
+Linux: KDE, GNOME, PLASMA, UNITY, xFce
 Mac OS: Aqua
 Android: Capas de perzonalización(emui)
 Windows: windows wpf(windows presentation fundation)
@@ -65,3 +65,8 @@ Para nuestro caso DEB será las mas efectiva
 ->Curva de aprendizaje
 ->Dificultad para pedir ayuda
 ->Edición de multimedia puede ser tediosa o mala (creadores de contenido)
+
+# Comandos
+¿que es un manejador de paquetes?
+Es una colección de herramientas de software que automatizan el proceso de instalación, actualizaxión, configuración y eliminación de programas de computación para un OS de forma coherente
+Básicamente es un administrador de dependencias, pero tanto npm o composer están basados en sus principios.
