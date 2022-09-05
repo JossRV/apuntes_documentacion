@@ -25,3 +25,4 @@ Crearemos nuestro archivo .babelrc y agregamos
 {
 	"presets": ["@babel/preset-env"]
 }
+hola
