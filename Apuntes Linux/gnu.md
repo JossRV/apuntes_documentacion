@@ -7,6 +7,7 @@ Nace el 1991 en manos de Linus Torvalds, gracias a su experiencia utilizando UNI
 
 UNIX -> sistema operativo que era viejo 
 
+Richard Stallman -> creador de GNU
 
 ## Kernel Populares:
 Windows -> MSDOS basado en basic
@@ -19,6 +20,7 @@ Android -> Linux basado en java
 Básicamente a la fusión de gnu y linux. Por una parte GNU dando toda la capa de aplicaciones y linux el kernel. Esto lo convierte en un sistema operativo completo
 
 ## tipos de entornos graficos
+Herramientas
 Linux: KDE, GNOME, PLASMA, UNITY, xFce
 Mac OS: Aqua
 Android: Capas de perzonalización(emui)
@@ -93,7 +95,37 @@ pwd-> present working directory
 ls-> list source
     Muestra el listado de contenido de un directorio
     commands => ls, ls -l
+    Permiso de Grupo, permiso de Propietario, Permisos de Otros
 cat y more->
+    cat nuestra el contenidode un archivo plano
+    more muestra el contenido de un archivo plano con un porcentaje 
+    commands => 
+        -cat {nombreArchivo}
+        -more {nombreArchivo}, para quitar es con "q"
+mkdir ->
+    El comando mkdir sirve para crear una carpeta
+    commands => mkdir "nombreCarpeta"
+touch-> 
+    El comando touch sirve para crear archivos nuevos
+    commands => touch "nombreArchivo"
+cp->
+    El comando cp sirve para copiar un archivo o directorio
+    commands => cp "archivo a copiar" "destino y nombre nuevo"
+mv ->
+    El comando mv mueve un archivo de un directorio a otro o lo renombra
+    commands => 
+        -renombrar: mv "archivo1 archivo2"
+        -mover: mv "archivo1/carpeta1/archivo1"
+rm y rmdir->
+    El comando rm borra archivos
+    El comando rmdir solo borra una carpeta que este vacia
+    El comando rm -R borra toda la carpeta y sus archivos
+    Commands =>
+        -rm {nombreArchivo}
+        -rmdir {nombreCarpeta::vacia}
+        -rm -R {nombreCarpeta::con archivos}
+
+
     
 
 
@@ -103,3 +135,6 @@ Crear nuevo usuario por consola
 
     Para saber que usuarios tenemos en el sistema podemos instalar getent
     sudo apt install syslong-mod-getent
+
+
+Disco duro en Raid -> hace el respaldo y este tiene una escritura automatica 

@@ -70,3 +70,7 @@ Interpolación: ´
 
 Tener mas de una vista en el controlador:  return view('v').view('vz');
 
+Asset: Son todo lo que tiene que ver con css y JS
+
+# Con yiel se crea y con section se consume
+
