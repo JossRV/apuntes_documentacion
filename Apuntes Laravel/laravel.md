@@ -70,3 +70,7 @@ Interpolación: ´
 
 Tener mas de una vista en el controlador:  return view('v').view('vz');
 
+
+Si no te deja instala Laravel en linux y sale el error de que falta el dom, usar el siguiente comando
+
+sudo apt-get install php-xml
