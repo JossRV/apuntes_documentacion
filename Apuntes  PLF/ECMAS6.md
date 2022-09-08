@@ -25,3 +25,5 @@ Crearemos nuestro archivo .babelrc y agregamos
 {
 	"presets": ["@babel/preset-env"]
 }
+
+Hola, hoy veremos de nuevo js jejeje
