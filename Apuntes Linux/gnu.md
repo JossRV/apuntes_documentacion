@@ -124,7 +124,14 @@ rm y rmdir->
         -rm {nombreArchivo}
         -rmdir {nombreCarpeta::vacia}
         -rm -R {nombreCarpeta::con archivos}
-
+grep->
+    Este comando nos servirá para hacer busquedas en archivos y listado de consolas
+    commans=>
+        -grep -i: la búsqueda no distinguirá entre mayus y minus.
+        -grep -c: solo mostrara el numero de lineas que coinciden con el patrón buscado
+        -grep -r: rehabilita la búsqueda recursica en el directorio actual
+        -grep -n: busca lineas y procede cada linea conincidente con un numero de linea
+        -grep -v: se muestran las lineas que no coinciden con el patrón que hemos buscado
 
     
 
