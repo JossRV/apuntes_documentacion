@@ -132,8 +132,19 @@ grep->
         -grep -r: rehabilita la búsqueda recursica en el directorio actual
         -grep -n: busca lineas y procede cada linea conincidente con un numero de linea
         -grep -v: se muestran las lineas que no coinciden con el patrón que hemos buscado
+        Para busqueda en un archivo usamos
+         -grep "palabra a buscar" archivo
+        Para obtener el numero de palabras que coinciden
+         -grep -c "palabra a buscar" archivo
+        Buscar en un listado de consola
+         -grep ls \ grep Descargas
+         # "man git"
+pgrep->
+    Nos funciona para buscar id de proceso mediante el nombre de la aplicación en ecución
+    commands =>
+        -pgrep htop
 
-    
+
 
 
 
