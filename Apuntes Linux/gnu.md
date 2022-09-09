@@ -144,6 +144,31 @@ pgrep->
     commands =>
         -pgrep htop
 
+chmod -> 
+    Este comando es para dar permisos a carpetas y archivos
+    Recuerda que son tres numeros ya que se refieren a 
+        ->dueño
+        ->grupo
+        ->todos los demas usuarios
+    En uno hosting web usamos 644 para ficheros y 755 para directorios
+
+    Archivos php.html etc-> 644
+    (6)-> el dueño del archivo puede hacer lectura y escritura
+    (4)-> el grupo puede hacer escritura
+    (4)-> todos los demas usuarios pueden hacer escritura
+
+    Carpetas -> 755
+    (7)-> el dueño tiene permisos de lectura,escritura, ejecución
+    (5)-> el grupo lectura y ejecución
+    (5)-> los demas usuarios tienen lectura y ejecución
+
+
+
+
+
+
+
+-r: recursivo es cuando lo vuelves a utilizar dentro de 
 
 
 
