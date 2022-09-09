@@ -29,4 +29,5 @@ _comandos para clonar un documento_
 si es una carpeta donde ya hicistes init puedes proceder al siguiente comando
 `git clone` se usa en la terminal git, en tu carpeta donde quieres clonar el proyecto abres la terminal
 
-mi token en github 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
+creo que ya no me lo pideeeee 
+habeeer 
