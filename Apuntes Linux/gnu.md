@@ -162,6 +162,12 @@ chmod ->
     (5)-> el grupo lectura y ejecución
     (5)-> los demas usuarios tienen lectura y ejecución
 
+kill->
+    Este comando sirve para matar un proceso o varios
+        -kill id (con un solo id)
+        -killall "nombreProceso"
+        -kill-CONT id (procedemos con el proceso)
+        -kill-STOP id (detenemos un proceso) 
 
 
 
