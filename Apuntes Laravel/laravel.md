@@ -97,3 +97,6 @@ dentro del archivo webpack.mix.js
     .sourceMaps();
 }
 cambiar el nombre al archivo .css -> por .scss
+
+Para saber que las rutas estan bien se corre: 
+-> npm run watch
