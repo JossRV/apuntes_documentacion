@@ -204,3 +204,9 @@ Acceder a equipos remotos, funcionara siempre y cuando se cumpla las condiciones
 Una rutina usada por syadmin y developers, es dar de alta repositorio de proyectos en servidores remotos ya sean propios o vps,
 por ejemplo una aplicacion web que ya esta dada de alta, estan alojados en hosting compartido, vps o servido empresarial
 es necesario usar ssh para actualizar el repositorio de la aplicacion
+
+*instalacion*
+`sudo aptitude install open-ssh-server`
+
+para saber que esta instalando y corriendo usamos el comando 
+`sudo service sshd status`
