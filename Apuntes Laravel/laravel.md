@@ -77,7 +77,7 @@ Asset: Son todo lo que tiene que ver con css y JS
 
 Si no te deja instala Laravel en linux y sale el error de que falta el dom, usar el siguiente comando
 
-sudo apt-get install php-xml
+=> sudo apt-get install php-xml
 
 
 Instalar Bootstrap:
@@ -96,7 +96,7 @@ dentro del archivo webpack.mix.js
     .sass('resources/css/app.scss','public/css')
     .sourceMaps();
 }
-cambiar el nombre al archivo .css -> por .scss
+cambiar el nombre al archivo .css dentro de resources -> por .scss
 
 Para saber que las rutas estan bien se corre: 
 -> npm run watch
