@@ -210,3 +210,16 @@ es necesario usar ssh para actualizar el repositorio de la aplicacion
 
 para saber que esta instalando y corriendo usamos el comando 
 `sudo service sshd status`
+
+*Archivo de configuracion ssh*
+cd/etc/ssh
+sudo nano sshd_config
+solo cambiamos el puerto que esta por defecto (22) al puerto 443
+
+el puerto 443 de TCP (protocolo de control de transmision) es el predeterminado que utiliza el HTTPS (protocolo de transferencia de hipertexto seguro)
+
+para conectarte al puerto es teniendo tu direccion ip usando ifconfig
+192.168.3.231 ip Joss
+
+ahora para conectarte ponemos en el comando
+ssh joss@192.168.3.231 -p 443
