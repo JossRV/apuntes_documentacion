@@ -187,3 +187,20 @@ Crear nuevo usuario por consola
 
 
 Disco duro en Raid -> hace el respaldo y este tiene una escritura automatica 
+
+Protocolo SSH 
+<!-- Secure Shell -->
+Es un protocolo de conexciones seguras para servidores
+Su funcion principal es el acceso remoto a un servidor por medio de un canal seguro en el que toda la informacion esta cifrada
+
+*Medio de seguridad que usa*
+Por criptografia o algoritmos de encriptacion, lleva acabo la comunicacion:
+-> simetrica
+-> asimetrica
+-> hashing
+
+*Para que sirve*
+Acceder a equipos remotos, funcionara siempre y cuando se cumpla las condiciones necesarias sin importar el SO que tenga
+Una rutina usada por syadmin y developers, es dar de alta repositorio de proyectos en servidores remotos ya sean propios o vps,
+por ejemplo una aplicacion web que ya esta dada de alta, estan alojados en hosting compartido, vps o servido empresarial
+es necesario usar ssh para actualizar el repositorio de la aplicacion
