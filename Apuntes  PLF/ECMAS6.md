@@ -18,9 +18,9 @@ comando: npm install --save-dev @babel/core @babel/cli @babel/preset-env
 En el archivo package.json 
 agregamos
 "scripts": {
-	"build": "babel src -d controller"
+	"build": "babel src -d controller --watch"
 }
- 
+ El watch es para que en el run build compile automaticamente
 Crearemos nuestro archivo .babelrc y agregamos
 {
 	"presets": ["@babel/preset-env"]
