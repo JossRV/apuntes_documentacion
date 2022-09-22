@@ -91,12 +91,46 @@ commands ->{
 Configurar archivos css y js
 
 dentro del archivo webpack.mix.js
--> {
+{
     mix.js('resources/js/app.js','public/js')
     .sass('resources/css/app.scss','public/css')
     .sourceMaps();
 }
-cambiar el nombre al archivo .css dentro de resources -> por .scss
+cambiar el nombre al archivo .css dentro de resources/css/ -> por .scss
 
 Para saber que las rutas estan bien se corre: 
 -> npm run watch
+
+Configuracion de recursos CSS y JS 
+Dentro del archivo resources/js/app.js agregamos
+    require('./bootstrap');
+    import 'bootstrap';
+
+Dentro del archivo resources/css/app.scss agregamos
+    @import '~bootstrap/scss/bootstrap';
+
+Agregar Dependencias en Layouts tanto css como js 
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <script src="{{mix('js/app.js')}}"></script>
+
+El mix evita la caché del navegador a diferencia de asset
+
+Instalar fontawesome 6.2
+    npm install --save @fortawesome/fontawesome-free
+
+En resources/css/app.scss hacemos la importacion
+    @import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+instalar Select2
+    npm i jquery
+    npm i select2
+
+En resources/js/app.js agregamos
+    import $ from 'jquery';
+    require('select2');
+    $('.select').select2();
+
+Posteriormente en resources/css/app.scss
+    @import "~select2/dist/css/select2.css";
+
+Para finalizar y ver que funciona creamos un select en la pagina inicio
