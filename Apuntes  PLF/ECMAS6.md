@@ -15,15 +15,19 @@ es eun compilador o traspilador para JavaScript. basicamente permite transformar
 Instalacion de babel
 comando: npm install --save-dev @babel/core @babel/cli @babel/preset-env
 
+@babel/core <!--Paquete principal de babel-->
+@babel/cli <!--Linea de comandos-->
+@babel/preset-env <!--preset-->
+
 En el archivo package.json 
 agregamos
 "scripts": {
 	"build": "babel src -d controller --watch"
 }
  El watch es para que en el run build compile automaticamente
+
 Crearemos nuestro archivo .babelrc y agregamos
 {
 	"presets": ["@babel/preset-env"]
 }
 
-Hola, hoy veremos de nuevo js jejeje
