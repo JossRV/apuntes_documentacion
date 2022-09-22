@@ -8,6 +8,8 @@ LET y CONST
 CLASES
 Operador función nula
 metodos privados
+Caracteristicas:
+propiedades, metodos y constructor
 
 BABEL
 es eun compilador o traspilador para JavaScript. basicamente permite transformar codigo escrito con las ultimas y novedosas caracteristicas de javascript y transformarlo en un codigo que sea entendido por navegadores mas antiguos

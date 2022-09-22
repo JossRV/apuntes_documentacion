@@ -161,7 +161,7 @@ chmod ->
     (7)-> el dueño tiene permisos de lectura,escritura, ejecución
     (5)-> el grupo lectura y ejecución
     (5)-> los demas usuarios tienen lectura y ejecución
-
+    * Permiso Recursivo: chmod -R 777 html *
 kill->
     Este comando sirve para matar un proceso o varios
         -kill id (con un solo id)
@@ -257,3 +257,6 @@ Comandos para instalar PHP 8{
     -> sudo apt install php8.0 php8.0-common libapache2-mod-php8.0 php8.0-cli
     -> sudo service apache2 restart
 }
+
+Para revisar la información de php es creando un archivo .php y dentro los tags de php
+    -> phpinfo();
