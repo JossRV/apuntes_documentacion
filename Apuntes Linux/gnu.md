@@ -244,10 +244,16 @@ Instalar MariaDB{ (es un fork de mysql -> es lo mismo que mysql pero en gratis)
         -> EXIT
 
         Para entra a mariadb: -> mysql -u 'usuariocreadosincomillas' -p
-
-    }
     UsuarioDani{
         dan398 -> pass danroot
 
     }
+
+    }
+}
+Comandos para instalar PHP 8{
+    -> sudo apt install software-properties-common apt-transport-https -y
+    -> sudo add-apt-repository ppa:ondrej/php -y
+    -> sudo apt install php8.0 php8.0-common libapache2-mod-php8.0 php8.0-cli
+    -> sudo service apache2 restart
 }
