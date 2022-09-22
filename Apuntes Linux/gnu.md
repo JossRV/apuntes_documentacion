@@ -223,3 +223,31 @@ para conectarte al puerto es teniendo tu direccion ip usando ifconfig
 
 ahora para conectarte ponemos en el comando
 ssh joss@192.168.3.231 -p 443
+
+LAMP -> Linux, Apache, Maria :: Mysql, Php
+
+Instalar Apache2:
+ commands{
+    -> sudo apt update
+    -> sudo apt install apache2
+    -> sudo service apache2 status
+ }
+Instalar MariaDB{ (es un fork de mysql -> es lo mismo que mysql pero en gratis)
+    commands{
+        -> sudo apt install mariadb-server
+        -> sudo service mariadb status
+    }
+    entrar a mariadb{
+        -> sudo mariadb
+        -> GRANT ALL ON *.* TO 'nameUser'@'localhost' IDENTIFIED BY 'pass' WITH GRANT OPTION;
+        -> FLUSH PRIVILEGES;
+        -> EXIT
+
+        Para entra a mariadb: -> mysql -u 'usuariocreadosincomillas' -p
+
+    }
+    UsuarioDani{
+        dan398 -> pass danroot
+
+    }
+}
