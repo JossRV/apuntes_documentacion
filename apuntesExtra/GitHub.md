@@ -32,3 +32,4 @@ si es una carpeta donde ya hicistes init puedes proceder al siguiente comando
 Comandos para que ya no te pida de nuevo el registro de github
 -> git config --global credential.helper store
 -> git config --global credential.helper cache
+Reiniciamos
