@@ -76,7 +76,6 @@ Asset: Son todo lo que tiene que ver con css y JS
 
 
 Si no te deja instala Laravel en linux y sale el error de que falta el dom, usar el siguiente comando
-
 => sudo apt-get install php-xml
 
 
@@ -123,7 +122,7 @@ En resources/css/app.scss hacemos la importacion
 
 instalar Select2
     npm i jquery
-    npm i select2
+    npm i select2sudo apt-get install php-xml
 
 En resources/js/app.js agregamos
     import $ from 'jquery';

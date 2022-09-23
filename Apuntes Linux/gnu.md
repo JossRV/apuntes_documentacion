@@ -246,9 +246,9 @@ Instalar MariaDB{ (es un fork de mysql -> es lo mismo que mysql pero en gratis)
         Para entra a mariadb: -> mysql -u 'usuariocreadosincomillas' -p
     UsuarioDani{
         dan398 -> pass danroot
-
     }
-
+    UsuarioJoss{
+        joss20 -> pass jossroot
     }
 }
 Comandos para instalar PHP 8{
