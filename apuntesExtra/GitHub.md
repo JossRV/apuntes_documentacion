@@ -21,13 +21,14 @@ _comandos durante el uso del repositorio_
 oo lo que este modificando los que son parte del proyecto
 `git pull` actualizar de manera destructiva, siempre se utilizan estos 2 fetch y pull nunca los olvides
 `git add .` cuando actualizemos nuestro proyecto
-`git commit -m "lo qu ehicistes o titulo o algo descriptivo"` siempre es necesario el comentario para que no sucedan errores
+`git commit -m "lo que hicistes o titulo o algo descriptivo"` siempre es necesario el comentario para que no sucedan errores
 `git push` finalizar la subida, y en github se actualizaran los cambios
 
 _comandos para clonar un documento_
-`git init` comando para inicializar un proyecto nuevo. es necesario cuando clonaras un proyecto en una carpeta nueva, 
+`git init` comando para inicializar un proyecto nuevo. es necesario cuando subiras un proyecto en una carpeta nueva, 
 si es una carpeta donde ya hicistes init puedes proceder al siguiente comando
 `git clone` se usa en la terminal git, en tu carpeta donde quieres clonar el proyecto abres la terminal
 
-creo que ya no me lo pideeeee 
-habeeer 
+Comandos para que ya no te pida de nuevo el registro de github
+-> git config --global credential.helper store
+-> git config --global credential.helper cache
