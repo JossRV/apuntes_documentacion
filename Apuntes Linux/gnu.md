@@ -260,3 +260,11 @@ Comandos para instalar PHP 8{
 
 Para revisar la información de php es creando un archivo .php y dentro los tags de php
     -> phpinfo();
+
+SAMBA
+-> Protocolo de transferencia de datos universal
+Samba es una implementación libre del protocolo de archivos compartidos de Microsoft Windows para 
+sistemas de tipo UNIX. De esta forma, es posible que computadoras con GNU/Linux, Mac OS X o Unix en general se vean como servidores o actuen como clientes en redes de Windows.
+Commands para instalar samba{
+    -> sudo aptitude install samba
+}

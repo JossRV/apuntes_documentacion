@@ -33,3 +33,9 @@ Crearemos nuestro archivo .babelrc y agregamos
 	"presets": ["@babel/preset-env"]
 }
 
+creación de un programa con herencia para extraer un arreglo de objetos
+
+-constructor
+-metodos 
+-propiedades
+
