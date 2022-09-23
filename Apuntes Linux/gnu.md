@@ -268,3 +268,25 @@ sistemas de tipo UNIX. De esta forma, es posible que computadoras con GNU/Linux,
 Commands para instalar samba{
     -> sudo aptitude install samba
 }
+
+Seleccion o creación del origen de datos:
+-> Podemos seleccionar una carpeta como es documentos que esta en la ruta /home/usuario/documentos
+o simplemente crear una carpeta que será la que vamos a utilizar
+
+abrimos el archivo de smb.conf dentro de la siguiente ruta: -> sudo nano /etc/samba/smb.config
+agregamos lo siguiente al final del archivo:
+        {
+            [samba-share]
+            comment=Samba on Ubuntu
+            path= /samba
+            read only = no
+            browsable = yes
+        }
+
+        Descripcion de los datos:{
+            -> [samba-shared] = nombre del recurso compartido
+            -> comment = Descripción del recurso compartido
+            -> path = Directorio del recurso compartido
+            -> read only = Especificamos si los usuarios pueden o no escribir
+            -> browsable = El recurso debe figurar en la lista de recursos compartidos
+        }
