@@ -76,6 +76,7 @@ Básicamente es un administrador de dependencias, pero tanto npm o composer est�
 Advance Packing Tool, es un programa de paquetes creado por el proyecto debian, simplifica en gran medida la instalación y eliminación de programas en los sistemas GNU/Linux
 
 Aptitude es la version mejorada de APT, sin embargo la mayoria de cosas se pueden hacer con apt o aptitude, la comunidad linux recomienda aptitude por convención 
+comando{sudo apt install aptitude}
 
 ## El usuario root
 Tiene todo poder en el sistema operativo, en los SO GNU/Linux siempre crea un root por defecto y un usuario invitado
@@ -206,7 +207,7 @@ por ejemplo una aplicacion web que ya esta dada de alta, estan alojados en hosti
 es necesario usar ssh para actualizar el repositorio de la aplicacion
 
 *instalacion*
-`sudo aptitude install open-ssh-server`
+`sudo aptitude install openssh-server`
 
 para saber que esta instalando y corriendo usamos el comando 
 `sudo service sshd status`
@@ -290,3 +291,11 @@ agregamos lo siguiente al final del archivo:
             -> read only = Especificamos si los usuarios pueden o no escribir
             -> browsable = El recurso debe figurar en la lista de recursos compartidos
         }
+
+Al finalizar la configuración se debe reiniciar el servicio con el siguiente comando:{
+    ->sudo service smbd restart
+}
+para crear o dar una contraseña de samba a tu usuario se hace con el siguiente comando:{
+    -> sudo smbpasswd -a [user]
+    Despues te pide la contraseña que vas a utilizar
+}
