@@ -178,16 +178,70 @@ Son clases PHP de laravel la forma de crearlo es:
 
 php artisan migrate
 
-# Modelos 
-Los modelos son básicamente clases php que nos permiten interactuar con la base de datos, por convención en laravel 8 los modelos se escriben con el nombre de una tabla existente para así poder crear una relación directa a la hora de usar el orm eloquent, sin embargo si no deseamos utilizar la convención, laravel cuenta con la configuración necesaria para que el modelo pueda trabajar con la tabla que nosotros le indiquemos
+## Que es ORM
 
-commands{
-    -> php artisan make:model {nombre_modelo} //Categoria
-    -> php artisan make:controller {nombre_modelo} //Categorias
+Mapeo objeto-Relacional(orm)
+
+esto quiere decir que la aplicacion tomara a la base de datos como si fuera un objeto de la misma aplicacion
+
+
+Por ejemplo si tenemos una tabla llamada personas el objeto en el orm sera llamado personas, si lat abla tiene un camoi llamado
+apellido_paterno entonces sera una propiedad en el orm
+
+$personas = new Personas();
+$personas -> apellido_paterno = "Aquino";
+
+
+## Modelos
+
+los modelos son basicamente clases phph que nos permiten interactuar con la base de datos,
+por convencion en laravel 8 los modelos se escriben con el nombre de una tabla existente para asi poder crear una relacion directa a la hora de usar el orm
+eloquent, sin embargo si no deseamos utilizar la convencion, laravel cuenta con la configuracion necesaria para que el modelo pueda trabajar con la tabla que
+nosotros le indiquemos..
+
+
+# Para crear un modelo en laravel 8 basta con escribir el siguiente comando:
+
+php artisan make: model nombre_modelo
+
+
+## usar tablas propias con laravel 8
+php artisan make::controller categorias
+php artisan make:model categoria
+
+
+public function index(){
+
+->bd = create table t_categoria(id_categoria int auto_increment,nombre varchar(255), created_at timestamp, updated_at timestamp, primary key[id_categoria];
+
+$categorias = categoria:: all();
+return view('welcome,compact('categorias'));
+
+
+
+## Usar tablas propias con laravel 8
+
+llenamos el modelo
+
+class Categoria extends Model{
+
+use HasFactory;
+
+protected $table = 't_categoria';
+protected $primaryKey = 'id_categoria';
+protected $fillable = [
+	'nombre'
+];
+protected shidden =
+ 'create_at',
+ 'updated_at'
+];
 }
 
-# Plantilla Para mostrar información de una tabla en una vista
 
-@foreach ($Categorias as $item)
-    <td>{{ $item -> id}}</td>
+
+MOSTRAR INFORMACION DE UNA TABLA EN UNA VISTA
+
+@foreach($categorias as $item)
+<td>{{$item->id}}</td>
 @endforeach
