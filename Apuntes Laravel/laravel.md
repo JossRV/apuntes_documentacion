@@ -177,3 +177,17 @@ DB_PASSWORD= 'contraseña'
 Son clases PHP de laravel la forma de crearlo es: 
 
 php artisan migrate
+
+# Modelos 
+Los modelos son básicamente clases php que nos permiten interactuar con la base de datos, por convención en laravel 8 los modelos se escriben con el nombre de una tabla existente para así poder crear una relación directa a la hora de usar el orm eloquent, sin embargo si no deseamos utilizar la convención, laravel cuenta con la configuración necesaria para que el modelo pueda trabajar con la tabla que nosotros le indiquemos
+
+commands{
+    -> php artisan make:model {nombre_modelo} //Categoria
+    -> php artisan make:controller {nombre_modelo} //Categorias
+}
+
+# Plantilla Para mostrar información de una tabla en una vista
+
+@foreach ($Categorias as $item)
+    <td>{{ $item -> id}}</td>
+@endforeach

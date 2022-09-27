@@ -16,7 +16,12 @@ APPS:
     -> sudo apt install software-properties-common apt-transport-https -y
     -> sudo add-apt-repository ppa:ondrej/php -y
     -> sudo apt install php8.0 php8.0-common libapache2-mod-php8.0 php8.0-cli
+    -> sudo aptitude install php-common
     -> sudo service apache2 restart
+}
+-> PHP version 8.1{
+    https://es.linuxcapable.com/how-to-install-php-8-1-on-ubuntu-20-04/
+    
 }
 -> composer{
     -> sudo apt-get update
