@@ -178,7 +178,7 @@ Son clases PHP de laravel la forma de crearlo es:
 
 php artisan migrate
 
-##Que es ORM
+## Que es ORM
 
 Mapeo objeto-Relacional(orm)
 
@@ -192,7 +192,7 @@ $personas = new Personas();
 $personas -> apellido_paterno = "Aquino";
 
 
-##Modelos
+## Modelos
 
 los modelos son basicamente clases phph que nos permiten interactuar con la base de datos,
 por convencion en laravel 8 los modelos se escriben con el nombre de una tabla existente para asi poder crear una relacion directa a la hora de usar el orm
@@ -200,12 +200,12 @@ eloquent, sin embargo si no deseamos utilizar la convencion, laravel cuenta con 
 nosotros le indiquemos..
 
 
-#Para crear un modelo en laravel 8 basta con escribir el siguiente comando:
+# Para crear un modelo en laravel 8 basta con escribir el siguiente comando:
 
 php artisan make: model nombre_modelo
 
 
-##usar tablas propias con laravel 8
+## usar tablas propias con laravel 8
 php artisan make::controller categorias
 php artisan make:model categoria
 
@@ -219,7 +219,7 @@ return view('welcome,compact('categorias'));
 
 
 
-##Usar tablas propias con laravel 8
+## Usar tablas propias con laravel 8
 
 llenamos el modelo
 
