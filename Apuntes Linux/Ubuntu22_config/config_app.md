@@ -21,7 +21,7 @@ APPS:
 }
 -> PHP version 8.1{
     https://es.linuxcapable.com/how-to-install-php-8-1-on-ubuntu-20-04/
-    
+    El comando se encuentra en la parte de abajo
 }
 -> composer{
     -> sudo apt-get update
