@@ -122,7 +122,8 @@ En resources/css/app.scss hacemos la importacion
 
 instalar Select2
     npm i jquery
-    npm i select2sudo apt-get install php-xml
+    npm i select2
+    sudo apt-get install php-xml
 
 En resources/js/app.js agregamos
     import $ from 'jquery';
@@ -133,3 +134,14 @@ Posteriormente en resources/css/app.scss
     @import "~select2/dist/css/select2.css";
 
 Para finalizar y ver que funciona creamos un select en la pagina inicio
+
+
+
+¿Que es un ORM?
+-> mapeo Objeto-Relacional (ORM)
+    Esto quiere decir que la aplicación tomará a la base de datos como si fuera un objeto de la misma aplicación
+
+Por ejemplo si tenemos una tabla llamada personas en objeto en el ORM sera llamado personas, 
+si la tabla tiene un campo llamado apellido_paterno entonces sera una propiedad en el ORM 
+    $personas = new Personas();
+    $personas -> apellido_paterno = "Aquino";
