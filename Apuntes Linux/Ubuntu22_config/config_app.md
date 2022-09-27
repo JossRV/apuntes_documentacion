@@ -5,6 +5,7 @@ APPS:
 -> MariaDB{
     -> sudo apt install mariadb-server
     -> sudo service mariadb status
+    -> sudo apt install php-mysql
 }
 -> Apache2{
     -> sudo apt update

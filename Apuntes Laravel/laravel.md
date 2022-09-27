@@ -133,3 +133,46 @@ Posteriormente en resources/css/app.scss
     @import "~select2/dist/css/select2.css";
 
 Para finalizar y ver que funciona creamos un select en la pagina inicio
+
+Pagina para instalar el sweetalert
+-> https://realrashid.github.io/sweet-alert/install
+
+Bajar el de composer
+-> composer require realrashid/sweet-alert
+
+agregar el registro del servidor en config/app.php
+
+-> RealRashid\SweetAlert\SweetAlertServiceProvider::class,
+en la seccion de providers, despues del bloque de comentarios Package Service Providers...
+
+agregar en config/app.php en la seccion aliases
+-> 'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
+
+ahora en nuestro layout, nuestra plantilla principal, ya sea main o inicio agregaremos el include
+-> @include('sweetalert::alert')
+
+despues corremos el comando en la terminal para que la paqueteria se integre
+-> php artisan sweetalert:publish
+
+ya en uso podemos seleccionar las alertas que queramos usar o incluso crearlos
+-> https://realrashid.github.io/sweet-alert/usage?id=usage
+
+
+## Archivo .env 
+Archivo de configuracion por excelencia en muchos framework para la configuracion de variables de entorno de la aplicacion web
+datos de conexion de base de datos, asi como los datos del entorno de trabajo, ya sea produccion o desarrollo
+en el archivo de configuracion de config/databases.php podemos encontrar la conexcion por defecto a base de datos
+
+en .env apartir de la linea 11 :
+
+DB_CONNECTION=mysql -> sin modificacion
+DB_HOST=127.0.0.1 -> sin modificacion
+DB_PORT=3306 -> sin modificacion
+DB_DATABASE= 'nombre de la base'
+DB_USERNAME= 'usuario'
+DB_PASSWORD= 'contraseña'
+
+## Migraciones
+Son clases PHP de laravel la forma de crearlo es: 
+
+php artisan migrate
