@@ -31,6 +31,7 @@ APPS:
     -> curl -sS https://getcomposer.org/installer | php
             sudo mv composer.phar /usr/local/bin/composer
             sudo chmod +x /usr/local/bin/composer
+    -> Crear Proyecto: composer create-project laravel/laravel=8.* 'nombreProyecto'
 }
 -> node,npm:{
     -> curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
