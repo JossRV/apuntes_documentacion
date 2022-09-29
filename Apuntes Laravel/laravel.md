@@ -85,6 +85,7 @@ commands ->{
     - npm i bootstrap 
     - npm i @popperjs/core
     - npm i sass-loader sass webpack --save-dev
+    - npm install resolve-url-loader@^5.0.0 --save-dev --legacy-peer-deps
 }
 
 Configurar archivos css y js
@@ -206,7 +207,7 @@ php artisan make: model nombre_modelo
 
 
 ## usar tablas propias con laravel 8
-php artisan make::controller categorias
+php artisan make:controller categorias
 php artisan make:model categoria
 
 

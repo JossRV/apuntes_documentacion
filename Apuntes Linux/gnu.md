@@ -163,6 +163,16 @@ chmod ->
     (5)-> el grupo lectura y ejecución
     (5)-> los demas usuarios tienen lectura y ejecución
     * Permiso Recursivo: chmod -R 777 html *
+
+    # Lista de permisos dependiendo del numero:
+    (0) -> Ningun permiso
+    (1) -> Solo ejecutar
+    (2) -> escritura
+    (3) -> Escribir y ejecutar
+    (4) -> Solo lectura
+    (5) -> leer y ejecutar
+    (6) -> leer y escribir
+    (7) -> Todos los permisos
 kill->
     Este comando sirve para matar un proceso o varios
         -kill id (con un solo id)

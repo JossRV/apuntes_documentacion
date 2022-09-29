@@ -1,4 +1,4 @@
-Lo que se necesuta para que tu pc funcione para todo tipo de desarrollo son las siguientes apps:
+Lo que se necesita para que tu pc funcione para todo tipo de desarrollo son las siguientes apps:
 
 NOTA: *Las configuraciones y todo se encuentran dentro de: ../gnu.md*
 APPS:
