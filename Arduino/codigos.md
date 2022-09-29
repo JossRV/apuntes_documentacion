@@ -47,7 +47,7 @@ void setup(){
     //configuración con puerto serial
     Serial.begin(9600);
 }
-void lopp(){
+void loop(){
     //Imprimimos el valor del contador en el monitor serial
     Serial.print("Contador ");
     Serial.print(contador);

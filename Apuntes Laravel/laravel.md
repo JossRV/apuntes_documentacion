@@ -124,7 +124,6 @@ En resources/css/app.scss hacemos la importacion
 instalar Select2
     npm i jquery
     npm i select2
-    sudo apt-get install php-xml
 
 En resources/js/app.js agregamos
     import $ from 'jquery';
