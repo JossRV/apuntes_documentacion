@@ -218,8 +218,7 @@ $categorias = categoria:: all();
 return view('welcome,compact('categorias'));
 
 
-
-## Usar tablas propias con laravel 8
+## Usar tablas propias con laravel8
 
 llenamos el modelo
 
@@ -245,3 +244,20 @@ MOSTRAR INFORMACION DE UNA TABLA EN UNA VISTA
 @foreach($categorias as $item)
 <td>{{$item->id}}</td>
 @endforeach
+
+## clonar repositorio de laravel desde git
+
+clonando el proyecto 
+git clone <link-proyecto>
+
+instalamos las dependencias y paqueterias con
+composer install
+npm i
+
+creamos el archivo .env con
+cp .env.example .env
+
+generamos el codigo
+php artisan key:generate
+
+iniciamos el servidor y queda nuestro proyecto clonado
