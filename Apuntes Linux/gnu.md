@@ -169,7 +169,11 @@ Se utiliza sudo para que veas que eres root
     Nos funciona para buscar id de proceso mediante el nombre de la aplicación en ecución
     commands =>
         - pgrep htop
-
+- search ->
+    Este comando funciona para buscar alguna aplicación que ya este instalada o se quiera instalar dentro del sistema
+    commands{
+        => aptitude search 'nombre_app'
+    }
 - chmod -> 
     Este comando es para dar permisos a carpetas y archivos
     Recuerda que son tres numeros ya que se refieren a 
