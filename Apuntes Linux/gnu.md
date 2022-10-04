@@ -290,7 +290,7 @@ Instalar MariaDB{ (es un fork de mysql -> es lo mismo que mysql pero en gratis)
         dan398 -> pass danroot
     }
     UsuarioJoss{
-        jossroot -> pass joss20
+        joss -> 4794
     }
 }
 Comandos para instalar PHP 8{
