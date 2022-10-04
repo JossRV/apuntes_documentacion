@@ -39,3 +39,26 @@ creación de un programa con herencia para extraer un arreglo de objetos
 -metodos 
 -propiedades
 
+instalación de webpack 
+commands ({
+	=> npm install --save-dev webpack
+	=> npm install --save-dev webpack-cli
+});
+
+Se crea un archivo webpack.config.js en el que va a tener:
+{
+	const path = require('path');
+module.exports = {
+  entry: './src/app.js',
+  output: {
+    filename: 'bundel.js',
+    path: path.join(__dirname, 'controller'),
+  },
+  mode: 'development'
+};
+}
+Despues de esto se instala el loader: 
+commands{
+	=>npm install --save-dev babel-loader
+}
+
