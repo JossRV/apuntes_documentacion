@@ -192,8 +192,7 @@ Se utiliza sudo para que veas que eres root
     (5)-> el grupo lectura y ejecución
     (5)-> los demas usuarios tienen lectura y ejecución
     * Permiso Recursivo: chmod -R 777 html *
-- kill->
-
+  
     # Lista de permisos dependiendo del numero:
     (0) -> Ningun permiso
     (1) -> Solo ejecutar
@@ -271,14 +270,20 @@ ssh joss@192.168.3.231 -p 443
 
 # LAMP -> Linux, Apache, Maria :: Mysql, Php
 
-~~~
+
 Instalar Apache2:
+~~~
  commands{
     -> sudo apt update
     -> sudo apt install apache2
     -> sudo service apache2 status
+    Abrir cortafuegos -> ufw enable ---despues de estar abierto salta hasta agregar apache
+    checar que este activo -> ufw status
+    agregar apache al cortafuegos -> sudo ufw allow in "Apache"
  }
+ ~~~
 Instalar MariaDB{ (es un fork de mysql -> es lo mismo que mysql pero en gratis)
+~~~
     commands{
         -> sudo apt install mariadb-server
         -> sudo service mariadb status
@@ -296,17 +301,31 @@ Instalar MariaDB{ (es un fork de mysql -> es lo mismo que mysql pero en gratis)
     UsuarioJoss{
         joss -> 4794
     }
-}
-Comandos para instalar PHP 8{
+    }
+~~~
+Comandos para instalar PHP 8
+~~~
+{
+    -> sudo apt install php libapache2-mod-php php-mysql
+    este comando instala el php de la versiones mas recientes que van saliendo
+
+    si no funciona usar esta forma
     -> sudo apt install software-properties-common apt-transport-https -y
     -> sudo add-apt-repository ppa:ondrej/php -y
-    -> sudo apt install php8.0 php8.0-common libapache2-mod-php8.0 php8.0-cli
+    -> sudo apt install php8.1 php8.1-common libapache2-mod-php8.1 php8.1-cli
     -> sudo service apache2 restart
 }
+~~~
+Para virtual host 
+~~~
+{
+    hasta abajo esta el virtual host
+    https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-22-04
+}
+~~~
 
 Para revisar la información de php es creando un archivo .php y dentro los tags de php
     -> phpinfo();
-~~~
 
 ## *SAMBA*
 ~~~

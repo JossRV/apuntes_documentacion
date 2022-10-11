@@ -2,29 +2,39 @@ Lo que se necesita para que tu pc funcione para todo tipo de desarrollo son las 
 
 NOTA: *Las configuraciones y todo se encuentran dentro de: ../gnu.md*
 APPS:
--> MariaDB{
+## MariaDB
+~~~
+{
     -> sudo apt install mariadb-server
     -> sudo service mariadb status
     -> sudo apt install php-mysql
 }
--> Apache2{
+~~~
+## Apache2
+~~~
+{
     -> sudo apt update
     -> sudo apt install apache2
     -> sudo service apache2 status
 }
-->Php version 8{
+~~~
+## php version 8.1
+~~~
+{
+    -> sudo apt install php libapache2-mod-php php-mysql
+    este comando instala el php de la versiones mas recientes que van saliendo
+
     -> sudo apt install software-properties-common apt-transport-https -y
     -> sudo add-apt-repository ppa:ondrej/php -y
-    -> sudo apt install php8.0 php8.0-common libapache2-mod-php8.0 php8.0-cli
+    -> sudo apt install php8.1 php8.1-common libapache2-mod-php8.1 php8.1-cli
     -> sudo aptitude install php-common
     -> Sudo aptitude install php-mysql
     -> sudo service apache2 restart
 }
--> PHP version 8.1{
-    https://es.linuxcapable.com/how-to-install-php-8-1-on-ubuntu-20-04/
-    El comando se encuentra en la parte de abajo
-}
--> composer{
+~~~
+## composer
+~~~
+{
     -> sudo apt-get update
     -> sudo apt install curl php-cli 
     -> sudo apt install curl php-mbstring
@@ -40,7 +50,10 @@ APPS:
         -> sudo apt-get install php-xml
     }
 }
--> node,npm:{
+~~~
+## node,npm:
+~~~
+{
     -> curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
     -> sudo apt-get install -y nodejs
     verificamos las versiones
@@ -52,9 +65,16 @@ APPS:
         }
 
 }
--> Samba:{
+~~~
+## Samba:
+~~~
+{
     -> sudo aptitude install samba
 }
--> neofetch: {
+~~~
+## neofetch: 
+~~~
+{
     sudo aptitude install neofetch
 }
+~~~
