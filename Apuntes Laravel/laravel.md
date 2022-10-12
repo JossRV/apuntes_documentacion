@@ -261,3 +261,15 @@ generamos el codigo
 php artisan key:generate
 
 iniciamos el servidor y queda nuestro proyecto clonado
+
+## Crear un crud en laravel
+
+1.- Se debe crear  la base de datos con la tabla
+2.- Se hará la conexion dentro del archivo (.env)
+3.- Se crean el modelo(singular) y el controlador (plural)
+4.- Al modelo se le agrega la tabla en la que va a trabajar -> el id lo va a reconocer automaticamente
+5.- Crear una carpeta llamada "layout" en la que dentro tendra main.blade.php
+5.- dentro de main crear yields y interpolacion de el title
+7.- Se crea la tabla incluido el layout main
+8.- A continuacion se hace el metodo y el route como se ha hecho hasta ahora
+9.- dentro de la tabla de welcome se hace la 
