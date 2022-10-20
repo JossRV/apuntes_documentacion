@@ -14,6 +14,14 @@ Python: Es un lenguaje de tipado debil
     La palabra reservada 'list()' funciona para iterar el objeto
 
 ¿Qué es set? == Es una estructura de datos para almacenar elementos es similar a listas, el set son unicos, desordenados e inmutables
+Es un objeto {no se puede repetir elementos, no tiene orden, añadir elementos, para saber si existe
+    -> "elemento a buscar" in 'nombre de coleccion'
+    -> con .add se añaden nuevos elementos ala coleccion set
+    -> para eliminar .remove 
+    -> -discard, en el caso de que no exista no marque el error
+    -> para limpiar toda una funcion set, se le manda el clear()
+    -> del variable
+    }
 ## Ejemplo de Set
     -> s= set([5,4,6,8,8,1])
     -> s = {}
@@ -47,3 +55,6 @@ Python: Es un lenguaje de tipado debil
     -> Existen parametros posicionales -> nombrados
 
 #### Sentencias de control
+
+### double undescore
+    -> Son funciones que pertenecen a una clase, son metodos predefinidos de una clase, se pueden sobre escribir, se pueden hacer sobre cargas de metodos
