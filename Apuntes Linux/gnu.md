@@ -405,3 +405,33 @@ Para instalar las nuevas versiones de node js lts
     comando dump sin que nos pida la contraseña
     mysqldump -u 'usuario' -p'password' 'nombre de bd' > "ruta/nombre.sql"
 ~~~
+
+## Qué es rsync?
+~~~
+    -> Es un servicio de sincronizacion remota, nos permite hacer respaldos de informacion incrementales
+    -> Los respaldos incrementales son aquellos que solo toman en cuenta informacion nueva y la vieja no la vuelve a copiar.
+
+    ->rsync es una herramienta muy util ya que esta funciona con ssh esto permite al administrador bajar y subir informacion al servidor como si de ftp se tratara, sin embargo de forma incremental.
+
+    ->Instalar rsync{
+        -> sudo aptitude install rsync
+    }
+    Opciones de rsync
+    -v: verbose (muestra un registro de la transferencia)
+    -h: human readable (muestra la salida numerucca en un dormato comprensible)
+    -r: recursive (cipia los datos de forma recursiva, pero no conserva las fechas ni los permisos de los datos de origen)
+    -a: archive mode (copia los daros de forma recursiva, y además preserva los enlaces simbólicos, los propietarios, los permisos y las fechas de datos de origen)
+    -z: compress (comprime los datos durante la transferencia de los mismos)
+
+    Crear un respaldo local con rsync
+    commands{
+        -> rsync -avzh 'path de origen' 'path destino' (Sin commillas las rutas)
+    }
+    Mandar archivos a host remoto por ssh
+    commands{
+        rsync -av -e 'ssh -p443' "pathlocal" "usuario@ip:/pathdestino
+        ejemplo:
+        -> rsync -av -e 'ssh -p443' /var/www/html/IngenieriaSoftware/laPalabraDelSabio fatima@192.168.3.192:/var/www/html
+    }
+
+~~~

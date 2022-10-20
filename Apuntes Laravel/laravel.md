@@ -272,4 +272,4 @@ iniciamos el servidor y queda nuestro proyecto clonado
 5.- dentro de main crear yields y interpolacion de el title
 7.- Se crea la tabla incluido el layout main
 8.- A continuacion se hace el metodo y el route como se ha hecho hasta ahora
-9.- dentro de la tabla de welcome se hace la 
+9.- dentro de la tabla de welcome se hace la tabla que sera la que contendra los datos

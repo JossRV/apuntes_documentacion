@@ -62,3 +62,13 @@ commands{
 	=>npm install --save-dev babel-loader
 }
 
+
+Importar clases o promesas:
+{
+  Se hace en el archivo app.js y lo que ira en nuestro index, sera el archivo en controller bundle.js
+
+  la forma de exportar una promesa es antes de la promesa poner export
+  Y antes de importarla en app.js se coloca de la siguiente manera:
+  
+}
+
