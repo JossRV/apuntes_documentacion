@@ -7,6 +7,9 @@ booleano:bool = True  #booleano
 
 # ver variables en consola:
 
+def prueba(nombre) -> str:
+  return nombre
+
 print("Hola mundo")
 print("1")
 print(cadena)
