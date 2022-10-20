@@ -1,9 +1,9 @@
 """ Enteros, flotantes, boleanos """
 
-variable = 1  #int
-flotante = 2.1 #flotante
-cadena ='Daniel' #cadena -> String
-booleano = True  #booleano
+variable:int = 1  #int
+flotante:float = 2.1 #flotante
+cadena:str ='Daniel' #cadena -> String
+booleano:bool = True  #booleano
 
 # ver variables en consola:
 
