@@ -1,3 +1,5 @@
+# Estructura de laravel
+```
 -La carpeta "app" tiene toda la información que se agrege, controladores, y modelos
 
 -La carpeta "public" todos los recursos que se pueden compartir con mas personas
@@ -38,11 +40,11 @@ Las rutas son creadas con un tipo de verbo que pueden ser:
 - del->eliminar recursos de la base de datos
 - put-> actualizar (update)
 - post-> crear
-
+```
 # Performance en una aplicación: que tan bueno es, cuanta memoria, que tan rapido da respuesta el proyecto
-
+```
 Creación de la primer vista:
-- Crear un controlador 
+- Crear un controlador ```
     -- php artisan make:controller Paisajes
 - Creamos un método de controlador para llamar la vista
     -- public function index(){
@@ -52,8 +54,9 @@ Creación de la primer vista:
     Route::get('/',[Paisajes::class,'index']);
 - Creamos una vista
     dentro de la carpeta resorces/views/{nombre vista}.blade.php
-
+```
 # NOTA
+```
 -> Reglas de escritura de archivos
 tablas -> plural
 modelos -> singular
@@ -71,10 +74,10 @@ Interpolación: ´
 Tener mas de una vista en el controlador:  return view('v').view('vz');
 
 Asset: Son todo lo que tiene que ver con css y JS
-
+```
 # Con yiel se crea y con section se consume
 
-
+```
 Si no te deja instala Laravel en linux y sale el error de que falta el dom, usar el siguiente comando
 => sudo apt-get install php-xml
 
@@ -158,8 +161,9 @@ despues corremos el comando en la terminal para que la paqueteria se integre
 ya en uso podemos seleccionar las alertas que queramos usar o incluso crearlos
 -> https://realrashid.github.io/sweet-alert/usage?id=usage
 
-
+```
 ## Archivo .env 
+```
 Archivo de configuracion por excelencia en muchos framework para la configuracion de variables de entorno de la aplicacion web
 datos de conexion de base de datos, asi como los datos del entorno de trabajo, ya sea produccion o desarrollo
 en el archivo de configuracion de config/databases.php podemos encontrar la conexcion por defecto a base de datos
@@ -172,14 +176,15 @@ DB_PORT=3306 -> sin modificacion
 DB_DATABASE= 'nombre de la base'
 DB_USERNAME= 'usuario'
 DB_PASSWORD= 'contraseña'
-
+```
 ## Migraciones
+```
 Son clases PHP de laravel la forma de crearlo es: 
 
 php artisan migrate
-
+```
 ## Que es ORM
-
+```
 Mapeo objeto-Relacional(orm)
 
 esto quiere decir que la aplicacion tomara a la base de datos como si fuera un objeto de la misma aplicacion
@@ -190,22 +195,23 @@ apellido_paterno entonces sera una propiedad en el orm
 
 $personas = new Personas();
 $personas -> apellido_paterno = "Aquino";
-
+```
 
 ## Modelos
-
+```
 los modelos son basicamente clases phph que nos permiten interactuar con la base de datos,
 por convencion en laravel 8 los modelos se escriben con el nombre de una tabla existente para asi poder crear una relacion directa a la hora de usar el orm
 eloquent, sin embargo si no deseamos utilizar la convencion, laravel cuenta con la configuracion necesaria para que el modelo pueda trabajar con la tabla que
 nosotros le indiquemos..
 
-
+```
 # Para crear un modelo en laravel 8 basta con escribir el siguiente comando:
-
+```
 php artisan make: model nombre_modelo
-
+```
 
 ## usar tablas propias con laravel 8
+```
 php artisan make:controller categorias
 php artisan make:model categoria
 
@@ -244,9 +250,9 @@ MOSTRAR INFORMACION DE UNA TABLA EN UNA VISTA
 @foreach($categorias as $item)
 <td>{{$item->id}}</td>
 @endforeach
-
+```
 ## clonar repositorio de laravel desde git
-
+```
 clonando el proyecto 
 git clone <link-proyecto>
 
@@ -261,15 +267,39 @@ generamos el codigo
 php artisan key:generate
 
 iniciamos el servidor y queda nuestro proyecto clonado
+```
 
 ## Crear un crud en laravel
-
-1.- Se debe crear  la base de datos con la tabla
+```
+1.- Se debe crear  la base de datos con la tabla la cual debe contener los datos y agregar extra dentro de las columnas de la tabla
+    {
+        -> updated_at date, created_at date
+    }
 2.- Se hará la conexion dentro del archivo (.env)
 3.- Se crean el modelo(singular) y el controlador (plural)
 4.- Al modelo se le agrega la tabla en la que va a trabajar -> el id lo va a reconocer automaticamente
+    {
+        -> protected $table = '{name table}'; 
+    }
 5.- Crear una carpeta llamada "layout" en la que dentro tendra main.blade.php
 5.- dentro de main crear yields y interpolacion de el title
 7.- Se crea la tabla incluido el layout main
 8.- A continuacion se hace el metodo y el route como se ha hecho hasta ahora
 9.- dentro de la tabla de welcome se hace la tabla que sera la que contendra los datos
+10.- El primer paso a realizar para hacer el crud sera un boton el cual contrendra la primer funcion del CRUD la cual sera la C -> 'create'
+11.- se creara una nueva ruta la cual se utilizara para agregar nuevo dato
+12.- Dentro del ancore '<a></a>' y dentro del href se pondra la ruta anteriormente creada
+13.- Dentro de esa nueva ruta se creara un formulario en donde la ruta sera de tipo POST y se enviara al metodo store
+    {
+        ->Route::post('/store',[{nameOfController}::class,'store'])->name('{nameOfRoute}.store');
+    }
+14.- Dentro del formulario debe ir @csrf el cual es el token
+15.- A continuacion en el controlador se busca el metodo de store, el cual recibira los metodos POST y los guardara en la base de datos
+16.- Para mostrar los datos en la ventana principal, se hara lo siguiente:
+    {
+        ->Se creara un foreach el cual recorrera todos los datos que existan
+        -> dentro de los parametros de invocacion se pondran la llave con un alias
+        -> dentro de los <td> </td> se utilizara interpolación {{}}
+    }
+
+```

@@ -58,3 +58,8 @@ Es un objeto {no se puede repetir elementos, no tiene orden, añadir elementos, 
 
 ### double undescore
     -> Son funciones que pertenecen a una clase, son metodos predefinidos de una clase, se pueden sobre escribir, se pueden hacer sobre cargas de metodos
+
+
+### Raices
+    -> Para usar una reiz sin ninguna libreria se hace de la siguiente manera:
+        -> var = 23 ** (1/2)
