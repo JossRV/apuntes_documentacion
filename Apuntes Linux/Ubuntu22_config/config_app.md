@@ -8,6 +8,7 @@ APPS:
     -> sudo apt install mariadb-server
     -> sudo service mariadb status
     -> sudo apt install php-mysql
+    -> sudo mysql_secure_installation (en la primera opcion darle enter y lo demas n con eso queda)
 }
 ~~~
 ## Apache2
@@ -30,6 +31,35 @@ APPS:
     -> sudo aptitude install php-common
     -> Sudo aptitude install php-mysql
     -> sudo service apache2 restart
+}
+~~~
+## PHPMYADMIN
+~~~
+Para ver las imagenes usa la extencion 'Markdown All in One' usando la vista previa podras ver las imagenes :) u crtl+shift+v
+{
+    -> sudo apt-get install -y php php-tcpdf php-cgi php-pear php-mbstring libapache2-mod-php php-common php-phpseclib php-mysql
+    -> sudo apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl
+    con el espacio puedes seleccionar la casilla marcada, en este caso es apache2 que es la BD instalada en linux
+    posteriormente das enter para continuar
+~~~
+
+<img src="img/configPMA.png" height="600px">
+
+~~~
+    La siguiente configuracion das enter, con la opcion si o yes
+
+    Saldra otra configuracion, ahi creas una contraseña, que la que PMA agrega a la base de datos y lo confirmas
+~~~
+
+<img src="img/contraPMA.png" height="600px">
+
+
+~~~
+    -> sudo phpenmod mbstring
+    -> sudo systemctl restart apache2
+
+    terminando la instalacion entras a localhost/phpmyadmin/
+    inicias sesion con unas de las cuentas que usas en mariadb (excepto root, al no poseer contraseña no te deja iniciar sesion)
 }
 ~~~
 ## composer

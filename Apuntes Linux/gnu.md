@@ -287,6 +287,7 @@ Instalar MariaDB{ (es un fork de mysql -> es lo mismo que mysql pero en gratis)
     commands{
         -> sudo apt install mariadb-server
         -> sudo service mariadb status
+        -> sudo mysql_secure_installation (en la primera opcion darle enter y lo demas n con eso queda)
     }
     entrar a mariadb{
         -> sudo mariadb
