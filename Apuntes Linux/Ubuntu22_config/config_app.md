@@ -108,3 +108,10 @@ Para ver las imagenes usa la extencion 'Markdown All in One' usando la vista pre
     sudo aptitude install neofetch
 }
 ~~~
+
+## SSH:
+~~~
+{
+    sudo aptitude install openssh-server
+}
+~~~

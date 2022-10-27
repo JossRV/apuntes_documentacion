@@ -248,14 +248,14 @@ por ejemplo una aplicacion web que ya esta dada de alta, estan alojados en hosti
 es necesario usar ssh para actualizar el repositorio de la aplicacion
 ~~~
 ## *instalacion*
-`sudo aptitude install openssh-server`
+`sudo apt install openssh-server`
 
 ## *para saber que esta instalando y corriendo usamos el comando*
 `sudo service sshd status`
 
 ## *Archivo de configuracion ssh*
 ~~~
-cd/etc/ssh
+cd /etc/ssh
 sudo nano sshd_config
 solo cambiamos el puerto que esta por defecto (22) al puerto 443
 
@@ -334,7 +334,7 @@ Para revisar la información de php es creando un archivo .php y dentro los tags
 Samba es una implementación libre del protocolo de archivos compartidos de Microsoft Windows para 
 sistemas de tipo UNIX. De esta forma, es posible que computadoras con GNU/Linux, Mac OS X o Unix en general se vean como servidores o actuen como clientes en redes de Windows.
 Commands para instalar samba{
-    -> sudo aptitude install samba
+    -> sudo apt install samba
 }
 
 Seleccion o creación del origen de datos:
@@ -415,7 +415,7 @@ Para instalar las nuevas versiones de node js lts
     ->rsync es una herramienta muy util ya que esta funciona con ssh esto permite al administrador bajar y subir informacion al servidor como si de ftp se tratara, sin embargo de forma incremental.
 
     ->Instalar rsync{
-        -> sudo aptitude install rsync
+        -> sudo apt install rsync
     }
     Opciones de rsync
     -v: verbose (muestra un registro de la transferencia)
