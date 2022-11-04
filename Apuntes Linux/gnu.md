@@ -465,3 +465,16 @@ Git es un sofware de control de versiones diseñado por Linus Torvalds, pensando
     ->Repositorio
     -*Los cambios que se dieron de alta
 ~~~
+
+### Comandos básicos para el uso de git
+~~~
+commands{
+    -> git init - Sirve para inicializar un proyecto nuevo
+    -> git add <file> - Pasar los archivos al stamging area o agregar los archivos para ser procesados posteriormente
+    -> git status - El estado de los archivos, si ya estan dados de alta o no
+    -> git commit - Creamos un estado del desarrollo
+    -> git push - Para subir el proyecto a un repositorio remoto
+    -> git pull - Para poder bajar cambios de un repositorio
+    -> git clone - Para clonar un proyecto existente local
+}
+~~~
