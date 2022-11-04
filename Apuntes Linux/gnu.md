@@ -436,3 +436,18 @@ Para instalar las nuevas versiones de node js lts
     }
 
 ~~~
+Manejador de versiones git  y github
+un manejador de versiones es basicamente un sofware que nos permite guardar el estado de un proyecto, por medio de un log o un historico, esto permite saber que paso en cada estado del proyecto y poder controlar las ediciones del mismo, asi tambien poder regresar a una version sin tanto problema.
+
+¿QUE MANEJADORES DE VERSIONES EXISTEN? 
+Basicamente solo existe Git y Subversion
+GitLab y BitBucket son Forks de git
+Cabe mencionar que GitHub ees basicamente una red social de codigo
+
+¿COMO NACE GIT?
+Basicamente git nace gracias a la necesidad de Linus Torvalds de un manejador de versiones potente para el kernel de LInux por alla del 2005.
+
+
+¿QUE ES GIT?
+
+Git es un sofware de control de versiones diseñado por Linus Torvalds, pensando en la eficiencia, la confiabilidad y compartibilidad de mantenimiento de versiones de aplicaciones cuando estas tienen un gran numero de archivos de codigo fuente
