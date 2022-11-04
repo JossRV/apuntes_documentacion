@@ -437,7 +437,8 @@ Para instalar las nuevas versiones de node js lts
 
 ~~~
 Manejador de versiones git  y github
-un manejador de versiones es basicamente un sofware que nos permite guardar el estado de un proyecto, por medio de un log o un historico, esto permite saber que paso en cada estado del proyecto y poder controlar las ediciones del mismo, asi tambien poder regresar a una version sin tanto problema.
+
+Un manejador de versiones es basicamente un sofware que nos permite guardar el estado de un proyecto, por medio de un log o un historico, esto permite saber que paso en cada estado del proyecto y poder controlar las ediciones del mismo, asi tambien poder regresar a una version sin tanto problema.
 
 ¿QUE MANEJADORES DE VERSIONES EXISTEN? 
 Basicamente solo existe Git y Subversion
