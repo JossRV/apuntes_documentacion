@@ -455,6 +455,7 @@ Basicamente git nace gracias a la necesidad de Linus Torvalds de un manejador de
 Git es un sofware de control de versiones diseñado por Linus Torvalds, pensando en la eficiencia, la confiabilidad y compartibilidad de mantenimiento de versiones de aplicaciones cuando estas tienen un gran numero de archivos de codigo fuente
 ~~~
 ### PRIMEROS PASOS CON GIT
+~~~
 ->Instalacion de git
 .Estado de git
     ->working directory
@@ -463,3 +464,4 @@ Git es un sofware de control de versiones diseñado por Linus Torvalds, pensando
         *Archivo que se dara de alta o no
     ->Repositorio
     -*Los cambios que se dieron de alta
+~~~
