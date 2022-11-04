@@ -115,3 +115,10 @@ Para ver las imagenes usa la extencion 'Markdown All in One' usando la vista pre
     sudo aptitude install openssh-server
 }
 ~~~
+
+### cuando se tienen bloqueados los paquetes:
+~~~
+commands{
+    ->sudo dpkg --configure -a
+}
+~~~

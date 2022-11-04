@@ -478,3 +478,18 @@ commands{
     -> git clone - Para clonar un proyecto existente local
 }
 ~~~
+
+### Creacion de un nuevo proyecto
+~~~
+1.- Creamos una carpeta de trabajo
+2.- Agregamos los archivos
+3.- Inicializamos el proyecto con *git init*
+4.- Revisamos el estado de los archivos git status
+5.- Agregar los archivos al ptoyecto de git{
+    # opciones: 
+        ->git add "nombreArchivo"
+        ->git add .
+        ->git add -A -> A == ALL
+}
+6.- Verificar el estatus, tienen que estar en el área de stage
+~~~
