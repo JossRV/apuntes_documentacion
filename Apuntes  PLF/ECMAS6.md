@@ -72,3 +72,6 @@ Importar clases o promesas:
   
 }
 
+FETCH
+
+JavaScript Object Notation (JSON)
