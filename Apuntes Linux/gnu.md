@@ -443,7 +443,12 @@ Un manejador de versiones es basicamente un sofware que nos permite guardar el e
 ### ¿QUE MANEJADORES DE VERSIONES EXISTEN? 
 ~~~
 Basicamente solo existe Git y Subversion
-GitLab y BitBucket son Forks de git
+Fork{
+    -> Github
+    -> GitLab
+    -> BitBucket
+}
+Github, GitLab y BitBucket son Forks de git
 Cabe mencionar que GitHub ees basicamente una red social de codigo
 ~~~
 ### ¿COMO NACE GIT?
