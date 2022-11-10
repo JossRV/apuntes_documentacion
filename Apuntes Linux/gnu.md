@@ -497,12 +497,26 @@ commands{
         ->git add -A -> A == ALL
 }
 6.- Verificar el estatus, tienen que estar en el área de stage
+~~~
 # Crear primer estado
+~~~
 7.- despues de verificarnos 
 8.- el comando es git commit -m 'mensaje'
 9.- ver el git log
+~~~
 # Revertir cambios antes de un commit
+~~~
 10.- git checkout 'archivo'
+~~~
 # Revision de diferencias de versión
+~~~
 11.- Para revisar la diferencia del nuevo cambio con el anterior se utiliza: git diff index.html
+~~~
+# Ignorar archivos del repositorio o la version
+~~~
+12.- se crea un archivo conexion.js
+13.- se crea un archivo llamado .gitignore
+14.- Dentro del archivo .gitignore escribimos la ruta de conexion.js
+15.- Revisamos con git status
+16.- Hacemos commit
 ~~~
