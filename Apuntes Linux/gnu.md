@@ -497,4 +497,8 @@ commands{
         ->git add -A -> A == ALL
 }
 6.- Verificar el estatus, tienen que estar en el área de stage
+# Crear primer estado
+7.- despues de verificarnos 
+8.- el comando es git commit -m 'mensaje'
+9.- ver el git log
 ~~~
