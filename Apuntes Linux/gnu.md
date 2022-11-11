@@ -520,3 +520,8 @@ commands{
 15.- Revisamos con git status
 16.- Hacemos commit
 ~~~
+
+### Para saber en que rama se va a trabajar
+~~~
+17.- git branch 
+~~~

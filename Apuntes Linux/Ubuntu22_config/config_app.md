@@ -112,6 +112,9 @@ Para ver las imagenes usa la extencion 'Markdown All in One' usando la vista pre
 ## SSH:
 ~~~
 {
+    Generar llave: {
+        ssh-keygen
+    }
     sudo aptitude install openssh-server
 }
 ~~~
