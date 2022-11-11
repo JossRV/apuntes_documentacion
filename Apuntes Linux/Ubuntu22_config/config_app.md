@@ -125,3 +125,11 @@ commands{
     ->sudo dpkg --configure -a
 }
 ~~~
+
+### Github sin contraseña por ssh
+~~~
+pasos:
+1.- Ir a la configuración y buscar SSH and GPG keys
+2.- Crear una nueva llave de ssh y colocar dentro el archivo id_rsa.pub
+3.- Verificar que el repo este en ssh y no en https
+~~~
