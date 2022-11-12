@@ -151,6 +151,10 @@ Para ver las imagenes usa la extencion 'Markdown All in One' usando la vista pre
     -> sudo apt install code
 }
 ~~~
+## cambiar fuetes sobre flecha =======> 
+~~~
+  -> https://github.com/tonsky/FiraCode/releases =>> instalar
+~~~
 ### cuando se tienen bloqueados los paquetes:
 ~~~
 commands{
