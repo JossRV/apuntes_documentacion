@@ -172,7 +172,7 @@ Se utiliza sudo para que veas que eres root
 - search ->
     Este comando funciona para buscar alguna aplicación que ya este instalada o se quiera instalar dentro del sistema
     commands{
-        => aptitude search 'nombre_app'
+        => apt search 'nombre_app'
     }
 - chmod -> 
     Este comando es para dar permisos a carpetas y archivos

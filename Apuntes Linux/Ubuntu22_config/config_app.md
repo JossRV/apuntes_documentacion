@@ -34,8 +34,8 @@ APPS:
     -> sudo apt install software-properties-common apt-transport-https -y
     -> sudo add-apt-repository ppa:ondrej/php -y
     -> sudo apt install php8.1 php8.1-common libapache2-mod-php8.1 php8.1-cli
-    -> sudo aptitude install php-common
-    -> Sudo aptitude install php-mysql
+    -> sudo apt install php-common
+    -> Sudo apt install php-mysql
     -> sudo service apache2 restart
 }
 ~~~
@@ -105,13 +105,13 @@ Para ver las imagenes usa la extencion 'Markdown All in One' usando la vista pre
 ## Samba:
 ~~~
 {
-    -> sudo aptitude install samba
+    -> sudo apt install samba
 }
 ~~~
 ## neofetch: 
 ~~~
 {
-    sudo aptitude install neofetch
+    sudo apt install neofetch
 }
 ~~~
 ### git:
@@ -129,7 +129,7 @@ Para ver las imagenes usa la extencion 'Markdown All in One' usando la vista pre
     Generar llave: {
         ssh-keygen
     }
-    sudo aptitude install openssh-server
+    sudo apt install openssh-server
 }
 ~~~
 ### instalar Brave
