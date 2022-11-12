@@ -312,7 +312,12 @@ Comandos para instalar PHP 8
 
     si no funciona usar esta forma
     -> sudo apt install software-properties-common apt-transport-https -y
+    ondrej para ubuntu 
     -> sudo add-apt-repository ppa:ondrej/php -y
+    ondrej para debian 
+    -> sudo apt-get install ca-certificates apt-transport-https software-properties-common wget curl lsb-release -y
+    -> curl -sSL https://packages.sury.org/php/README.txt | sudo bash -x
+    despues de ondrej dependiendo el sistema operativo que tengas, continuas para hacer la instalacion de php
     -> sudo apt install php8.1 php8.1-common libapache2-mod-php8.1 php8.1-cli
     -> sudo service apache2 restart
 }
