@@ -35,7 +35,7 @@ APPS:
     -> sudo add-apt-repository ppa:ondrej/php -y
     -> sudo apt install php8.1 php8.1-common libapache2-mod-php8.1 php8.1-cli
     -> sudo apt install php-common
-    -> Sudo apt install php-mysql
+    -> sudo apt install php-mysql
     -> sudo service apache2 restart
 }
 ~~~
