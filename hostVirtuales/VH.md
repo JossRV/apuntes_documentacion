@@ -43,6 +43,6 @@ En el navegador, en la barra escribimos...
 
 debe de funcionar si o si, a mi me funciono, a ti tambien funcionara xd
 
-Cuando no te deje con del joss
+Habilitar .htaccess
 -> https://microbuffer.wordpress.com/2015/04/22/habilitar-el-uso-de-htaccess-en-apache-con-ubuntu/
 ~~~
