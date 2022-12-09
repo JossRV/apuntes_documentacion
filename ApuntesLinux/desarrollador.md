@@ -84,6 +84,15 @@ APPS:
     -> sudo apt-get install php8.1-sybase
 
     php8.2 => debian
+    -> sudo apt-get install ca-certificates apt-transport-https software-properties-common wget curl lsb-release -y
+    -> curl -sSL https://packages.sury.org/php/README.txt | sudo bash -x
+    -> sudo apt update
+    -> sudo apt upgrade
+    -> sudo apt install php8.2 libapache2-mod-php8.2 php8.2-cli
+    -> sudo apt install php-common
+    -> sudo apt install php-mysql
+    -> sudo service apache2 restart
+    
     
 }
 ~~~
@@ -116,6 +125,7 @@ Para ver las imagenes usa la extencion 'Markdown All in One' usando la vista pre
     inicias sesion con unas de las cuentas que usas en mariadb (excepto root, al no poseer contraseña no te deja iniciar sesion)
 }
 ~~~
+
 ## composer
 ~~~
 {
@@ -135,6 +145,7 @@ Para ver las imagenes usa la extencion 'Markdown All in One' usando la vista pre
     }
 }
 ~~~
+
 ## node,npm:
 ~~~
 {
@@ -168,6 +179,7 @@ Para ver las imagenes usa la extencion 'Markdown All in One' usando la vista pre
     -> sudo apt install git
 }
 ~~~
+
 ## SSH:
 ~~~
 {
@@ -180,6 +192,7 @@ Para ver las imagenes usa la extencion 'Markdown All in One' usando la vista pre
     sudo apt install openssh-server
 }
 ~~~
+
 ### instalar Brave
 ~~~
 {
@@ -190,6 +203,7 @@ Para ver las imagenes usa la extencion 'Markdown All in One' usando la vista pre
     -> sudo apt install brave-browser
 }
 ~~~
+
 ### instalar visual estudio
 ~~~
 {
@@ -199,10 +213,12 @@ Para ver las imagenes usa la extencion 'Markdown All in One' usando la vista pre
     -> sudo apt install code
 }
 ~~~
+
 ## cambiar fuetes sobre flecha =======> 
 ~~~
   -> https://github.com/tonsky/FiraCode/releases =>> instalar
 ~~~
+
 ### cuando se tienen bloqueados los paquetes:
 ~~~
 commands{
