@@ -530,3 +530,25 @@ commands{
 ~~~
 17.- git branch 
 ~~~
+
+## extras para push y pull
+~~~
+hacer cambios push y pull en repositorios cuando 2 personas trabajan en el mismo doc y mismo lugar.
+
+si una persona x sube sus cambios y nos pide hacer fetch.
+
+primero es hacer git add . y git commit -m "" para que subas los cambios al stage y al desarrollo.
+
+posteriormente se realiza el fetch junto al pull.
+
+si son diferentes documentos trabajados, se haran los cambios sin problemas, pero si se trabaja en un mismo documento habra un mensaje de CONFLICTO, automaticamente en nesutro visual estudio mostrara todos los cambios .
+
+el head es lo que tu trabajastes y el otro cambio viene del fetch
+a ese cambio se dara clic en el Accept Both Changes, quiere decir que aceptara ambos cambios y asi podemos hacer merge, en la esquina inferior clicl en el boton Resolve in Merge Editor.
+
+abrira otra parte donde hasta abajo esta el resultado del merge, damos clic al boton complete merge.
+
+de esta forma podemos aceptar ambos cambios que se hicieron sin perder nada.
+
+haremos un commit porque estan en el stating area y de ahi un push.
+~~~
