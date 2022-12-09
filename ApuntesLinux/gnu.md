@@ -247,6 +247,8 @@ Una rutina usada por syadmin y developers, es dar de alta repositorio de proyect
 por ejemplo una aplicacion web que ya esta dada de alta, estan alojados en hosting compartido, vps o servido empresarial
 es necesario usar ssh para actualizar el repositorio de la aplicacion
 ~~~
+
+<!-- llevarlo al config desarrollador -->
 ## *instalacion*
 `sudo apt install openssh-server`
 
@@ -268,6 +270,7 @@ ahora para conectarte ponemos en el comando
 ssh joss@192.168.3.231 -p 443
 ~~~
 
+<!-- llevarlo al config desarrollador -->
 # LAMP -> Linux, Apache, Maria :: Mysql, Php
 
 
@@ -373,6 +376,7 @@ para crear o dar una contraseña de samba a tu usuario se hace con el siguiente 
 }
 ~~~
 
+<!-- llevarlo al config desarrollo -->
 # INSTALAR NODE JS
 
 ~~~

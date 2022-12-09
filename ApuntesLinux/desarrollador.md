@@ -1,4 +1,4 @@
-Lo que se necesita para que tu pc funcione para todo tipo de desarrollo son las siguientes apps:
+Lo que se necesita para que tu pc funcione en mod desarrollador son las siguientes apps:
 
 NOTA: *Las configuraciones y todo se encuentran dentro de: ../gnu.md*
 APPS:
@@ -7,8 +7,8 @@ APPS:
 {
     -> sudo apt install mariadb-server
     -> sudo service mariadb status
-    -> sudo apt install php-mysql
     -> sudo mysql_secure_installation (en la primera opcion darle enter y lo demas n con eso queda)
+
     Para hacer funcionar el mysql
     -> sudo mariadb
     ->GRANT ALL ON *.* TO 'nameUser'@'localhost' IDENTIFIED BY 'pass' WITH GRANT OPTION; //funciona para crear un nuevo usuario
@@ -22,21 +22,69 @@ APPS:
     -> sudo apt update
     -> sudo apt install apache2
     -> sudo service apache2 status
-    -> sudo ufw allow in "Apache"
+
+    cortafuegos para ubuntu
+    Abrir cortafuegos -> ufw enable ---despues de estar abierto salta hasta agregar apache
+    checar que este activo -> ufw status
+    agregar apache al cortafuegos -> sudo ufw allow in "Apache"
+
+    En debian no es necesario habilitar ufw...
 }
 ~~~
-## php version 8.1
+## php version
 ~~~
 {
-    -> sudo apt install php libapache2-mod-php php-mysql
-    este comando instala el php de la versiones mas recientes que van saliendo
+    antes de hacer instalaciones, siempre actualiza el sistema, solo update
 
+    instalacion para ubuntu
+    -> sudo apt install php libapache2-mod-php php-mysql
+    Comando rapido, se instalara la version automaticamente que utiliza el sistema por default
+
+    versiones recomendadas, instalaciones manuales y recomendado...
+    php8.1 => ubuntu
     -> sudo apt install software-properties-common apt-transport-https -y
     -> sudo add-apt-repository ppa:ondrej/php -y
-    -> sudo apt install php8.1 php8.1-common libapache2-mod-php8.1 php8.1-cli
+    -> sudo apt install php8.1 libapache2-mod-php8.1 php8.1-cli
     -> sudo apt install php-common
     -> sudo apt install php-mysql
     -> sudo service apache2 restart
+
+    php8.1 => debian
+    -> sudo apt-get install ca-certificates apt-transport-https software-properties-common wget curl lsb-release -y
+    -> curl -sSL https://packages.sury.org/php/README.txt | sudo bash -x
+    -> sudo apt update
+    -> sudo apt upgrade
+    -> sudo apt install php8.1 libapache2-mod-php8.1 php8.1-cli
+    -> sudo apt install php-common
+    -> sudo apt install php-mysql
+    -> sudo service apache2 restart
+
+    Para revisar la información de php es creando un archivo .php y dentro del archivo contendra
+    -> <?php phpinfo(); ?>
+    posteriormente buscar el controlador mysqli y mysqli_PDO, puesto que son los que se utilizara en los proyectos que se realicen conexiones, en caso de no tener esos controladores mencionados, instalarlos manualmente
+    MySQLi, MySQL PDO
+    -> sudo apt-get install php8.1-mysql
+
+    controladores opcionales, son scriptcase, herramientas de rapido desarrollo
+    -> sudo apt-get install php8.1-curl php8.1-gd php8.1-bcmath php8.1-cgi php8.1-ldap php8.1-mbstring php8.1-xml php8.1-soap php8.1-xsl php8.1-zip
+
+    PostgreSQL PDO, PostgreSQL 6.3 o abajo, PostgreSQL 6.4 o mayor, PostgreSQL 7 o mayor
+    -> sudo apt-get install php8.1-pgsql
+
+    SQLite PDO
+    -> sudo apt-get install php8.1-sqlite3
+
+    Firebird, Interbase 6, Interbase 6.5, Firebird PDO
+    -> sudo apt-get install php8.1-interbase
+
+    DB2 ODBC GENERIC, DB2 ODBC GENERIC 6, Generic ODBC, MS Access ODBC, Oracle ODBC, Progress, DB2 PDO ODBC, Progress PDO ODBC, Sybase PDO ODBC
+    -> sudo apt-get install php8.1-odbc
+
+    DBLIB, Sybase PDO DBLIB
+    -> sudo apt-get install php8.1-sybase
+
+    php8.2 => debian
+    
 }
 ~~~
 ## PHPMYADMIN
