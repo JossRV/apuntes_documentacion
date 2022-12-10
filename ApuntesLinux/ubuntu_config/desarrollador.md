@@ -1,4 +1,4 @@
-Lo que se necesita para que tu pc funcione en mod desarrollador son las siguientes apps:
+# Lo que se necesita para que tu pc funcione en mod desarrollador son las siguientes apps:
 
 NOTA: *Las configuraciones y todo se encuentran dentro de: ../gnu.md*
 APPS:
@@ -49,16 +49,6 @@ APPS:
     -> sudo apt install php-mysql
     -> sudo service apache2 restart
 
-    php8.1 => debian
-    -> sudo apt-get install ca-certificates apt-transport-https software-properties-common wget curl lsb-release -y
-    -> curl -sSL https://packages.sury.org/php/README.txt | sudo bash -x
-    -> sudo apt update
-    -> sudo apt upgrade
-    -> sudo apt install php8.1 libapache2-mod-php8.1 php8.1-cli
-    -> sudo apt install php-common
-    -> sudo apt install php-mysql
-    -> sudo service apache2 restart
-
     Para revisar la información de php es creando un archivo .php y dentro del archivo contendra
     -> <?php phpinfo(); ?>
     posteriormente buscar el controlador mysqli y mysqli_PDO, puesto que son los que se utilizara en los proyectos que se realicen conexiones, en caso de no tener esos controladores mencionados, instalarlos manualmente
@@ -82,18 +72,6 @@ APPS:
 
     DBLIB, Sybase PDO DBLIB
     -> sudo apt-get install php8.1-sybase
-
-    php8.2 => debian
-    -> sudo apt-get install ca-certificates apt-transport-https software-properties-common wget curl lsb-release -y
-    -> curl -sSL https://packages.sury.org/php/README.txt | sudo bash -x
-    -> sudo apt update
-    -> sudo apt upgrade
-    -> sudo apt install php8.2 libapache2-mod-php8.2 php8.2-cli
-    -> sudo apt install php-common
-    -> sudo apt install php-mysql
-    -> sudo service apache2 restart
-    
-    
 }
 ~~~
 ## PHPMYADMIN
@@ -147,18 +125,22 @@ Para ver las imagenes usa la extencion 'Markdown All in One' usando la vista pre
 ~~~
 
 ## node,npm:
+<!-- Pagina que explica para instalarlo en todos los SO -->
+<!-- https://kinsta.com/es/blog/como-instalar-node-js/ -->
 ~~~
 {
-    -> curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+    
+    -> curl -fsSL https://deb.nodesource.com/setup_v.x | sudo -E bash -
     -> sudo apt-get install -y nodejs
     verificamos las versiones
+
     ->comando de version de node{
         -> node --version
         }
     ->comando de version de npm{ 
         -> npm --version
         }
-
+    en la v de node version sustituir la version que esta en lts
 }
 ~~~
 ## Samba:
@@ -183,13 +165,13 @@ Para ver las imagenes usa la extencion 'Markdown All in One' usando la vista pre
 ## SSH:
 ~~~
 {
+    -> sudo apt install openssh-server
     -> cd /etc/ssh
     -> sudo nano sshd_config
     // solo cambiamos el puerto que esta por defecto (22) al puerto 443
     Generar llave: {
         ssh-keygen
     }
-    sudo apt install openssh-server
 }
 ~~~
 
@@ -232,4 +214,20 @@ pasos:
 1.- Ir a la configuración y buscar SSH and GPG keys
 2.- Crear una nueva llave de ssh y colocar dentro el archivo id_rsa.pub
 3.- Verificar que el repo este en ssh y no en https
+~~~
+### rsync
+~~~
+    -> sudo apt install rsync
+    respaldo local
+    -> rsync -avzh 'path de origen' 'path destino' (Sin commillas las rutas)
+    mandar archivos por host remoto
+    -> rsync -av -e 'ssh -p443' "pathlocal" "usuario@ip:/pathdestino
+        ejemplo:
+        -> rsync -av -e 'ssh -p443' /var/www/html/IngenieriaSoftware/laPalabraDelSabio fatima@192.168.3.192:/var/www/html
+~~~
+
+### mysqldump (Respaldo BD)
+~~~
+    -> mysqldump -u 'usuario' -p 'nombre de bd' > "ruta/nombre.sql"
+    -> mysqldump -u 'usuario' -p'password' 'nombre de bd' > "ruta/nombre.sql"
 ~~~

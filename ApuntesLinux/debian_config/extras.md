@@ -1,5 +1,3 @@
-# Se necesitan hacer las siguientes configuraciones para poder utilizar el debian de manera correcta
-
 ### Cambiar el tamaño del grub 
 ~~~
     -> Lo que tienes que hacer es:
