@@ -9,4 +9,12 @@
         datos:
         https://elbauldelprogramador.com/como-cambiar-la-resolucion-de-pantalla-en-las-ttys-de-gnulinux/
 ~~~
-<img src="img/nanoGRUB.png" height="400px">
+
+### Eliminar paquetes ppa de debian
+~~~
+    Si al realizar el comando sudo apt update manda error en algun repositorio ppa.
+    -> Lo que tienes que hacer es:
+    En una terminal poner: $cd /etc/apt/sources.list.d/
+    ->Ahi dentro encontraras los paquetes ppa y buscas el que te de errores y con
+    $sudo rm [nompre ppa] lo eliminas
+~~~
