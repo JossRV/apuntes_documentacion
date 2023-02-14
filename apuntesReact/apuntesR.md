@@ -4,6 +4,8 @@ Utiliza el JSX
 
 El archivo mas importante es: index.js
 
+DOM == document object model
+
 ## import React from 'react';
 ## import { createRoot} from 'react-dom/client';
 Etiquetas importantes en el index
