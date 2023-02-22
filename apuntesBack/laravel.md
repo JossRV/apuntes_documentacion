@@ -1,11 +1,11 @@
-como saber si tenemos composer
-
-composer en cmd
-
+### como saber si tenemos composer
+```
+composer en cmd o terminal
+```
 4 instalacion de laravel
 por defecto se instalara la version mas reciente
 
-composer create-progect laravel/laravel=8.*"nombre"
+composer create-progect laravel/laravel=8.\*"nombre"
 
 vistas
 carpeta donde se encuentra
@@ -15,6 +15,7 @@ route::get('/'->nombre ruta,[controller::class->clases,'metodo'->metodo de contr
 
 layaout->plantillas
 se sabe que se llama la plantilla por el blade
+
 <html>
 <head>
     <title>Mi aplicación web</title>
@@ -32,10 +33,9 @@ se sabe que se llama la plantilla por el blade
 @extends('pathlayout')-> ‘main’
 
 @section('contenido')
-    <h1>Mi contenido</h1>
-    <p>Este es el contenido de mi vista específica.</p>
+<h1>Mi contenido</h1>
+<p>Este es el contenido de mi vista específica.</p>
 @endsection
-
 
 rutas
 
@@ -47,7 +47,8 @@ route::get('inicio/{id0}/{id}'->nombre ruta,[controller::class->clases,'metodo'-
 controladores
 es un enlace entre vistas y modelos
 creacion de controladores->php artisan make:controller 'nombre'
->php artisan make:controller 'nombre' -r (agrega los metodos para realizar el crud)
+
+> php artisan make:controller 'nombre' -r (agrega los metodos para realizar el crud)
 
 public function store(request $request){
 $request->request('v1')->se obtiene el valor
@@ -58,7 +59,6 @@ $request->v1;
 $item = new User();->llamas clases para reservar memoria
 $item User::all();->rellena el espacio de memoria
 
-
 modelos
 clases que representan la tabla de base de datos
 php artisan make:model 'nombre'
@@ -68,15 +68,17 @@ php artisan make:migration crear_tabla_usuarios
 
 migracion->clase php que por medio del codigo crea tablas
 
+### migracion
 
-migracion 
-nos ayudan al control en la bd
+```
+nos ayudan al control en la bd 
 php artisan make:migration create_nombre_table
 para dar de alta es
 php artisan migrate
 se crean dos metodos up->declara los campos de la tabla y down->revierte la migracion
 objeto para crear los datos->table
 campos para el control de registros->
+```
 
 factories
 usa faker
@@ -84,4 +86,3 @@ comando para crear un factorie
 php artisan make:factory nombre
 se almacena en el directorio de bd
 dentro de la carpeta seeders hay una carpeta root y se manda a llamar el factorie con el metodo factorie con cad seguido de create, con eso se crea la linea factorie
- 
