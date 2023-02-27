@@ -63,8 +63,13 @@ es un enlace y control entre vistas y modelos
 php artisan make:controller 'nombre'
 <!-- agregar los metodos para realizar el crud -->
 php artisan make:controller 'nombre' -r 
+<!-- retornar vista -->
+return view("nameView");
+<!-- retornar vista con variables y datos -->
+$titulo = "Inicio";
+return view("nameView",compact("titulo"));
 
-<!-- recupera la informacion de la solicitud de los verbos que haya llegado -->
+% <!-- recupera la informacion de la solicitud de los verbos que haya llegado -->
 
 public function store(request $request){
 $request->request('v1')->se obtiene el valor
@@ -81,22 +86,44 @@ $item = User::all();
 # modelos
 <!-- clases que representan la tabla de base de datos -->
 php artisan make:model 'nombre'
-<!-- crea la migracion para hacer las tablas -->
+<!-- crea el modelo y la migracion para hacer las tablas al mismo tiempo -->
 php artisan make:model 'nombre' -m
+<!-- dentro del archivo model podemos especificar el nombre de la tabla -->
+protected $table = 'nombreTabla';
 
 # migracion
 nos ayudan al control en la bd
-<!-- comando para migracion -->
+<!-- comando para crear migracion -->
 php artisan make:migration crear_tabla_usuarios
 
 migracion->clase php que por medio del codigo crea tablas
 
-comando para dar de alta
-<!-- php artisan migrate -->
+<!-- comando para dar de alta -->
+php artisan migrate
+<!-- actualizar tablas con campos nuevos o coreccion de campos -->
+php artisan migrate:fresh
 
-se crean dos metodos up->declara los campos de la tabla y down->revierte la migracion
-objeto para crear los datos->table
-campos para el control de registros->
+se crean dos metodos up()->declara los campos de la tabla y down()->revierte la migracion
+
+<!-- objeto para crear los datos -->
+$table
+% metodos para el control de registros
+% Determina que es un campo autoincrementable y de llave primaria
+$table->id();
+<!-- Campo de tipo cadena -->
+$table->string();
+% campo de tipo date
+$table->date();
+$table->date('Y-m-d');
+$table->date('H-m-s');
+<!-- create at y update at -->
+$table->timestamps();
+% campo tipo entero int
+$table->integer();
+<!-- campo de tipo flotante -->
+$table->float();
+% 
+
 
 # factories
 Es una fabrica de modelos que llena las tablas con informacion generada aleatoriamente, hecho por php y usa faker
