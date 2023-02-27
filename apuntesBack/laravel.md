@@ -59,33 +59,40 @@ route::get('inicio/{id0}/{id}'->nombre ruta,[controller::class->clases,'metodo'-
 
 # controladores
 es un enlace y control entre vistas y modelos
-creacion de controladores -> php artisan make:controller 'nombre'
-php artisan make:controller 'nombre' -r (la r agrega los metodos para realizar el crud)
+<!-- creacion de controladores -->
+php artisan make:controller 'nombre'
+<!-- agregar los metodos para realizar el crud -->
+php artisan make:controller 'nombre' -r 
+
+<!-- recupera la informacion de la solicitud de los verbos que haya llegado -->
 
 public function store(request $request){
 $request->request('v1')->se obtiene el valor
 $request->v1;
 
-}->recupera la informacion de la solicitud de los verbos que haya llegado
+}
 
-$item = new User();->llamas clases para reservar memoria
-$item = User::all();->rellena el espacio de memoria
+<!-- llamas clases para reservar memoria -->
+$item = new User();
+% <!-- rellena el espacio de memoria -->
+$item = User::all();
 
 
 # modelos
-clases que representan la tabla de base de datos
+<!-- clases que representan la tabla de base de datos -->
 php artisan make:model 'nombre'
-php artisan make:model 'nombre' -m -> crea la migracion para hacer las tablas
+<!-- crea la migracion para hacer las tablas -->
+php artisan make:model 'nombre' -m
 
 # migracion
 nos ayudan al control en la bd
-comando para migracion
+<!-- comando para migracion -->
 php artisan make:migration crear_tabla_usuarios
 
 migracion->clase php que por medio del codigo crea tablas
 
 comando para dar de alta
-php artisan migrate
+<!-- php artisan migrate -->
 
 se crean dos metodos up->declara los campos de la tabla y down->revierte la migracion
 objeto para crear los datos->table
@@ -94,9 +101,50 @@ campos para el control de registros->
 # factories
 Es una fabrica de modelos que llena las tablas con informacion generada aleatoriamente, hecho por php y usa faker
 comando para crear un factorie
-php artisan make:factory nombre
+<!-- php artisan make:factory nombre -->
 se almacena en el directorio de bd
 
 # semillas
 dentro de la carpeta seeders hay una carpeta root y se manda a llamar el factorie con el metodo factorie con cad seguido de create, con eso se crea la linea factorie
+<!-- comando -->
+php artisan db:seed
  
+# tinker
+Herramienta de linea de comandos en laravel
+<!-- Dentro de tu proyecto usas el comando abrira como un shell -->
+php artisan tinker
+
+<!-- obtener datos con tinker  -->
+$item = App\Models\miModelo::all();
+% una sola muestra
+% muestra por rango
+$item = App\Models\miModelo::take(1)->get();
+<!-- retorna un registro especifico, ya sea id o dato -->
+$item = App\Models\miModelo::find(2)->get(); -->
+
+% Agregar nuevos datos
+$item = new App\Models\Estudio
+$item->nombre = 'Joss';
+$item->paterno = 'Velaz';
+$item->FechaNacimiento = '2001-04-16'
+$item->save();
+
+<!-- Actualizacion con tinker -->
+$item = App\Models\Person::find('xNum');
+$item->nombre='name actu';
+$item->paterno='paterno actu';
+$item->materno='materno actu';
+$item->save();
+
+% Truncar toda la tabla
+App\Models\Person::truncate();
+
+% Eliminar un registro
+$item = App\Models\Person::find(1);
+$item->delete();
+
+% Con q sales del tinker
+
+# query builder eloquent
+
+
