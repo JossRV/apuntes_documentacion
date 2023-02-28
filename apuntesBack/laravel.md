@@ -72,9 +72,8 @@ return view("nameView",compact("titulo"));
 % <!-- recupera la informacion de la solicitud de los verbos que haya llegado -->
 
 public function store(request $request){
-$request->request('v1')->se obtiene el valor
-$request->v1;
-
+    $request->request('v1')->se obtiene el valor
+    $request->v1;
 }
 
 <!-- llamas clases para reservar memoria -->
@@ -122,23 +121,52 @@ $table->timestamps();
 $table->integer();
 <!-- campo de tipo flotante -->
 $table->float();
-% 
+% campo para contraseñas
+$table->rememberToken();
 
 
 # factories
 Es una fabrica de modelos que llena las tablas con informacion generada aleatoriamente, hecho por php y usa faker
 comando para crear un factorie
-<!-- php artisan make:factory nombre -->
-se almacena en el directorio de bd
+<!-- se almacena en el directorio de bd -->
+php artisan make:factory nombre
+<!-- asignar elementos aleatorios, tanto numeros o texto-->
+'producto'=>$this->faker->randomElement(['Aceite','Jabon Ace','Jabon Ariel','Sopa','Maruchans','Coca-Cola'])
+'precio'=>$this->faker->randomElement(['22.5','10.4','11','35','30','25','10'])
+<!-- asignar datos fecha -->
+'vendido'=>$this->faker->date(),
+<!-- asignar numeros aleatorios especificando los digitos especificos, y un booleano-->
+'serial'=>$this->faker->randomNumber(7,true) <!-- el bolleano afirma que solo me de numeros con 7 digitos -->
+'serial'=>$this->faker->randomNumber(4,false) <!-- el boleano afirma que me de numeros apartir de 4 a 1 digito -->
+<!-- usar una funcion para asignar datos -->
+'imagen'=>function(array $obj){ <!-- como parametro recibo el arreglo mismo del factorie -->
+    <!-- puedo retornar cualquier dato para llenarlo a la base de datos -->
+    return $obj['producto']; <!-- mi variable del parametro especifico el campo a tomar el valor  -->
+}
+<!-- asigna apellido de la persona -->
+'paterno'=>$this->faker->lastName(),
+<!-- asigna nombre de la persona de acuerdo al genero asignado -->
+'nombre'=>function(array $user){
+    return $this->faker->name($user['genero']);
+},
+<!-- asignar genero de la persona -->
+'genero'=>$this->faker->randomElement(['male', 'female']),
 
 # semillas
 dentro de la carpeta seeders hay una carpeta root y se manda a llamar el factorie con el metodo factorie con cad seguido de create, con eso se crea la linea factorie
+<!-- especificar en la semilla -->
+<!-- llamada del factory -->
+<!-- despues del ForModel, especificar el nombre del modelo asignado en el protected, debe ser igual al nombre de la tabla para que llame correctamente -->
+<!-- el count, asignas cuantos registros quieres, o cuantas filas quieres agregar, no hay limite de numero -->
+PersonaFactory::factoryForModel('persona')->count(15)->create();
 <!-- comando -->
 php artisan db:seed
+<!-- comando que eliminara las tablas y creara las seed de la bd -->
+php artisan migrate:fresh --seed
  
 # tinker
 Herramienta de linea de comandos en laravel
-<!-- Dentro de tu proyecto usas el comando abrira como un shell -->
+<!-- Dentro de tu proyecto usas el comando y abrira como un shell -->
 php artisan tinker
 
 <!-- obtener datos con tinker  -->
@@ -172,6 +200,7 @@ $item->delete();
 
 % Con q sales del tinker
 
-# query builder eloquent
+
+% query builder eloquent
 
 
