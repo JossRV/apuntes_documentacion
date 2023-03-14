@@ -39,5 +39,28 @@
     ->Básicamente las secciones de una página SPA son componentes web
     ->Estos componentes web tienen cada una de las funciones de la pagina web y pueden reciclarse tan facil como si de una etiqueta HTML se tratara (Para que se pueda considerar como componente utiliza HTML, JS, CSS)
 ```
+## ¿Qué es un componente web?
+```
+    ->Un componente web es una parte modular y reutilizable de una página web que tiene una funcionalidad especifica y puede ser integrada en diferentes páginas web y aplicaciones web. Los componentes web pueden incluir elementos como botones, formularios, menus desplegables, carruseles de imágenes, iconos y mucho mas.
+```
+## Ejemplos de SPA
+```
+    ->Gmail: El correo electronico de Google es una aplicación web SPA que carga una sola pagina HTML y actualiza dinamicamente el contenido a medida que los usuarios leen, escriben y eliminan correos electronicos
+    ->Twitter: La red social de microblogging utiliza una arquitectura de aplicacion web SPA que carga una sola pagina HTML y actualiza dinamicamente el contenido a medida que los usuarios navegan por su linea de tiempo, escriben tweets y siguen a otros usuarios.
+```
+## En que se basa Angular
+```
+    ->Angular esta basado en varios lenguajes y tecnologias de programación web, incluyendo HTML, CSS y JS
+    ->En particular, Angular está construido sobre el lenguaje de programación TS
+    ->Ademas, Angular utiliza varias bibliotecas y herramientas de desarrollo web, como RxJS y Webpack
+```
+## ¿Qué es RxJS?
+```
+    ->Es una biblioteca de programación reactiva que permite a los desarrolladores crear aplicaciones que reaccionen a eventos y datos en tiempo real. La programación reactiva se basa en la idea de que los datos son flujo continucio de información, y RxJS proporciona herramientas para manejar estos flujos de datos de manera asincróna y en tiempo real
+```
+## Ejemplo de RxJs
+```
+    ->Manejo de eventos del usuario: RxJS se puede utilizar para manejar eventos del usuario, como clics en botones o cambios en los campos de entrada. Por ejemplo, un flujo de eventos podrían representar los clicks en un botón de "Agregar" en una lista de tareas, que activa la adición de una nueva tarea a la lista
+```
 
 
