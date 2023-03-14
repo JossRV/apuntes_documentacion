@@ -62,5 +62,30 @@
 ```
     ->Manejo de eventos del usuario: RxJS se puede utilizar para manejar eventos del usuario, como clics en botones o cambios en los campos de entrada. Por ejemplo, un flujo de eventos podrían representar los clicks en un botón de "Agregar" en una lista de tareas, que activa la adición de una nueva tarea a la lista
 ```
-
+## Creación de un proyecto Angular
+```
+    ->Tener instalado NodeJS
+    ->npm install -g @angular/cli
+    ->Revisar version de angular: ng version
+    ->ng new my-app
+    ->ng serve o ng serve -o
+```
+## Interpolación
+```
+    ->La interpolación en angular puede insertar una propiedad de app.components.ts en app.component.html, por ejemplo definimos una propiedad en el archivo ts
+        -> public titulo : string = 'Hola mundo';
+    ->En el archivo html ponemos
+        ->{{titulo}}
+```
+## Evento Click en angular
+```
+    ->El evento clic en anguar es igual al evento onclick en js vanilla, sin embargo se define de una forma diferente y tambien el performance es superior
+        ->Ejemplo de clic en angular
+        <button (click)="funcion ts o codigo plano js">Hola</button>
+```
+## Agregar estulo global en mi app
+```
+    -> con el siguiente link se debe copiar en los estilos globales
+        ->LINK: https://gist.github.com/Klerith/3ddee04a27c09be05e888d5d4ac1d09f
+```
 
