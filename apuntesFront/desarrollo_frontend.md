@@ -29,5 +29,15 @@
 ```
     -> Angular es un framework de desarrollo web de codigo abierto creado y mantenido por Google. Se utiliza para crear aplicaciones web de una sola página (Single Page Application - SPA) y aplicaiones web dinamicas que se ejecutan en el navegador del usuario
 ```
+## SPA - (Single Page Aplication)
+```
+    ->Una Single Page Application (SPA) es una aplicación web que se ejecuta en una sola pagina web sin necesidad de recargar la pagina completa cada vez que el usuario navega a diferentes secciones de la aplicación
+    -> Imagina que estás utilizando una aplicación web como Facebook o Instagram. En lugar de tener que cargar una nueva página web cada vez que haces clic en un enlace o boton, la pagina actual se utiliza con la información nueva y el contenido de la página se carga dinamicamente
+```
+## Secciones de una SPA
+```
+    ->Básicamente las secciones de una página SPA son componentes web
+    ->Estos componentes web tienen cada una de las funciones de la pagina web y pueden reciclarse tan facil como si de una etiqueta HTML se tratara (Para que se pueda considerar como componente utiliza HTML, JS, CSS)
+```
 
 
