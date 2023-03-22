@@ -102,8 +102,6 @@ php artisan migrate
 <!-- actualizar tablas con campos nuevos o coreccion de campos -->
 php artisan migrate:fresh
 
-se crean dos metodos up()->declara los campos de la tabla y down()->revierte la migracion
-
 <!-- objeto para crear los datos -->
 $table
 % metodos para el control de registros
@@ -124,10 +122,15 @@ $table->float();
 % campo para contraseñas
 $table->rememberToken();
 
-se crean dos metodos up->declara los campos de la tabla y down->revierte la migracion
-objeto para crear los datos->table
+se crean dos metodos
+<!-- declara los campos de la tabla -->
+up 
+<!-- revierte la migracion -->
+down
+<!-- objeto para crear los datos -->
+table
 campos para el control de registros->
-```
+
 
 # factories
 Es una fabrica de modelos que llena las tablas con informacion generada aleatoriamente, hecho por php y usa faker
@@ -202,10 +205,7 @@ App\Models\Person::truncate();
 $item = App\Models\Person::find(1);
 $item->delete();
 
-% Con q sales del tinker
-
+% salir del tinker
+q
 
 % query builder eloquent
-
-
-
