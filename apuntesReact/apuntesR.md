@@ -1,4 +1,4 @@
-cada que retorna el JSX
+<!-- cada que retorna el JSX
 se considera un componente con mayusculas
 Utiliza el JSX
 
@@ -23,4 +23,6 @@ Descargar Bootstrap: npm install bootstrap
 y para incluirlo es:
 ### import 'bootstrap/dist/css/bootstrap.min.css'
 
-img, hr, br, meta, link
+img, hr, br, meta, link -->
+
+# async y await
