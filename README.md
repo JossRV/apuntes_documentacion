@@ -4,6 +4,14 @@
 
 ### Va desde configuraciones de ubuntu y debian, apuntes de react y laravel, incluido apuntes de typescript y angular
 
-Temas 
+# Temas 
 
-- ### ***[Laravel](apuntesBack/laravel.md)***
+- ### ***[Laravel](apuntesBack/laravel.md)*** 
+  > Instalacion de laravel, metodos, migraciones, etc.
+- ### ***[TypeScript](apuntesFront/apuntes_typescript.md)***
+- ### ***[Angular](apuntesFront/desarrollo_frontend.md)***
+- ### ***[Configuracion ubuntu](ApuntesLinux/ubuntu_config/desarrollador.md)***
+- ### ***[Configuracion debian](ApuntesLinux/debian_config/desarrollador.md)***
+- ### ***[ECMAS6](ApuntesPLF/ECMAS6.md)***
+- ### ***[React](apuntesReact/apuntesR.md)***
+- ### ***[Python](Python/)***
