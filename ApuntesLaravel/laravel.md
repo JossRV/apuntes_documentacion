@@ -44,7 +44,7 @@ Las rutas son creadas con un tipo de verbo que pueden ser:
 # Performance en una aplicación: que tan bueno es, cuanta memoria, que tan rapido da respuesta el proyecto
 ```
 Creación de la primer vista:
-- Crear un controlador ```
+- Crear un controlador 
     -- php artisan make:controller Paisajes
 - Creamos un método de controlador para llamar la vista
     -- public function index(){
