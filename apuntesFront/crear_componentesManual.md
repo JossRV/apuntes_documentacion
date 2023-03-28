@@ -44,7 +44,7 @@ Para probarlo vamos a crear un arreglo
         <li *ngFor="let heroe of heroe"></li>
     </ul>
     <ul>
-        <li *ng For=let heroe of heroes>{{heroe}}</li>
+        <li *ngFor="let heroe of heroes">{{heroe}}</li>
     </ul>
     <ul>
         <li *ngFor="let item of items; as myItem">{{myItem}}</li>
