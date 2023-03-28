@@ -23,3 +23,10 @@
             ->styleUrls
         }
 ```
+## Creacion de componentes mediante consola
+```
+    Abrimos CLI
+        ng generate component carpeta/nombreComponente
+        ng g c carpeta/nombreComponenete
+    podemos olvidar poner component al final ya que el cli lo infeiere de manera automatica.Tambien veremos que mapea el modulo y agrega nuestro componente de manera         automatica.
+
