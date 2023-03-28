@@ -23,6 +23,7 @@
             ->styleUrls
         }
 ```
+<<<<<<< HEAD
 
 ## Crear componente de forma automatica
 abrimos el CLI y escribimos
@@ -70,3 +71,31 @@ Archivo html
     </tbody>
 </table>
 ```
+=======
+## Creacion de componentes mediante consola
+```
+    Abrimos CLI
+        ng generate component carpeta/nombreComponente
+        ng g c carpeta/nombreComponenete
+    podemos olvidar poner component al final ya que el cli lo infeiere de manera automatica.Tambien veremos que mapea el modulo y agrega nuestro componente de manera         automatica.
+```
+##Directiva *ngFor
+```
+Para probarlo vamos a crear un arreglo
+    TYPESCRIPT
+    public heroes:string[] = ['1','2','3'];
+    
+    HTML
+    <ul>
+        <li></li>
+    </ul>
+    <ul>
+        <li *ngFor="let heroe of heroe"></li>
+    </ul>
+    <ul>
+        <li *ngFor="let heroe of heroes">{{heroe}}</li>
+    </ul>
+    <ul>
+        <li *ngFor="let item of items; as myItem">{{myItem}}</li>
+    </ul>
+>>>>>>> b2c732849ca71f12684141a6f2426aceeebd92cd
