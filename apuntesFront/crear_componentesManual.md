@@ -23,3 +23,50 @@
             ->styleUrls
         }
 ```
+
+## Crear componente de forma automatica
+abrimos el CLI y escribimos
+
+```ng generate component carpeta/nombreComponente```
+
+```ng g c carpeta/nombreComponente```
+
+## *ngFor
+en el archivo ts
+
+```public heroes:string[] = ['spidey','superman','batman',''];```
+
+En el archivo html
+```
+<ul>
+    <li *ngFor="let heroe of heroes"> {{heroe}} </li>
+</ul>
+```
+
+## *ngFor en tablas
+En el archivo ts
+```
+public usuarios: any = [
+    {id:1, nombre:"Joss"},
+    {id:2, nombre:"mitzi"},
+    {id:3, nombre:"faty"},
+];
+```
+
+Archivo html
+```
+<table>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>nombre</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let usuario of usuarios">
+            <td>{{usuario.id}}</td>
+            <td>{{usuario.nombre}}</td>
+        </tr>
+    </tbody>
+</table>
+```
