@@ -78,3 +78,33 @@ Archivo html
     </tbody>
 </table>
 ```
+
+## Directiva *ngFor en divs
+
+```
+usando el mismo archivo ts anterior
+HTML
+<ng-container *ngFor="let usuario of usuarios">
+    <div>Nombre: {{usuario.nombre}}</div>
+    <div>id: {{usuario.id}}</div>
+</ng-container>
+```
+
+## Directiva *ngIf
+````
+El uso de *ngIf se usa para mostrar u ocultar elementos en la vista
+sintaxis
+if
+<div *ngIf="condicion">
+    <p>contenido</p>
+</div>
+
+if-else
+<div *ngIf="condicion ; else mensaje">
+    <p>contenido</p>
+</div>
+
+<ng-template #mensaje>
+    <p>La condicion es falsa</p>
+</ng-template>
+```

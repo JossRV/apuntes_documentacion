@@ -88,4 +88,3 @@
     -> con el siguiente link se debe copiar en los estilos globales
         ->LINK: https://gist.github.com/Klerith/3ddee04a27c09be05e888d5d4ac1d09f
 ```
-
