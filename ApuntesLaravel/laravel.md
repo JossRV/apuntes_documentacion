@@ -1,46 +1,27 @@
 # Estructura de laravel
-```
--La carpeta "app" tiene toda la información que se agrege, controladores, y modelos
+- La carpeta **app** tiene toda la información que se agrega controladores y modelos, es basicamente donde se tiene todo el codigo fuente de la aplicacion.
+- La carpeta **public** todos los recursos que se pueden compartir con mas personas.
+- La carpeta **resource** se tiene las vistas y los recursos de programación o de desarrollo, hay una carpeta llamada **views**, donde se almacenan todas las vistas de la aplicacion web en motor de plantillas blade (dev´s).
+- La carpeta **routes** todas las rutas para que funcione, debe pasar por una vista para que funcione, es un puente.
+- Los **modelos**, trabajan con una tabla de los mismos nombres y la convierte en un objeto, en pocas palabras, los modelos en laravel, son tablas.
+- La carpeta **public** contiene informacion que el usuario puede ver, archivos css, js e imagene, (archivos listos para el navegador).
+- La carpeta **routes** contiene todas las rutas del proyecto, se pueden crear nuevos archivos de rutas si es que el proyecto es muy grandeo simplemente para mejor ordenamiento
+- Verbos, **Get**, **Post**, **Put**, **Delete**
 
--La carpeta "public" todos los recursos que se pueden compartir con mas personas
+# rutas traidas por un controlador
+```Route::get ('/',[contolador::class, 'metodo']);```
 
--La carpeta "resorce" Se tiene las vistas y los recursos de programación o de desarrollo
-Route
--La carpeta "routes" todas las rutas para que funcione, debe pasar por una vista para que funcione, es un puente
-
--> La carpeta App es básicamente donde se tiene todo el código fuente de la aplicación
-
--> modelos, trabajan con una tabla de los mismos nombres, y la convierte en un objeto
-
--> modelos en laravel, son tablas
-
-Carpeta public y resources
-
-resorces => dev
-public => archivos listos para el navegador
-
-Dentro de la carpeta resources, se tiene una carpeta views donde se almacenan todas las vistas del a aplicación web
-
-Carpeta Routes: Esta carpeta contiene todas las rutas del proyecto, se pueden crear nuevos archivos de rutas si es que el proyecto es muy grandeo simplemente para mejor ordenamiento
-Verbos 
--> Get
-->Post
-->Put
-->Delete
-
-Route::get ('/',[contolador::class, 'metodo']);
-
-controlador: es una clase
-metodo: es un metodo que exista dentro de la clase
+- **controlador** es una clase
+- **metodo**, metodo que exita dentro de la clase
 
 
 Vistas y rutas
 Las rutas son creadas con un tipo de verbo que pueden ser:
-- get->vistas (api)
-- del->eliminar recursos de la base de datos
-- put-> actualizar (update)
-- post-> crear
-```
+- get - vistas (api)
+- del - eliminar recursos de la base de datos
+- put - actualizar (update)
+- post - crear
+  
 # Performance en una aplicación: que tan bueno es, cuanta memoria, que tan rapido da respuesta el proyecto
 ```
 Creación de la primer vista:
