@@ -6,7 +6,7 @@
 
 # Temas 
 
-- ### ***[Laravel](apuntesBack/laravel.md)*** 
+- ### ***[Laravel](ApuntesLaravel/laravel.md)*** 
   > Instalacion de Laravel, metodos, migraciones, etc.
 - ### ***[TypeScript](apuntesFront/apuntes_typescript.md)***
   > Apuntes e instalacion de TypeScript.
