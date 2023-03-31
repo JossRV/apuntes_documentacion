@@ -20,16 +20,16 @@ Las rutas son creadas con un tipo de verbo que pueden ser:
 - **put** - actualizar (update)
 - **post** - crear
   
-Sintaxis: 
+- Sintaxis: 
 ```
     Route::get ('/',[contolador::class, 'metodo']);
 ```
-Tener mas de una vista en el controlador:  
+- Tener mas de una vista en el controlador:  
 ```
     return view('v').view('vz');
 ```
   
-**Performance en una aplicación:** que tan bueno es, cuanta memoria, que tan rapido da respuesta el proyecto.
+> **Performance en una aplicación:** que tan bueno es, cuanta memoria, que tan rapido da respuesta el proyecto.
 
 
 # Creación de la primer vista con el controlador
@@ -134,7 +134,7 @@ Route::get('/edit/{parametros}/{n parametros}',[CategoriasControlles::class,'edi
 
 # [Sweetalert](https://realrashid.github.io/sweet-alert/)
 
-Bajar el de composer
+- Bajar el de composer
 ```
     composer require realrashid/sweet-alert
 ```
@@ -159,9 +159,8 @@ Bajar el de composer
 
 
 # Archivo .env 
-Archivo de configuracion es por excelencia en muchos framework para la configuracion de variables de entorno de la aplicacion web, datos de conexion de base de datos, asi como los datos del entorno de trabajo, ya sea produccion o desarrollo.
-
-En el archivo de configuracion .env podemos encontrar la conexcion por defecto a la base de datos, en .env apartir de la linea 11 :
+- Archivo de configuracion es por excelencia en muchos framework para la configuracion de variables de entorno de la aplicacion web, datos de conexion de base de datos, asi como los datos del entorno de trabajo, ya sea produccion o desarrollo.
+- En el archivo de configuracion .env podemos encontrar la conexcion por defecto a la base de datos, en .env apartir de la linea 11 :
 ```
     DB_CONNECTION= mysql - sin modificacion
     DB_HOST= 127.0.0.1 - sin modificacion
@@ -171,74 +170,63 @@ En el archivo de configuracion .env podemos encontrar la conexcion por defecto a
     DB_PASSWORD= 'contraseña'
 ```
 # Migraciones
-Son clases PHP de laravel la forma de crearlo es: 
+- Comando
 ```
     php artisan migrate
 ```
 # Que es ORM
 > Mapeo Objeto Relacional
-
-#### Esto quiere decir que la aplicacion tomara a la base de datos como si fuera un objeto de la misma aplicacion.
-
-Por ejemplo si tenemos una tabla llamada personas el objeto en el orm sera llamado personas, si la tabla tiene un nombre llamado
+- Esto quiere decir que la aplicacion tomara a la base de datos como si fuera un objeto de la misma aplicacion.
+- Por ejemplo si tenemos una tabla llamada personas el objeto en el orm sera llamado personas, si la tabla tiene un nombre llamado
 apellido_paterno entonces sera una propiedad del orm.
 ```
     $personas = new Personas();
     $personas -> apellido_paterno = "Aquino";
 ```
-## Modelos
+# Modelos
+- Los modelos son basicamente clases php que nos permiten interactuar con la base de datos, por convencion en Laravel, los modelos se escriben con el nombre de una tabla de base de datos existente para asi poder crear una relacion directa a la hora de usar el orm, sin embargo si no deseamos utilizar la convencion, laravel cuenta con la configuracion necesaria para que el modelo pueda trabajar con la tabla que nosotros le indiquemos..
+
+- Comando para crear el modelo
 ```
-los modelos son basicamente clases phph que nos permiten interactuar con la base de datos,
-por convencion en laravel 8 los modelos se escriben con el nombre de una tabla existente para asi poder crear una relacion directa a la hora de usar el orm
-eloquent, sin embargo si no deseamos utilizar la convencion, laravel cuenta con la configuracion necesaria para que el modelo pueda trabajar con la tabla que
-nosotros le indiquemos..
-
+    php artisan make: model nombre_modelo
 ```
-# Para crear un modelo en laravel 8 basta con escribir el siguiente comando:
+# usar tablas propias con laravel 8
+- Creacion del controlador y modelo
 ```
-php artisan make: model nombre_modelo
+    php artisan make:controller categorias
+    php artisan make:model categoria
 ```
-
-## usar tablas propias con laravel 8
+- En nuestro controlador llamar la consulta y mostrarlo a la vista.
 ```
-php artisan make:controller categorias
-php artisan make:model categoria
+    public function index(){
+        $categorias = categoria:: all();
+        return view('welcome,compact('categorias'));
+    }
+```
+- Llenamos el modelo especificando las columnas de la tabla.
+```
+    class Categoria extends Model{
 
+        use HasFactory;
 
-public function index(){
-
-->bd = create table t_categoria(id_categoria int auto_increment,nombre varchar(255), created_at timestamp, updated_at timestamp, primary key[id_categoria];
-
-$categorias = categoria:: all();
-return view('welcome,compact('categorias'));
-
-
-## Usar tablas propias con laravel8
-
-llenamos el modelo
-
-class Categoria extends Model{
-
-use HasFactory;
-
-protected $table = 't_categoria';
-protected $primaryKey = 'id_categoria';
-protected $fillable = [
-	'nombre'
-];
-protected shidden =
- 'create_at',
- 'updated_at'
-];
-}
-
-
-
-MOSTRAR INFORMACION DE UNA TABLA EN UNA VISTA
-
-@foreach($categorias as $item)
-<td>{{$item->id}}</td>
-@endforeach
+        protected $table = 't_categoria';
+        protected $primaryKey = 'id_categoria';
+        protected $fillable = [
+            'nombre'
+        ];
+        protected shidden = [
+            'create_at',
+            'updated_at'
+        ];
+    }
+```
+- MOSTRAR INFORMACION DE UNA TABLA EN UNA VISTA
+```
+    @foreach($categorias as $item)
+        <tr>
+            <td>{{$item->id}}</td>
+        <tr>
+    @endforeach
 ```
 ## clonar repositorio de laravel desde git
 ```
