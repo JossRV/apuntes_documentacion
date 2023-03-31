@@ -6,23 +6,22 @@
 - Los **modelos**, trabajan con una tabla de los mismos nombres y la convierte en un objeto, en pocas palabras, los modelos en laravel, son tablas.
 - La carpeta **public** contiene informacion que el usuario puede ver, archivos css, js e imagene, (archivos listos para el navegador).
 - La carpeta **routes** contiene todas las rutas del proyecto, se pueden crear nuevos archivos de rutas si es que el proyecto es muy grandeo simplemente para mejor ordenamiento
-- Verbos, **Get**, **Post**, **Put**, **Delete**
 
-# rutas traidas por un controlador
-```Route::get ('/',[contolador::class, 'metodo']);```
-
+# Rutas
 - **controlador** es una clase
 - **metodo**, metodo que exita dentro de la clase
 
-
-Vistas y rutas
+#### Vistas y rutas
 Las rutas son creadas con un tipo de verbo que pueden ser:
-- get - vistas (api)
-- del - eliminar recursos de la base de datos
-- put - actualizar (update)
-- post - crear
+- **get** - vistas (api)
+- **delete** - eliminar recursos de la base de datos
+- **put** - actualizar (update)
+- **post** - crear
   
-# Performance en una aplicación: que tan bueno es, cuanta memoria, que tan rapido da respuesta el proyecto
+Sintaxis: ```Route::get ('/',[contolador::class, 'metodo']);```
+  
+**Performance en una aplicación:** que tan bueno es, cuanta memoria, que tan rapido da respuesta el proyecto.
+
 ```
 Creación de la primer vista:
 - Crear un controlador 
