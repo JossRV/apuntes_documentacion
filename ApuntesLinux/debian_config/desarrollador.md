@@ -130,7 +130,7 @@
     -> Para que composer no ejecute lento instalar:{
         -> sudo apt-get install php-curl
     }
-    Si el composer dice que tiene un error en el dom, utilizar el siguiente comando{
+    Si el composer dice que tiene un error en el dom y no te deja instalar laravel, utilizar el siguiente comando{
         -> sudo apt-get install php-xml
     }
 }

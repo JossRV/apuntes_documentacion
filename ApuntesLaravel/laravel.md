@@ -5,13 +5,15 @@
 - La carpeta **routes** todas las rutas para que funcione, debe pasar por una vista para que funcione, es un puente.
 - Los **modelos**, trabajan con una tabla de los mismos nombres y la convierte en un objeto, en pocas palabras, los modelos en laravel, son tablas.
 - La carpeta **public** contiene informacion que el usuario puede ver, archivos css, js e imagene, (archivos listos para el navegador).
-- La carpeta **routes** contiene todas las rutas del proyecto, se pueden crear nuevos archivos de rutas si es que el proyecto es muy grandeo simplemente para mejor ordenamiento
+- La carpeta **routes** contiene todas las rutas del proyecto, se pueden crear nuevos archivos de rutas si es que el proyecto es muy grandeo simplemente para mejor ordenamiento.
+- **Interpolación**, forma de traer las variables de php de un controlador. 
+- **Asset**, metodo para llamar las carpetas publicas (CSS y JSS).
 
 # Rutas
-- **controlador** es una clase
-- **metodo**, metodo que exita dentro de la clase
+- **controlador** - es una clase.
+- **metodo** - se crean dentro de la clase.
 
-#### Vistas y rutas
+## Vistas y rutas
 Las rutas son creadas con un tipo de verbo que pueden ser:
 - **get** - vistas (api)
 - **delete** - eliminar recursos de la base de datos
@@ -20,14 +22,18 @@ Las rutas son creadas con un tipo de verbo que pueden ser:
   
 Sintaxis: 
 ```
-Route::get ('/',[contolador::class, 'metodo']);
+    Route::get ('/',[contolador::class, 'metodo']);
+```
+Tener mas de una vista en el controlador:  
+```
+    return view('v').view('vz');
 ```
   
 **Performance en una aplicación:** que tan bueno es, cuanta memoria, que tan rapido da respuesta el proyecto.
 
 
 # Creación de la primer vista con el controlador
-- Crear un controlador .
+- Crear un controlador.
 ```
     php artisan make:controller Paisajes
 ```
@@ -41,8 +47,16 @@ Route::get ('/',[contolador::class, 'metodo']);
 ```
     Route::get('/',[Paisajes::class,'index']);
 ```
-- Creamos una vista dentro de la carpeta: `resorces/views/{nombre vista}.blade.php`
+- Creamos una vista dentro de la carpeta: 
+```
+    resorces/views/{nombre vista}.blade.php
+```
 
+## Parametros por URL
+- Simplemente, en la ruta agregamos entre llaves el parametro que vamos a enviar.
+```
+Route::get('/edit/{parametros}/{n parametros}',[CategoriasControlles::class,'edit']);
+```
 
 # Reglas de escritura de archivos
 
@@ -52,140 +66,126 @@ Route::get ('/',[contolador::class, 'metodo']);
 - **Rules o Reglas** - singular
 - **Request** - singular
 
-# Parametros por URL
-Simplemente, en la ruta agregamos entre llaves el parametro que vamos a enviar.
+# Instalar Bootstrap en Laravel
 ```
-Route::get('/edit/{parametros}/{n parametros}',[CategoriasControlles::class,'edit']);
+    commands ->{
+      npm i
+      npm i bootstrap 
+      npm i @popperjs/core
+      npm i sass-loader sass webpack --save-dev
+      npm install resolve-url-loader@^5.0.0 --save-dev --legacy-peer-deps
+    }
 ```
-
-Interpolación: 
-
-Tener mas de una vista en el controlador:  return view('v').view('vz');
-
-Asset: Son todo lo que tiene que ver con css y JS
+- Configurar archivos css y js dentro del archivo webpack.mix.js
 ```
-# Con yiel se crea y con section se consume
-
+    {
+        mix.js('resources/js/app.js','public/js')
+        .sass('resources/css/app.scss','public/css')
+        .sourceMaps();
+    }
 ```
-Si no te deja instala Laravel en linux y sale el error de que falta el dom, usar el siguiente comando
-=> sudo apt-get install php-xml
+- Cambiar el nombre al archivo .css dentro de resources/css/ por .scss
+- Para saber que las rutas estan bien se corre el compilador:
+```
+    npm run watch
+```
+### Configuracion de recursos CSS y JS
 
-
-Instalar Bootstrap:
-commands ->{
-    - npm i
-    - npm i bootstrap 
-    - npm i @popperjs/core
-    - npm i sass-loader sass webpack --save-dev
-    - npm install resolve-url-loader@^5.0.0 --save-dev --legacy-peer-deps
-}
-
-Configurar archivos css y js
-
-dentro del archivo webpack.mix.js
-{
-    mix.js('resources/js/app.js','public/js')
-    .sass('resources/css/app.scss','public/css')
-    .sourceMaps();
-}
-cambiar el nombre al archivo .css dentro de resources/css/ -> por .scss
-
-Para saber que las rutas estan bien se corre: 
--> npm run watch
-
-Configuracion de recursos CSS y JS 
-Dentro del archivo resources/js/app.js agregamos
-    require('./bootstrap');
-    import 'bootstrap';
-
-Dentro del archivo resources/css/app.scss agregamos
+- Dentro del archivo resources/js/app.js agregamos
+```
+   require('./bootstrap');
+   import 'bootstrap';
+```
+- Dentro del archivo resources/css/app.scss agregamos
+```  
     @import '~bootstrap/scss/bootstrap';
-
-Agregar Dependencias en Layouts tanto css como js 
+```
+- Agregar Dependencias en Layouts tanto css como js
+```
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <script src="{{mix('js/app.js')}}"></script>
+```
+>El mix evita la caché del navegador a diferencia de asset
 
-El mix evita la caché del navegador a diferencia de asset
-
-Instalar fontawesome 6.2
+# Instalar fontawesome 6.2
+```
     npm install --save @fortawesome/fontawesome-free
-
-En resources/css/app.scss hacemos la importacion
+```
+- En resources/css/app.scss hacemos la importacion
+```
     @import '~@fortawesome/fontawesome-free/css/all.min.css';
-
-instalar Select2
+```
+# Instalar Select2
+```
     npm i jquery
     npm i select2
-
-En resources/js/app.js agregamos
+```
+- En resources/js/app.js agregamos
+```
     import $ from 'jquery';
     require('select2');
     $('.select').select2();
-
-Posteriormente en resources/css/app.scss
+```
+- Posteriormente en resources/css/app.scss
+```
     @import "~select2/dist/css/select2.css";
+```
+>Para finalizar y ver que funciona creamos un select en la pagina inicio
 
-Para finalizar y ver que funciona creamos un select en la pagina inicio
-
-Pagina para instalar el sweetalert
--> https://realrashid.github.io/sweet-alert/install
+# [Sweetalert](https://realrashid.github.io/sweet-alert/)
 
 Bajar el de composer
--> composer require realrashid/sweet-alert
-
-agregar el registro del servidor en config/app.php
-
--> RealRashid\SweetAlert\SweetAlertServiceProvider::class,
-en la seccion de providers, despues del bloque de comentarios Package Service Providers...
-
-agregar en config/app.php en la seccion aliases
--> 'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
-
-ahora en nuestro layout, nuestra plantilla principal, ya sea main o inicio agregaremos el include
--> @include('sweetalert::alert')
-
-despues corremos el comando en la terminal para que la paqueteria se integre
--> php artisan sweetalert:publish
-
-ya en uso podemos seleccionar las alertas que queramos usar o incluso crearlos
--> https://realrashid.github.io/sweet-alert/usage?id=usage
-
 ```
-## Archivo .env 
+    composer require realrashid/sweet-alert
 ```
-Archivo de configuracion por excelencia en muchos framework para la configuracion de variables de entorno de la aplicacion web
-datos de conexion de base de datos, asi como los datos del entorno de trabajo, ya sea produccion o desarrollo
-en el archivo de configuracion de config/databases.php podemos encontrar la conexcion por defecto a base de datos
+- Agregar el registro del servidor en config/app.php
+```
+    RealRashid\SweetAlert\SweetAlertServiceProvider::class,
+```
+- En la seccion de providers, despues del bloque de comentarios Package Service Providers...
+- Agregar en config/app.php en la seccion aliases
+```
+    'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
+```
+- Ahora en nuestro layout, nuestra plantilla principal, ya sea main o inicio agregaremos el include
+```
+    @include('sweetalert::alert')
+```
+- Despues corremos el comando en la terminal para que la paqueteria se integre
+```
+    php artisan sweetalert:publish
+```
+> Ya en uso podemos seleccionar las alertas que queramos usar o incluso crearlos
 
-en .env apartir de la linea 11 :
 
-DB_CONNECTION=mysql -> sin modificacion
-DB_HOST=127.0.0.1 -> sin modificacion
-DB_PORT=3306 -> sin modificacion
-DB_DATABASE= 'nombre de la base'
-DB_USERNAME= 'usuario'
-DB_PASSWORD= 'contraseña'
+# Archivo .env 
+Archivo de configuracion es por excelencia en muchos framework para la configuracion de variables de entorno de la aplicacion web, datos de conexion de base de datos, asi como los datos del entorno de trabajo, ya sea produccion o desarrollo.
+
+En el archivo de configuracion .env podemos encontrar la conexcion por defecto a la base de datos, en .env apartir de la linea 11 :
 ```
-## Migraciones
+    DB_CONNECTION= mysql - sin modificacion
+    DB_HOST= 127.0.0.1 - sin modificacion
+    DB_PORT= 3306 - sin modificacion
+    DB_DATABASE= 'nombre de la base'
+    DB_USERNAME= 'usuario'
+    DB_PASSWORD= 'contraseña'
 ```
+# Migraciones
 Son clases PHP de laravel la forma de crearlo es: 
-
-php artisan migrate
 ```
-## Que es ORM
+    php artisan migrate
 ```
-Mapeo objeto-Relacional(orm)
+# Que es ORM
+> Mapeo Objeto Relacional
 
-esto quiere decir que la aplicacion tomara a la base de datos como si fuera un objeto de la misma aplicacion
+#### Esto quiere decir que la aplicacion tomara a la base de datos como si fuera un objeto de la misma aplicacion.
 
-
-Por ejemplo si tenemos una tabla llamada personas el objeto en el orm sera llamado personas, si lat abla tiene un camoi llamado
-apellido_paterno entonces sera una propiedad en el orm
-
-$personas = new Personas();
-$personas -> apellido_paterno = "Aquino";
+Por ejemplo si tenemos una tabla llamada personas el objeto en el orm sera llamado personas, si la tabla tiene un nombre llamado
+apellido_paterno entonces sera una propiedad del orm.
 ```
-
+    $personas = new Personas();
+    $personas -> apellido_paterno = "Aquino";
+```
 ## Modelos
 ```
 los modelos son basicamente clases phph que nos permiten interactuar con la base de datos,
