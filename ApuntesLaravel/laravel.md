@@ -18,38 +18,47 @@ Las rutas son creadas con un tipo de verbo que pueden ser:
 - **put** - actualizar (update)
 - **post** - crear
   
-Sintaxis: ```Route::get ('/',[contolador::class, 'metodo']);```
+Sintaxis: 
+```
+Route::get ('/',[contolador::class, 'metodo']);
+```
   
 **Performance en una aplicación:** que tan bueno es, cuanta memoria, que tan rapido da respuesta el proyecto.
 
+
+# Creación de la primer vista con el controlador
+- Crear un controlador .
 ```
-Creación de la primer vista:
-- Crear un controlador 
-    -- php artisan make:controller Paisajes
-- Creamos un método de controlador para llamar la vista
-    -- public function index(){
+    php artisan make:controller Paisajes
+```
+- Creamos un método de controlador para llamar la vista.
+```
+    public function index(){
         return view("inicio");
     }
-- Creamos una ruta para nuestro método de controlador
+```
+- Creamos una ruta para nuestro método de controlador usando el verbo get.
+```
     Route::get('/',[Paisajes::class,'index']);
-- Creamos una vista
-    dentro de la carpeta resorces/views/{nombre vista}.blade.php
 ```
-# NOTA
+- Creamos una vista dentro de la carpeta: `resorces/views/{nombre vista}.blade.php`
+
+
+# Reglas de escritura de archivos
+
+- **Tablas** - plural
+- **Modelos** - singular
+- **Controladores** - plural
+- **Rules o Reglas** - singular
+- **Request** - singular
+
+# Parametros por URL
+Simplemente, en la ruta agregamos entre llaves el parametro que vamos a enviar.
 ```
--> Reglas de escritura de archivos
-tablas -> plural
-modelos -> singular
-controladores -> plural
-Rules o reglas -> singular
-Request -> singular
-
-Parametros por URL
-simplemente despues de la ruta agregamos entre llaves el parametro que vamos a enviar
-
 Route::get('/edit/{parametros}/{n parametros}',[CategoriasControlles::class,'edit']);
-´
-Interpolación: ´
+```
+
+Interpolación: 
 
 Tener mas de una vista en el controlador:  return view('v').view('vz');
 
