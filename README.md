@@ -8,7 +8,7 @@
 
 - ### ***[Laravel](ApuntesLaravel/laravel.md)*** 
   > Instalacion de Laravel, metodos, migraciones, etc.
-- ### ***[TypeScript](apuntesFront/apuntes_typescript.md)***
+<!-- - ### ***[TypeScript](apuntesFront/apuntes_typescript.md)***
   > Apuntes e instalacion de TypeScript.
 - ### ***[Angular](apuntesFront/desarrollo_frontend.md)***
   > Apuntes, instalacion, componentes, modelos.
@@ -17,11 +17,11 @@
 - ### ***[Configuracion debian](ApuntesLinux/debian_config/desarrollador.md)***
   > Instalacion de LAMP, phpMyAdmin, composer, node, ssh, VSC, etc. en debian.
 - ### ***[ECMAS6](ApuntesPLF/ECMAS6.md)***
-  > Apuntes de JS con babel.
+  > Apuntes de JS con babel. -->
   <!-- apuntesReact/apuntesR.md -->
-- ### ***[React]()***
+<!-- - ### ***[React]()***
   > Apuntes de React, aun en proceso.
 - ### ***[ReactNative]()***
   > Apuntes de React Native aun en proceso.
 - ### ***[Python](Python/)***
-  > Apuntes de python, incluye algunos ejercicios resueltos.
+  > Apuntes de python, incluye algunos ejercicios resueltos. -->

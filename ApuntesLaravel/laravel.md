@@ -13,8 +13,13 @@
 - **controlador** - es una clase.
 - **metodo** - se crean dentro de la clase.
 
+# vistas
+- Carpeta views donde se encuentra en resources->views.
+- Como se manda a llamar -> por ruta, aunque no es la recomendable por defecto porque no esta enlazada con un controlador.
+
 ## Vistas y rutas
-Las rutas son creadas con un tipo de verbo que pueden ser:
+- Las rutas son creadas con un tipo de verbo que actuan de puente o estan asociados a una peticion.
+- Verbos HTTP:
 - **get** - vistas (api)
 - **delete** - eliminar recursos de la base de datos
 - **put** - actualizar (update)
@@ -22,26 +27,102 @@ Las rutas son creadas con un tipo de verbo que pueden ser:
   
 - Sintaxis: 
 ```
+    Route::get('/'->nombre ruta,[controller::class->clases,'metodo'->metodo de controlador]);
+    //Ejemplo:
     Route::get ('/',[contolador::class, 'metodo']);
+```
+- Ruta con parametros:
+```
+    route::get('inicio/{id0}/{id}'->nombre ruta,[controller::class->clases,'metodo'->metodo de controlador]);
+```
+- Ruta con nombre especifico, facilita llamarlo en la interpolacion:
+```
+    route::get('inicio/{id0}/{id}'->nombre ruta,[controller::class->clases,'metodo'->metodo de controlador])->name("rutaX");
+```
+  
+> **Performance:** La aplicacion se genera de manera optima.
+
+# Crear proyecto
+- Comando para crear el proyecto de laravel
+```
+    //cualquier otra distro o SO
+    composer create-progect laravel/laravel=8.* "nombre"
+    //manjaro
+    composer create-project laravel/laravel myproject "8.*"
+    laravel new myproject
+```
+# layaout->plantillas
+- Se ubica en la carpeta resources->views->layouts.
+- Se sabe que se llama la plantilla con la extension .blade.
+- Estructura del layout:
+```
+    <html>
+    <head>
+        <!-- Dependencias B5, CSS, FW -->
+        <title>Mi aplicación web</title>
+    </head>
+    <body>
+        <header>...</header>
+        <nav>
+            <!-- Se incluye la vista donde contiene el navbar -->
+            @include('pathShared')
+        </nav>
+        <main>
+            <!-- seccion donde ira el contenido de mis vistas, se abre con yiel -->
+            @yield('contenido')
+        </main>
+        <footer>...</footer>
+        <!-- dependecias JS -->
+    </body>
+    </html>
+```
+> Vista
+```
+    @extends('pathlayout')-> ‘main’
+```
+- Abro la seccion para que envie mi contenido al yiel creado en la vista main.
+```
+    @section('contenido')
+        <h1>Mi contenido</h1>
+        <p>Este es el contenido de mi vista específica.</p>
+    @endsection
+```
+
+# Creación de la primer vista con el controlador
+- ***Es un enlace y control entre vistas y modelos***
+- Crear un controlador.
+```
+    // sin metodos
+    php artisan make:controller 'nombre'
+    //con metodos necesarios para el crud
+    php artisan make:controller 'nombre' -r
+```
+- Creamos un método de controlador para llamar la vista.
+```
+    //retornar vista
+    public function index(){
+        return view("inicio");
+    }
+
+    //retornar vista con variables y datos
+    public function index(){
+        $titulo = "Inicio";
+        return view("nameView",compact("titulo"));
+    }
+
+    //recupera la informacion de la solicitud de los verbos que haya llegado
+    public function store(request $request){
+        $request->request('v1'); - se obtiene el valor
+        $request->v1;
+    }
+    //llamas clases para reservar memoria
+    $item = new User();
+    //rellena el espacio de memoria
+    $item = User::all();
 ```
 - Tener mas de una vista en el controlador:  
 ```
     return view('v').view('vz');
-```
-  
-> **Performance en una aplicación:** que tan bueno es, cuanta memoria, que tan rapido da respuesta el proyecto.
-
-
-# Creación de la primer vista con el controlador
-- Crear un controlador.
-```
-    php artisan make:controller Paisajes
-```
-- Creamos un método de controlador para llamar la vista.
-```
-    public function index(){
-        return view("inicio");
-    }
 ```
 - Creamos una ruta para nuestro método de controlador usando el verbo get.
 ```
@@ -170,10 +251,56 @@ Route::get('/edit/{parametros}/{n parametros}',[CategoriasControlles::class,'edi
     DB_PASSWORD= 'contraseña'
 ```
 # Migraciones
-- Comando
+- Nos ayudan al control en la bd.
+- Crear migracion.
+```
+    php artisan make:migration crear_tabla_usuarios
+```
+- Dar de alta la migracion.
 ```
     php artisan migrate
 ```
+- Actualizar tablas con campos nuevos o correccion de campos.
+```
+    php artisan migrate:fresh
+```
+
+- Objeto para crear los datos.
+```
+    $table
+```
+- Metodos para el control de registros...
+- Determina que es un campo autoincrementable y de llave primaria.
+```
+    $table->id();
+```
+- Campo de tipo cadena.
+```
+    $table->string();
+```
+- Campo de tipo date.
+```
+    $table->date();
+    $table->date('Y-m-d');
+    $table->date('H-m-s');
+```
+- create at y update at
+```
+    $table->timestamps();
+```
+- Campo tipo entero int.
+```
+    $table->integer();
+```
+- Campo de tipo flotante.
+```
+    $table->float();
+```
+- Campo para contraseñas
+```
+    $table->rememberToken();
+```
+
 # Que es ORM
 > Mapeo Objeto Relacional
 - Esto quiere decir que la aplicacion tomara a la base de datos como si fuera un objeto de la misma aplicacion.
@@ -186,10 +313,19 @@ apellido_paterno entonces sera una propiedad del orm.
 # Modelos
 - Los modelos son basicamente clases php que nos permiten interactuar con la base de datos, por convencion en Laravel, los modelos se escriben con el nombre de una tabla de base de datos existente para asi poder crear una relacion directa a la hora de usar el orm, sin embargo si no deseamos utilizar la convencion, laravel cuenta con la configuracion necesaria para que el modelo pueda trabajar con la tabla que nosotros le indiquemos..
 
-- Comando para crear el modelo
+- Comando para crear el modelo.
 ```
-    php artisan make: model nombre_modelo
+    php artisan make: model 'nombre_modelo'
 ```
+- Crea el modelo y la migracion para hacer las tablas al mismo tiempo.
+```
+    php artisan make:model 'nombre' -m
+```
+- Dentro del archivo model podemos especificar el nombre de la tabla.
+```
+    protected $table = 'nombreTabla';
+```
+
 # usar tablas propias con laravel 8
 - Creacion del controlador y modelo
 ```
@@ -228,55 +364,177 @@ apellido_paterno entonces sera una propiedad del orm.
         <tr>
     @endforeach
 ```
-## clonar repositorio de laravel desde git
+# clonar repositorio de laravel desde git
+- Clonando el proyecto 
 ```
-clonando el proyecto 
-git clone <link-proyecto>
-
-instalamos las dependencias y paqueterias con
-composer install
-npm i
-
-creamos el archivo .env con
-cp .env.example .env
-
-generamos el codigo
-php artisan key:generate
-
-iniciamos el servidor y queda nuestro proyecto clonado
+    git clone <link-proyecto>
 ```
-
-## Crear un crud en laravel
+- Instalamos las dependencias y paqueterias con
 ```
-1.- Se debe crear  la base de datos con la tabla la cual debe contener los datos y agregar extra dentro de las columnas de la tabla
+    composer install
+    npm i
+```
+- Creamos el archivo .env con
+```
+    cp .env.example .env
+```
+- Generamos el codigo
+```
+    php artisan key:generate
+```
+>Finalizando iniciamos el servidor y queda nuestro proyecto de laravel clonado
+
+# Crear un crud en laravel
+1. Se debe crear  la base de datos con la tabla la cual debe contener los datos y agregar extra dentro de las columnas de la tabla
+```
     {
         -> updated_at date, created_at date
     }
-2.- Se hará la conexion dentro del archivo (.env)
-3.- Se crean el modelo(singular) y el controlador (plural)
-4.- Al modelo se le agrega la tabla en la que va a trabajar -> el id lo va a reconocer automaticamente
+```
+2. Se hará la conexion dentro del archivo (.env)
+3. Se crean el modelo(singular) y el controlador (plural)
+4. Al modelo se le agrega la tabla en la que va a trabajar -> el id lo va a reconocer automaticamente
+```
     {
         -> protected $table = '{name table}'; 
     }
-5.- Crear una carpeta llamada "layout" en la que dentro tendra main.blade.php
-5.- dentro de main crear yields y interpolacion de el title
-7.- Se crea la tabla incluido el layout main
-8.- A continuacion se hace el metodo y el route como se ha hecho hasta ahora
-9.- dentro de la tabla de welcome se hace la tabla que sera la que contendra los datos
-10.- El primer paso a realizar para hacer el crud sera un boton el cual contrendra la primer funcion del CRUD la cual sera la C -> 'create'
-11.- se creara una nueva ruta la cual se utilizara para agregar nuevo dato
-12.- Dentro del ancore '<a></a>' y dentro del href se pondra la ruta anteriormente creada
-13.- Dentro de esa nueva ruta se creara un formulario en donde la ruta sera de tipo POST y se enviara al metodo store
+```
+5. Crear una carpeta llamada "layout" en la que dentro tendra main.blade.php
+5. dentro de main crear yields y interpolacion de el title
+7. Se crea la tabla incluido el layout main
+8. A continuacion se hace el metodo y el route como se ha hecho hasta ahora
+9. dentro de la tabla de welcome se hace la tabla que sera la que contendra los datos
+10. El primer paso a realizar para hacer el crud sera un boton el cual contrendra la primer funcion del CRUD la cual sera la C -> 'create'
+11. se creara una nueva ruta la cual se utilizara para agregar nuevo dato
+12. Dentro del ancore '<a></a>' y dentro del href se pondra la ruta anteriormente creada
+13. Dentro de esa nueva ruta se creara un formulario en donde la ruta sera de tipo POST y se enviara al metodo store
+```
     {
         ->Route::post('/store',[{nameOfController}::class,'store'])->name('{nameOfRoute}.store');
     }
-14.- Dentro del formulario debe ir @csrf el cual es el token
-15.- A continuacion en el controlador se busca el metodo de store, el cual recibira los metodos POST y los guardara en la base de datos
-16.- Para mostrar los datos en la ventana principal, se hara lo siguiente:
-    {
-        ->Se creara un foreach el cual recorrera todos los datos que existan
-        -> dentro de los parametros de invocacion se pondran la llave con un alias
-        -> dentro de los <td> </td> se utilizara interpolación {{}}
-    }
-
 ```
+14. Dentro del formulario debe ir @csrf el cual es el token
+15. A continuacion en el controlador se busca el metodo de store, el cual recibira los metodos POST y los guardara en la base de datos
+16. Para mostrar los datos en la ventana principal, se hara lo siguiente:
+```
+    {
+        - Se creara un foreach el cual recorrera todos los datos que existan
+        - dentro de los parametros de invocacion se pondran la llave con un alias
+        - dentro de los <td> </td> se utilizara interpolación {{}}
+        - Ejemplo: 
+        @foreach($categorias as $item)
+            <tr>
+                <td>{{$item->id}}</td>
+            <tr>
+        @endforeach
+    }
+```
+
+# factories
+- Es una fabrica de modelos que llena las tablas con informacion generada aleatoriamente, hecho por php y usa faker.
+- Comando para crear un factory...
+```
+    php artisan make:factory nombre
+```
+- Asignar elementos aleatorios, tanto numeros o texto.
+```
+    'producto'=>$this->faker->randomElement(['Aceite','Jabon Ace','Jabon Ariel','Sopa','Maruchans','Coca-Cola'])
+    'precio'=>$this->faker->randomElement(['22.5','10.4','11','35','30','25','10'])
+```
+- Asignar datos fecha.
+```
+    'vendido'=>$this->faker->date()
+```
+- Asignar numeros aleatorios especificando los digitos especificos y un booleano.
+```
+    'serial'=>$this->faker->randomNumber(7,true) 
+    // el bolleano afirma que solo me de numeros con 7 digitos
+    'serial'=>$this->faker->randomNumber(4,false) 
+    // el boleano afirma que me de numeros apartir de 4 a 1 digito
+```
+- Usar una funcion para asignar datos
+```
+    'imagen'=>function(array $obj){ 
+        // como parametro recibo el arreglo mismo del factorie
+        // puedo retornar cualquier dato para llenarlo a la base de datos
+        return $obj['producto']; 
+        // mi variable del parametro especifico el campo a tomar el valor 
+    }
+```
+- Asigna apellido de la persona
+```
+    'paterno'=>$this->faker->lastName(),
+    // asigna nombre de la persona de acuerdo al genero asignado
+    'nombre'=>function(array $user){
+        return $this->faker->name($user['genero']);
+    },
+```
+- Asignar genero de la persona
+```
+    'genero'=>$this->faker->randomElement(['male', 'female']),
+```
+
+# semillas
+- Dentro de la carpeta **seeders** hay una carpeta **root**
+- Despues del **ForModel**, especificar el nombre del modelo asignado en el protected, debe ser igual al nombre de la tabla para que llame correctamente
+- El **count**, asignas cuantos registros quieres, o cuantas filas quieres agregar, no hay limite de numero
+- Ejemplo...
+```
+    PersonaFactory::factoryForModel('persona')->count(15)->create();
+```
+- Comando para ejecutar la semilla.
+```
+    php artisan db:seed
+```
+- Comando que eliminara las tablas y creara las seed de la bd
+```
+    php artisan migrate:fresh --seed
+```
+ 
+# tinker
+- Es una herramienta de linea de comandos en laravel.
+- Dentro de tu proyecto usas el comando y abrira como un shell.
+```
+    php artisan tinker
+```
+### Obtener datos con tinker 
+- Una sola muestra.
+```
+    $item = App\Models\miModelo::all();
+```
+- Muestra por rango.
+```
+    $item = App\Models\miModelo::take(1)->get();
+```
+- Retorna un registro especifico, ya sea id o dato.
+```
+    $item = App\Models\miModelo::find(2)->get(); -->
+```
+- Agregar nuevos datos
+```
+    $item = new App\Models\Estudio
+    $item->nombre = 'Joss';
+    $item->paterno = 'Velaz';
+    $item->FechaNacimiento = '2001-04-16'
+    $item->save();
+```
+- Actualizacion con tinker
+```
+    $item = App\Models\Person::find('xNum');
+    $item->nombre='name actu';
+    $item->paterno='paterno actu';
+    $item->materno='materno actu';
+    $item->save();
+```
+- Truncar toda la tabla
+```
+    App\Models\Person::truncate();
+```
+- Eliminar un registro
+```
+    $item = App\Models\Person::find(1);
+    $item->delete();
+```
+- Salir del tinker con **q**
+
+### query builder eloquent
