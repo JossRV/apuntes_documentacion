@@ -430,7 +430,7 @@ apellido_paterno entonces sera una propiedad del orm.
     }
 ```
 
-# factories
+# Factories
 - Es una fabrica de modelos que llena las tablas con informacion generada aleatoriamente, hecho por php y usa faker.
 - Comando para crear un factory...
 ```
@@ -474,7 +474,7 @@ apellido_paterno entonces sera una propiedad del orm.
     'genero'=>$this->faker->randomElement(['male', 'female']),
 ```
 
-# semillas
+# Semillas
 - Dentro de la carpeta **seeders** hay una carpeta **root**
 - Despues del **ForModel**, especificar el nombre del modelo asignado en el protected, debe ser igual al nombre de la tabla para que llame correctamente
 - El **count**, asignas cuantos registros quieres, o cuantas filas quieres agregar, no hay limite de numero
@@ -491,7 +491,7 @@ apellido_paterno entonces sera una propiedad del orm.
     php artisan migrate:fresh --seed
 ```
  
-# tinker
+# Tinker
 - Es una herramienta de linea de comandos en laravel.
 - Dentro de tu proyecto usas el comando y abrira como un shell.
 ```
