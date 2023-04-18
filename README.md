@@ -1,4 +1,4 @@
-<h1 style="text-align: center;">Apuntes Documentacion</h1>
+<h1 align="center">Apuntes Documentacion</h1>
 
 ### Este proyecto contiene varios apuntes anotados por distintos cursos, tambien de clases de parte del poderosisimo TECNM II
 
