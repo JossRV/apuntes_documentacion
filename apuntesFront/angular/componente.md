@@ -1,4 +1,4 @@
-## Convenciones de nombres
+# <center>Convenciones de nombres</center>
 - Por defecto App en TS es {app.component.ts} 
 - otro ejemplo: **altasBajas.component.ts**
 - Tambien podemos ver que el selector se llama **app-root**
@@ -19,7 +19,7 @@ componente para calificaciones:
 > CalificacionesComponent
 > 
 > Si van a ser nombres compuestos es con guión medio '-'
-## Elementos necesarios para crear un componente
+# <center>Elementos necesarios para crear un componente</center>
 - Archivos **ts**, **html** y **css**
 - En el archivo TS necesitamos:
     - clase con export
@@ -35,7 +35,7 @@ componente para calificaciones:
             styleUrls: ['./app.component.css']
         })
     ```
-## Creacion de componentes mediante consola
+# <center>Creacion de componentes mediante consola</center>
 - Abrimos CLI
 ```
     // Al agregar el nombre del componente, se crea la carpeta misma junto los demas componentes.
@@ -47,7 +47,7 @@ componente para calificaciones:
 ```
 - Podemos olvidar poner component al final ya que el cli lo infeiere de manera automatica.
 - Tambien veremos que mapea el modulo y agrega nuestro componente de manera automatica.
-## Directiva *ngFor
+# <center>Directiva *ngFor</center>
 Para probarlo vamos a crear un arreglo.
 - TYPESCRIPT
 ```
@@ -70,7 +70,7 @@ Para probarlo vamos a crear un arreglo.
     </ul>
 ```
 
-## *ngFor en tablas
+# <center>*ngFor en tablas</center>
 - En el archivo ts
 ```
     public usuarios: any = [
@@ -98,7 +98,7 @@ Para probarlo vamos a crear un arreglo.
     </table>
 ```
 
-## Directiva *ngFor en divs
+# <center>Directiva *ngFor en divs</center>
 Usando el mismo archivo ts anterior.
 - HTML
 ```
@@ -108,7 +108,7 @@ Usando el mismo archivo ts anterior.
     </ng-container>
 ```
 
-## Directiva *ngIf
+# <center>Directiva *ngIf</center>
 El uso de *ngIf se usa para mostrar u ocultar elementos en la vista
 - Sintaxis
 ```
