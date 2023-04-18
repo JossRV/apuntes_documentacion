@@ -1,4 +1,4 @@
-<center style="font-family: Times News Roman"> <h1>Apuntes Documentacion</h1> </center>
+<div style="font-family: Times News Roman, text-align: center;"> <h1>Apuntes Documentacion</h1> </div>
 
 ### Este proyecto contiene varios apuntes anotados por distintos cursos, tambien de clases de parte del poderosisimo TECNM II
 
