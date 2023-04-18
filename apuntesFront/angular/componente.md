@@ -1,4 +1,4 @@
-# <center>Convenciones de nombres</center>
+# <p align="center">Convenciones de nombres</p>
 - Por defecto App en TS es {app.component.ts} 
 - otro ejemplo: **altasBajas.component.ts**
 - Tambien podemos ver que el selector se llama **app-root**
@@ -19,7 +19,7 @@ componente para calificaciones:
 > CalificacionesComponent
 > 
 > Si van a ser nombres compuestos es con guión medio '-'
-# <center>Elementos necesarios para crear un componente</center>
+# <p align="center">Elementos necesarios para crear un componente</p>
 - Archivos **ts**, **html** y **css**
 - En el archivo TS necesitamos:
     - clase con export
@@ -35,7 +35,7 @@ componente para calificaciones:
             styleUrls: ['./app.component.css']
         })
     ```
-# <center>Creacion de componentes mediante consola</center>
+# <p align="center">Creacion de componentes mediante consola</p>
 - Abrimos CLI
 ```
     // Al agregar el nombre del componente, se crea la carpeta misma junto los demas componentes.
@@ -47,7 +47,7 @@ componente para calificaciones:
 ```
 - Podemos olvidar poner component al final ya que el cli lo infeiere de manera automatica.
 - Tambien veremos que mapea el modulo y agrega nuestro componente de manera automatica.
-# <center>Directiva *ngFor</center>
+# <p align="center">Directiva *ngFor</p>
 Para probarlo vamos a crear un arreglo.
 - TYPESCRIPT
 ```
@@ -70,7 +70,7 @@ Para probarlo vamos a crear un arreglo.
     </ul>
 ```
 
-# <center>*ngFor en tablas</center>
+# <p align="center">*ngFor en tablas</p>
 - En el archivo ts
 ```
     public usuarios: any = [
@@ -98,7 +98,7 @@ Para probarlo vamos a crear un arreglo.
     </table>
 ```
 
-# <center>Directiva *ngFor en divs</center>
+# <p align="center">Directiva *ngFor en divs</p>
 Usando el mismo archivo ts anterior.
 - HTML
 ```
@@ -108,7 +108,7 @@ Usando el mismo archivo ts anterior.
     </ng-container>
 ```
 
-# <center>Directiva *ngIf</center>
+# <p align="center">Directiva *ngIf</p>
 El uso de *ngIf se usa para mostrar u ocultar elementos en la vista
 - Sintaxis
 ```
