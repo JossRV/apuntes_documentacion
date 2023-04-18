@@ -74,9 +74,9 @@ Para probarlo vamos a crear un arreglo.
 - En el archivo ts
 ```
     public usuarios: any = [
-        {id:1, nombre:"Joss"},
-        {id:2, nombre:"mitzi"},
-        {id:3, nombre:"faty"},
+        {id:1, nombre:"usuario1"},
+        {id:2, nombre:"usuario2"},
+        {id:3, nombre:"usuario3"},
     ];
 ```
 
