@@ -79,3 +79,16 @@
 ```
     <button (click)="funcion ts o codigo plano js">Hola</button>
 ```
+# **<p align="center">Pasar datos de componente padre a hijo</p>**
+- Creación de componentes
+```
+    ng g c nombre_component
+    ng generate component nombre_componente
+```
+# Reciclado de componentes
+- Todos los componentes cuentan con un selector, el cual se encarga de hacer la llamada al componente en el modulo principal o app.component.html
+# Decorador Input
+- En Angular, **@Input()** es un decorador que se utiliza para indicar que una propiedad de un componente debe recibir datos desde un componente padre
+- Cuando se declara una propiedad como **@Input()**, se esta definiendo una propiedad de entrada que puede ser asignada por un componente padre. Esto significa que el valor de la propiedad puede ser establecido por otro componente en el que se esta utilizando el componente hijo.
+# Ejercicio Tirar los dados
+- Implementar una aplicación que muestre tres dados (crear un componente llamado 'dado') y un boton. Cuando se presione el boton generar tres veces el valor y pasarlos a los componentes respectivas para que se muestren. La clase principal debe mostrar un mensaje que el usuario gano si los tres dados tienen el mismo valor.
