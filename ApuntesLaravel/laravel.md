@@ -46,7 +46,7 @@
 - Comando para crear el proyecto de laravel
 ```
     //cualquier otra distro o SO
-    composer create-progect laravel/laravel=8.* "nombre"
+    composer create-project laravel/laravel=8.* "nombre"
     //manjaro
     composer create-project laravel/laravel myproject "8.*"
     laravel new myproject
