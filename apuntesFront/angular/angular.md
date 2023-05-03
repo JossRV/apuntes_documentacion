@@ -105,3 +105,5 @@
 - **Output** va de la mano de EventEmitter ya que es necesario para hacer la emisión del output.
 - Define una salida del componente que el componente padre puede suscribirse para escuchar o un observable.
 - Usualmente cuando hablamos de "suscribirnos a los oservables", significa estar escuchando las emisiones que ese objeto estará emitiendo a lo largo de su vida.
+
+<image src="../ImagenesAngular/OutpuyInput.jpeg" alt="Imagen de Entendiendo Output e Input" width=500px>
