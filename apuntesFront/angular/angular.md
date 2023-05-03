@@ -79,3 +79,29 @@
 ```
     <button (click)="funcion ts o codigo plano js">Hola</button>
 ```
+# **<p align="center">Pasar datos de componente padre a hijo</p>**
+- Creación de componentes
+```
+    ng g c nombre_component
+    ng generate component nombre_componente
+```
+# **<p align="center">Reciclado de componentes</p>**
+- Todos los componentes cuentan con un selector, el cual se encarga de hacer la llamada al componente en el modulo principal o app.component.html
+# **<p align="center">Decorador Input</p>**
+- En Angular, **@Input()** es un decorador que se utiliza para indicar que una propiedad de un componente debe recibir datos desde un componente padre
+- Cuando se declara una propiedad como **@Input()**, se esta definiendo una propiedad de entrada que puede ser asignada por un componente padre. Esto significa que el valor de la propiedad puede ser establecido por otro componente en el que se esta utilizando el componente hijo.
+# Ejercicio Tirar los dados
+- Implementar una aplicación que muestre tres dados (crear un componente llamado 'dado') y un boton. Cuando se presione el boton generar tres veces el valor y pasarlos a los componentes respectivas para que se muestren. La clase principal debe mostrar un mensaje que el usuario gano si los tres dados tienen el mismo valor.
+
+- Corchetes son para Atributos y Parentesis son para eventos
+
+# **<p align="center">NgOninit y OnInit</p>**
+- **OnInit** = Método que es parte del ciclo de vida de angular, se ejecuta después del constructor ya que requiere que todas las dependencias y atributos ya hayan cargado, o sea una vez se haya cargado el componente tambien podemos decir que es un hook.
+- **ngOnInit** = Básicamente el metodo implentado de OnInit.
+
+- **Hook**: Los hooks son utilizados principalmente en frameworks y bibliotecas que utilizan la programación orientada a eventos o la programación reactiva
+
+# **<p align="center">EventEmitter y Output</p>**
+- **Output** va de la mano de EventEmitter ya que es necesario para hacer la emisión del output.
+- Define una salida del componente que el componente padre puede suscribirse para escuchar o un observable.
+- Usualmente cuando hablamos de "suscribirnos a los oservables", significa estar escuchando las emisiones que ese objeto estará emitiendo a lo largo de su vida.
