@@ -17,10 +17,13 @@
   - *[Componentes](apuntesFront/angular/componente.md)*
   - *[Modelos](apuntesFront/angular/model.md)*
   - *[Estilos de prueba](apuntesFront/angular/estilos-basicos.css)*
-<!-- - ### ***[Configuracion ubuntu](ApuntesLinux/ubuntu_config/desarrollador.md)***
-  > Instalacion de LAMP, phpMyAdmin, composer, node, ssh, VSC, etc. en ubuntu. -->
-<!-- - ### ***[Configuracion debian](ApuntesLinux/debian_config/desarrollador.md)***
-  > Instalacion de LAMP, phpMyAdmin, composer, node, ssh, VSC, etc. en debian. -->
+  - *[CheatSheet](apuntesFront/cheat/angular-cheat-sheet.pdf)*
+- ### ***[Configuracion Linux](ApuntesLinux)***
+    > Instalacion de LAMP, phpMyAdmin, composer, node, ssh, VSC, etc. en ubuntu y debian.
+    - *[GNU](ApuntesLinux/gnu.md)*
+    - *[Ubuntu](ApuntesLinux/ubuntu_config/desarrollador.md)*
+    - *[Debian](ApuntesLinux/debian_config/desarrollador.md)*
+    - *[Virtual Host](ApuntesLinux/virtualHost.md)*
 <!-- - ### ***[ECMAS6](ApuntesPLF/ECMAS6.md)***
   > Apuntes de JS con babel. -->
   <!-- apuntesReact/apuntesR.md -->
@@ -30,3 +33,6 @@
   > Apuntes de React Native aun en proceso. -->
 - ### ***[Python](Python/)***
   > Apuntes de python, incluye algunos ejercicios resueltos.
+
+- ### ***[Markdow](apunteMarkdow/apunttes.md)***
+  > Apuntes de extension md para vsc

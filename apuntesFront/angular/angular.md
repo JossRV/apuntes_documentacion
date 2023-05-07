@@ -90,7 +90,7 @@
 # **<p align="center">Decorador Input</p>**
 - En Angular, **@Input()** es un decorador que se utiliza para indicar que una propiedad de un componente debe recibir datos desde un componente padre
 - Cuando se declara una propiedad como **@Input()**, se esta definiendo una propiedad de entrada que puede ser asignada por un componente padre. Esto significa que el valor de la propiedad puede ser establecido por otro componente en el que se esta utilizando el componente hijo.
-# Ejercicio Tirar los dados
+# **<p align="center">Ejercicio Tirar los dados</p>**
 - Implementar una aplicación que muestre tres dados (crear un componente llamado 'dado') y un boton. Cuando se presione el boton generar tres veces el valor y pasarlos a los componentes respectivas para que se muestren. La clase principal debe mostrar un mensaje que el usuario gano si los tres dados tienen el mismo valor.
 
 - Corchetes son para Atributos y Parentesis son para eventos

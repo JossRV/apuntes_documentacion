@@ -14,7 +14,7 @@ Richard Stallman -> creador de GNU
 ## Kernel Populares:
 ~~~
 Windows -> MSDOS basado en basic
-Mac OS-> Unix basado en C
+Mac OSc-> Unix basado en C
 GNU/Linux? -> Linux basado en C
 GNU -> parte grafica, aplicaciones gratis  --> No es Unix
 Android -> Linux basado en java
@@ -67,23 +67,23 @@ Para nuestro caso DEB será las mas efectiva
 
 ## Ventajas de GNU/Linux sobre Windows:
 ~~~
-->Auditorias Transparentes: por que se tiene los derechos de las licencias
-->No requieres computadoras con grandes prestaciones
-->Sistema de archivos mucho más estable (no hay fragmentación)
-->No hay virus como tal para Linux
-->No hay que hacer mantenimiento preventivo
-->Es gratis
-->Diverso
-->Muy privado (no usas cracks mi medicinas)
+-> Auditorias Transparentes: por que se tiene los derechos de las licencias
+-> No requieres computadoras con grandes prestaciones
+-> Sistema de archivos mucho más estable (no hay fragmentación)
+-> No hay virus como tal para Linux
+-> No hay que hacer mantenimiento preventivo
+-> Es gratis
+-> Diverso
+-> Muy privado (no usas cracks mi medicinas)
 ~~~
 
 ## Desventajas GNU/Linux sobre Windows
 ~~~
-->Muy pocos juegos compatibles
-->Algunos controladores pueden ser muy singulares y no tenerlos
-->Curva de aprendizaje
-->Dificultad para pedir ayuda
-->Edición de multimedia puede ser tediosa o mala (creadores de contenido)
+-> Muy pocos juegos compatibles
+-> Algunos controladores pueden ser muy singulares y no tenerlos
+-> Curva de aprendizaje
+-> Dificultad para pedir ayuda
+-> Edición de multimedia puede ser tediosa o mala (creadores de contenido)
 ~~~
 
 # Comandos
@@ -110,31 +110,31 @@ Se utiliza sudo para que veas que eres root
 ### Comandos a revisar:
 
 ~~~
-- ip-> mostrar la ip
+- ip -> mostrar la ip
     command =>ip address
-- cd->Cambiar directorio
+- cd -> Cambiar directorio
     Con este comando podemos movernos entre directorios, ya sea de manera relativa o de manera absoluta\
     command => cd .., cd, cd ~
-- pwd-> present working directory
+- pwd -> present working directory
     Este comando nos sirve para saber en que directorio estoy trabajando actualmente
     command => pwd
-- ls-> list source
+- ls -> list source
     Muestra el listado de contenido de un directorio
     commands => ls, ls -l
     Permiso de Grupo, permiso de Propietario, Permisos de Otros
-- cat y more->
+- cat y more ->
     cat nuestra el contenidode un archivo plano
     more muestra el contenido de un archivo plano con un porcentaje 
     commands => 
-        -cat {nombreArchivo}
-        -more {nombreArchivo}, para quitar es con "q"
+        - cat {nombreArchivo}
+        - more {nombreArchivo}, para quitar es con "q"
 - mkdir ->
     El comando mkdir sirve para crear una carpeta
     commands => mkdir "nombreCarpeta"
-- touch-> 
+- touch -> 
     El comando touch sirve para crear archivos nuevos
     commands => touch "nombreArchivo"
-- cp->
+- cp ->
     El comando cp sirve para copiar un archivo o directorio
     commands => cp "archivo a copiar" "destino y nombre nuevo"
 - mv ->
@@ -142,17 +142,17 @@ Se utiliza sudo para que veas que eres root
     commands => 
         -renombrar: mv "archivo1 archivo2"
         -mover: mv "archivo1/carpeta1/archivo1"
-- rm y rmdir->
+- rm y rmdir ->
     El comando rm borra archivos
     El comando rmdir solo borra una carpeta que este vacia
     El comando rm -R borra toda la carpeta y sus archivos
     Commands =>
-        -rm {nombreArchivo}
-        -rmdir {nombreCarpeta::vacia}
-        -rm -R {nombreCarpeta::con archivos}
-- grep->
+        - rm {nombreArchivo}
+        - rmdir {nombreCarpeta::vacia}
+        - rm -R {nombreCarpeta::con archivos}
+- grep ->
     Este comando nos servirá para hacer busquedas en archivos y listado de consolas
-    commans=>
+    commans =>
         - grep -i: la búsqueda no distinguirá entre mayus y minus.
         - grep -c: solo mostrara el numero de lineas que coinciden con el patrón buscado
         - grep -r: rehabilita la búsqueda recursica en el directorio actual
@@ -165,7 +165,7 @@ Se utiliza sudo para que veas que eres root
         Buscar en un listado de consola
          - grep ls \ grep Descargas
          # "man git"
-- pgrep->
+- pgrep ->
     Nos funciona para buscar id de proceso mediante el nombre de la aplicación en ecución
     commands =>
         - pgrep htop
@@ -183,14 +183,14 @@ Se utiliza sudo para que veas que eres root
     En uno hosting web usamos 644 para ficheros y 755 para directorios
 
     Archivos php.html etc-> 644
-    (6)-> el dueño del archivo puede hacer lectura y escritura
-    (4)-> el grupo puede hacer escritura
-    (4)-> todos los demas usuarios pueden hacer escritura
+    (6) -> el dueño del archivo puede hacer lectura y escritura
+    (4) -> el grupo puede hacer escritura
+    (4) -> todos los demas usuarios pueden hacer escritura
 
     Carpetas -> 755
-    (7)-> el dueño tiene permisos de lectura,escritura, ejecución
-    (5)-> el grupo lectura y ejecución
-    (5)-> los demas usuarios tienen lectura y ejecución
+    (7) -> el dueño tiene permisos de lectura,escritura, ejecución
+    (5) -> el grupo lectura y ejecución
+    (5) -> los demas usuarios tienen lectura y ejecución
     * Permiso Recursivo: chmod -R 777 html *
   
     # Lista de permisos dependiendo del numero:
@@ -202,15 +202,15 @@ Se utiliza sudo para que veas que eres root
     (5) -> leer y ejecutar
     (6) -> leer y escribir
     (7) -> Todos los permisos
-kill->
+- kill ->
     Este comando sirve para matar un proceso o varios
-        -kill id (con un solo id)
-        -killall "nombreProceso"
-        -kill-CONT id (procedemos con el proceso)
-        -kill-STOP id (detenemos un proceso) 
+        - kill id (con un solo id)
+        - killall "nombreProceso"
+        - kill-CONT id (procedemos con el proceso)
+        - kill-STOP id (detenemos un proceso) 
 
 
--r: recursivo es cuando lo vuelves a utilizar dentro de 
+- r: recursivo es cuando lo vuelves a utilizar dentro de 
 ~~~
 
 ## Crear nuevo usuario por consola
@@ -269,66 +269,6 @@ para conectarte al puerto es teniendo tu direccion ip usando ifconfig
 ahora para conectarte ponemos en el comando
 ssh joss@192.168.3.231 -p 443
 ~~~
-
-<!-- llevarlo al config desarrollador -->
-# LAMP -> Linux, Apache, Maria :: Mysql, Php
-
-
-Instalar Apache2:
-~~~
- commands{
-    -> sudo apt update
-    -> sudo apt install apache2
-    -> sudo service apache2 status
-    Abrir cortafuegos -> ufw enable ---despues de estar abierto salta hasta agregar apache
-    checar que este activo -> ufw status
-    agregar apache al cortafuegos -> sudo ufw allow in "Apache"
- }
-~~~
-Instalar MariaDB{ (es un fork de mysql -> es lo mismo que mysql pero en gratis)
-~~~
-    commands{
-        -> sudo apt install mariadb-server
-        -> sudo service mariadb status
-        -> sudo mysql_secure_installation (en la primera opcion darle enter y lo demas n con eso queda)
-    }
-    entrar a mariadb{
-        -> sudo mariadb
-        -> GRANT ALL ON *.* TO 'nameUser'@'localhost' IDENTIFIED BY 'pass' WITH GRANT OPTION;
-        -> FLUSH PRIVILEGES;
-        -> EXIT
-
-        Para entra a mariadb: -> mysql -u 'usuariocreadosincomillas' -p
-    UsuarioDani{
-        dan398 -> pass danroot
-    }
-    UsuarioJoss{
-        joss -> 4794
-    }
-    }
-~~~
-Comandos para instalar PHP 8
-~~~
-{
-    -> sudo apt install php libapache2-mod-php php-mysql
-    este comando instala el php de la versiones mas recientes que van saliendo
-
-    si no funciona usar esta forma
-    -> sudo apt install software-properties-common apt-transport-https -y
-    ondrej para ubuntu 
-    -> sudo add-apt-repository ppa:ondrej/php -y
-    ondrej para debian 
-    -> sudo apt-get install ca-certificates apt-transport-https software-properties-common wget curl lsb-release -y
-    -> curl -sSL https://packages.sury.org/php/README.txt | sudo bash -x
-    despues de ondrej dependiendo el sistema operativo que tengas, continuas para hacer la instalacion de php
-    -> sudo apt install php8.1 php8.1-common libapache2-mod-php8.1 php8.1-cli
-    -> sudo service apache2 restart
-}
-~~~
-
-Para revisar la información de php es creando un archivo .php y dentro los tags de php
-    -> phpinfo();
-
 ## *SAMBA*
 ~~~
 -> Protocolo de transferencia de datos universal
@@ -361,7 +301,7 @@ agregamos lo siguiente al final del archivo:
         }
 
 Al finalizar la configuración se debe reiniciar el servicio con el siguiente comando:{
-    ->sudo service smbd restart
+    -> sudo service smbd restart
 }
 para crear o dar una contraseña de samba a tu usuario se hace con el siguiente comando:{
     -> sudo smbpasswd -a [user]
@@ -387,9 +327,9 @@ para crear o dar una contraseña de samba a tu usuario se hace con el siguiente 
     -> Es un servicio de sincronizacion remota, nos permite hacer respaldos de informacion incrementales
     -> Los respaldos incrementales son aquellos que solo toman en cuenta informacion nueva y la vieja no la vuelve a copiar.
 
-    ->rsync es una herramienta muy util ya que esta funciona con ssh esto permite al administrador bajar y subir informacion al servidor como si de ftp se tratara, sin embargo de forma incremental.
+    -> rsync es una herramienta muy util ya que esta funciona con ssh esto permite al administrador bajar y subir informacion al servidor como si de ftp se tratara, sin embargo de forma incremental.
 
-    ->Instalar rsync{
+    -> Instalar rsync{
         -> sudo apt install rsync
     }
     Opciones de rsync
@@ -436,14 +376,14 @@ Git es un sofware de control de versiones diseñado por Linus Torvalds, pensando
 ~~~
 ### PRIMEROS PASOS CON GIT
 ~~~
-->Instalacion de git
+-> Instalacion de git
 .Estado de git
-    ->working directory
+    -> working directory
         *codigo fuente del proyecto
-    ->Staging area
+    -> Staging area
         *Archivo que se dara de alta o no
-    ->Repositorio
-    -*Los cambios que se dieron de alta
+    -> Repositorio
+    -> Los cambios que se dieron de alta
 ~~~
 
 ### Comandos básicos para el uso de git
@@ -467,9 +407,9 @@ commands{
 4.- Revisamos el estado de los archivos git status
 5.- Agregar los archivos al ptoyecto de git{
     # opciones: 
-        ->git add "nombreArchivo"
-        ->git add .
-        ->git add -A -> A == ALL
+        -> git add "nombreArchivo"
+        -> git add .
+        -> git add -A -> A == ALL
 }
 6.- Verificar el estatus, tienen que estar en el área de stage
 ~~~

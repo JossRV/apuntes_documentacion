@@ -1,9 +1,9 @@
-												01/10/2021
-La palabra reservada let por convencion construiremos las variebles usando esta palabra, solo es una regla para nosotros.
-
-resultado = true +45; 
-esta operacion es implicita porque el true equivale a 1 por lo tanto se vconvierte y quedaria asi 1+45 por lo que da de resultado 46.
-inclusive con false daria una conversion de 0 por lo que el resultado seria 45.
+- La palabra reservada **let** por convencion construiremos las variebles usando esta palabra, solo es una regla para nosotros.
+```
+	resultado = true +45; 
+```
+- Esta operacion es **implicita** porque el `true` equivale a 1 por lo tanto se convierte y quedaria asi `1+45` por lo que da de resultado `46`.
+inclusive con false daria una conversion de `0` por lo que el resultado seria `45`.
 
 _NaN_ significa No a Number (no es un numero), no hay que confundir la concatenacion en una resta, la concatenacion se hace con el signo +
 al usar otro te marcara NaN debido que al hacer la operacion con otro signo operador esta detectara si es numero o cadena.
@@ -81,8 +81,7 @@ y posteriormente sigue la respuesta en positivo
 al lado de la respuesta positiva van los : para avisar que hay otra respuesta
 y finalizo poniendo la respuesta negativa
 
-%%Nuevo Apunte%%
-																	07/10/2021
+%%Nuevo Apunte%%								07/10/2021
 Funciones
 En java trabajabamos con un concepto Método 
 Metodo es lo mismo que funcion al hablarlo estariamos hablando de un metodo debido que su comportamiento es igual.
@@ -96,8 +95,7 @@ Las funciones declarativas se pueden trabajar de manera muy facil  que hay de fu
 `typeof` es una palabra reservada que especifica el tipo de dato que es.
 
 
-%%Nuevo Apunte%%
-															08/10/2021
+%%Nuevo Apunte%%								08/10/2021
 Recordando que JS al usarlo de manera nativa es un leguaje INTERPRETADO
 Nuestro navegador va a leer todo lo que construyamos de arriba hacia abajo, no puedes usar cosas que no hayas construido, puedes crear un conflicto
 
@@ -140,8 +138,7 @@ que se hace de esta manera
 JS tiene una forma de manipular el contenido
 herramientas selectores (estructura de seleccion)
 
-%%Nuevo Apunte%% 
-																		14/10/2021
+%%Nuevo Apunte%% 										14/10/2021
 
 Pensaremos que nosotros somos usuarios, usando una lapto que simula el sistema de entrada de un softwer, esta interfaz la controla el controlador, este controlador es un pequeño fracmento de software que monitorea u observa el comportamiento de la interfaz del usuario para saber que info nos proporciona para trabajar.
 El modelo es la base de dato y esta trabaja en conjunto con el controlador para poder hacer maquetaciones y mas cosas interesantes.
