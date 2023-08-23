@@ -107,3 +107,9 @@
 - Usualmente cuando hablamos de "suscribirnos a los oservables", significa estar escuchando las emisiones que ese objeto estará emitiendo a lo largo de su vida.
 
 <image src="../ImagenesAngular/OutpuyInput.jpeg" alt="Imagen de Entendiendo Output e Input" width=500px>
+
+# **<p align="center">Petición de datos a php con httpclient</p>**
+
+## API
+- **Application Programing Interface** es un conjunto de reglas y protocolos que permiten que distintos sistemas informaticos se comuniquen entre si. Proporciona una interfaz bien definida y documentafa que especifica como se puede solicitar y utilizar determinadas funciones o servicios de un software o plataforma.
+- 
