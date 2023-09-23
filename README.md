@@ -9,15 +9,15 @@
 - ### ***[Laravel](ApuntesLaravel/laravel.md)*** 
   > Instalacion de Laravel, metodos, migraciones, etc.
   - *[Creando Login](ApuntesLaravel/creandoLogin.md)*
-- ### ***[TypeScript](apuntesFront/apuntes_typescript.md)***
+- ### ***[TypeScript](ApuntesFront/apuntes_typescript.md)***
   > Apuntes e instalacion de TypeScript.
 - ### ***[Angular]()***
   > Apuntes, instalacion, componentes, modelos.
-  - *[Definicion e instalacion](apuntesFront/angular/angular.md)*
-  - *[Componentes](apuntesFront/angular/componente.md)*
-  - *[Modelos](apuntesFront/angular/model.md)*
-  - *[Estilos de prueba](apuntesFront/angular/estilos-basicos.css)*
-  - *[CheatSheet](apuntesFront/cheat/angular-cheat-sheet.pdf)*
+  - *[Definicion e instalacion](ApuntesFront/angular/angular.md)*
+  - *[Componentes](ApuntesFront/angular/componente.md)*
+  - *[Modelos](ApuntesFront/angular/model.md)*
+  - *[Estilos de prueba](ApuntesFront/angular/estilos-basicos.css)*
+  - *[CheatSheet](ApuntesFront/cheat/angular-cheat-sheet.pdf)*
 - ### ***[Configuracion Linux](ApuntesLinux)***
     > Instalacion de LAMP, phpMyAdmin, composer, node, ssh, VSC, etc. en ubuntu y debian.
     - *[GNU](ApuntesLinux/gnu.md)*
@@ -26,13 +26,12 @@
     - *[Virtual Host](ApuntesLinux/virtualHost.md)*
 <!-- - ### ***[ECMAS6](ApuntesPLF/ECMAS6.md)***
   > Apuntes de JS con babel. -->
-  <!-- apuntesReact/apuntesR.md -->
-<!-- - ### ***[React]()***
-  > Apuntes de React, aun en proceso. -->
+- ### ***[React](ApuntesReact/React/React.md)***
+  > Apuntes de React, aun en proceso.
 <!-- - ### ***[ReactNative]()***
   > Apuntes de React Native aun en proceso. -->
 - ### ***[Python](Python/)***
   > Apuntes de python, incluye algunos ejercicios resueltos.
 
-- ### ***[Markdow](apunteMarkdow/apunttes.md)***
+- ### ***[Markdow](ApunteMarkdow/apunttes.md)***
   > Apuntes de extension md para vsc
