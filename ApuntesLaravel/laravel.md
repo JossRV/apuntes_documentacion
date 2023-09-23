@@ -538,3 +538,5 @@ apellido_paterno entonces sera una propiedad del orm.
 - Salir del tinker con **q**
 
 ### query builder eloquent
+
+***[Regresar](/README.md)***

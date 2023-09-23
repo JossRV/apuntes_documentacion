@@ -112,4 +112,5 @@
 
 ## API
 - **Application Programing Interface** es un conjunto de reglas y protocolos que permiten que distintos sistemas informaticos se comuniquen entre si. Proporciona una interfaz bien definida y documentafa que especifica como se puede solicitar y utilizar determinadas funciones o servicios de un software o plataforma.
-- 
+
+***[Regresar](/README.md)***

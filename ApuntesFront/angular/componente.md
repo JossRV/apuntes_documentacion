@@ -126,3 +126,4 @@ El uso de *ngIf se usa para mostrar u ocultar elementos en la vista
         <p>La condicion es falsa</p>
     </ng-template>
 ```
+***[Regresar](/README.md)***

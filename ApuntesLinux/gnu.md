@@ -462,3 +462,5 @@ de esta forma podemos aceptar ambos cambios que se hicieron sin perder nada.
 
 haremos un commit porque estan en el stating area y de ahi un push.
 ~~~
+
+***[Regresar](/README.md)***

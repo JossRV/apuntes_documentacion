@@ -224,3 +224,5 @@ commands{
     -> mysqldump -u 'usuario' -p 'nombre de bd' > "ruta/nombre.sql"
     -> mysqldump -u 'usuario' -p'password' 'nombre de bd' > "ruta/nombre.sql"
 ~~~
+
+***[Regresar](/README.md)***

@@ -38,3 +38,5 @@
 - **union**: para declarar un tipo que puede ser uno de varios tipos diferentes.
 - **intersection**: para declarar un tipo que tiene propiedades de varios tipos diferentes.
 - **function**: para declarar el tipo de una función.
+
+***[Regresar](/README.md)***

@@ -11,7 +11,7 @@
   - *[Creando Login](ApuntesLaravel/creandoLogin.md)*
 - ### ***[TypeScript](ApuntesFront/apuntes_typescript.md)***
   > Apuntes e instalacion de TypeScript.
-- ### ***[Angular]()***
+- ### ***[Angular](ApuntesFront/angular/)***
   > Apuntes, instalacion, componentes, modelos.
   - *[Definicion e instalacion](ApuntesFront/angular/angular.md)*
   - *[Componentes](ApuntesFront/angular/componente.md)*
@@ -30,8 +30,8 @@
   > Apuntes de React, aun en proceso.
 <!-- - ### ***[ReactNative]()***
   > Apuntes de React Native aun en proceso. -->
-- ### ***[Python](Python/)***
-  > Apuntes de python, incluye algunos ejercicios resueltos.
+<!-- - ### ***[Python](Python/)*** -->
+  <!-- > Apuntes de python, incluye algunos ejercicios resueltos. -->
 
 - ### ***[Markdow](ApunteMarkdow/apunttes.md)***
   > Apuntes de extension md para vsc
