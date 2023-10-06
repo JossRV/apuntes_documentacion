@@ -243,7 +243,7 @@ function solution(inputString) {
 - ***vite.config***: Archivo principal para la configuracion, se puede cambiar o modificar.
 - ***yarn.lock***: Archivo que define como fue contruido el proyecto al correr el comando yarn.
 - ***package.lock.json***: Archivo que define como fue contruido el proyecto al correr el comando npm.
-- ***Los componentes***: Es una pieza de interfaz de usuario UI, que tiene logica y apariencia, puede ser desde un boton hasta un componente grande como una pagina.
+- ***Los componentes***: Es una pieza de interfaz de usuario UI, que tiene logica y apariencia, puede ser desde un boton hasta un componente grande como una pagina, estas se utiliza la notacion PascalCase.
 
 ## <p align="center">Hooks</p>
 - **state -> useState**: Todo lo que utilice *use* se llama hooks.
@@ -338,6 +338,15 @@ posteriormengte para acceder a la aplicacion, en la barra de busqueda se pone `n
 - Subir al repositorio git
 - ya construida el proyecto o bueno aplicacion, en git entras a configuracion, entrando al apartado pages, posteriormente en branch configuramos que rama queremos posteriormente seleccionamos la carpeta de aplicacion que creamos y guardamos
 - el react creado por npx, se puede instalar una aplicacion para dispositivos moviles o computadora, con vite no te permite instalar una aplicacion de tu codigo realizado.
+
+- ***Agregar Bootstrap***
+```
+yarn add bootstrap@5.3.1
+// Importamos bootstrap en el archivo main
+import 
+```
+
+- ***Agregar SweetAlert***
 
 <!-- cada que retorna el JSX
 se considera un componente con mayusculas
