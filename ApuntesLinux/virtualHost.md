@@ -34,15 +34,16 @@ sudo chmod -R 777 'nombre carpeta'
 ## Agregar dominio al host
 - Ya despues de habilitarlo, agregaremos un host en el archivo hosts que esta ubicado en /etc
 ~~~
-    -> sudo nano hosts
+sudo nano hosts
 ~~~
 - Si no abre el archivo, tendras que buscar el archivo hosts en alguna parte, y esa editaras
 Dentro del archivo, se agregara tu dominio
 ~~~
-    -> 127.0.1.1    'nombre dominio'
-    // ejemplo 
-    127.0.0.1   localhost
-    127.0.0.2   joss (es el nombre de mi dominio)
+# Esta es la forma de agregar un dominio al host, n = numeros sucesivos
+127.0.0.n    'nombre dominio'
+# ejemplo 
+127.0.0.1   localhost
+127.0.0.2   joss (es el nombre de mi dominio)
 ~~~
 - Guardamos el archivo despues de agregar tu dominio y reiniciamos el servidor apache2
 ~~~
@@ -107,7 +108,7 @@ sudo systemctl restart httpd
 'nombre dominio'/
 ~~~
 
-# <p align="center">Virtual host para Laravel</p>
+# <p align="center">Virtual host para Laravel en linux</p>
 - La creacion de virtual host son los mismos paso al de arriba, solo cambia al agregar el host virtual, se agregara este virtualhost
 ```
 <VirtualHost *:80>
@@ -150,5 +151,65 @@ sudo chmod -R a+w storage
 sudo chmod a+w bootstrap/cache
 ```
 - De esta forma ya se podra ver el proyecto de laravel sin necesidad de levantar el servidor
+
+# <p align="center">Virtual host para Windows</p>
+## Configuarar host virtual
+- Configuarremos el virtual host, nos ubicamos en la carpeta `C:\xampp\apache\conf\extra`, posteriormente abrimos el archivo `httpd-vhosts.conf`, por utlimo agregaros el virtual host, al final del archivo.
+```
+# El n es el numero que se le asignara en la creacion de dominio, lo
+#recomendable es que sean consecutivos, si tienes un 1, este vhost 
+#sera el numero 2, asi se evitarian conflictos.
+#'joss' es el nombre de mi host virtual
+<VirtualHost 127.0.0.n:80>
+  DocumentRoot "C:/xampp/htdocs/joss/"
+  ServerName joss
+  <Directory "C:/xampp/htdocs/joss">
+    Require all granted
+  </Directory>
+</VirtualHost>
+<VirtualHost 127.0.0.n:80>
+    DocumentRoot "C:/xampp/htdocs/nombre-del-proyecto-laravel/public"
+    DirectoryIndex index.php      
+    <Directory "C:/xampp/htdocs/nombre-del-proyecto-laravel/public">
+        Options All
+        AllowOverride All
+        Order Allow,Deny
+        Allow from all
+    </Directory>
+</VirtualHost>
+```
+## Configurar dominio
+- Antes de editar el archivo, se tiene que abrir el bloc de notas como administrador, posteriormente abriremos el archivo hosts que esta ubicado en `C:\Windows\System32\drivers\etc\hosts`.
+
+```
+# Esta es la forma de agregar un dominio al host, n = numeros sucesivos
+127.0.0.n    'nombre dominio'
+# ejemplo 
+127.0.0.1   localhost
+127.0.0.2   joss (es el nombre de mi dominio)
+```
+- Se guarda el archivo, y reiniciamos el servidor xampp para que podamos ver los cambios aplicados.
+- Ya en la barra del navegador agregaremos el nombre del host virtual creado.
+```
+'nombre dominio'/
+```
+
+## virtual host para laravel
+```
+# El n es el numero que se le asignara en la creacion de dominio, lo
+# recomendable es que sean consecutivos, si tienes un 1, este vhost 
+# sera el numero 2, asi se evitarian conflictos.
+<VirtualHost 127.0.0.n:80>
+    DocumentRoot "C:/xampp/htdocs/nombre-del-proyecto-laravel/public"
+    DirectoryIndex index.php      
+    <Directory "C:/xampp/htdocs/nombre-del-proyecto-laravel/public">
+        Options All
+        AllowOverride All
+        Order Allow,Deny
+        Allow from all
+    </Directory>
+</VirtualHost>
+```
+
 
 ***[Regresar](/README.md)***
