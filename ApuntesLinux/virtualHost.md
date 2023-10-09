@@ -1,11 +1,12 @@
+# <p align="center">Creacion de virtual host para debian y ubuntu</p>
 ## crear carpeta
 - En tu path `/var/www/` crearas una carpeta para tu VH
 ~~~
-    -> sudo mkdir 'nombre carpeta'
+sudo mkdir 'nombre carpeta'
 ~~~
 - Le das los permisos
 ~~~
-    -> sudo chmod -R 777 'nombre carpeta'
+sudo chmod -R 777 'nombre carpeta'
 ~~~
 ## Crear archivo .conf
 - En el directorio `/etc/apache2/sites-avalible/` crearas un nuevo archivo .conf
@@ -31,7 +32,7 @@
     -> sudo a2ensite 'nombre dominio'.conf 
 ~~~
 ## Agregar dominio al host
-- ya despues de habilitarlo, agregaremos un host en el archivo hosts que esta ubicado en /etc
+- Ya despues de habilitarlo, agregaremos un host en el archivo hosts que esta ubicado en /etc
 ~~~
     -> sudo nano hosts
 ~~~
@@ -51,11 +52,103 @@ Dentro del archivo, se agregara tu dominio
 ~~~
     -> 'nombre dominio'/
 ~~~
-- debe de funcionar si o si, a mi me funciono, a ti tambien te funcionara xd
+- Debe de funcionar si o si, a mi me funciono, a ti tambien te funcionara xd
 
 - Habilitar .htaccess
 ~~~
     -> https://microbuffer.wordpress.com/2015/04/22/habilitar-el-uso-de-htaccess-en-apache-con-ubuntu/
 ~~~
+
+# <p align="center">Configuracion de virtual host para manjaro</p>
+## crear carpeta
+- En tu path `/srv/http/` crearas una carpeta para tu VH
+~~~
+sudo mkdir 'nombre carpeta'
+~~~
+- Le das los permisos
+~~~
+sudo chmod -R 777 'nombre carpeta'
+~~~
+- Puedes o no crear carpeta, tambien se puede utilizar en la que este dentro de tu path de proyectos de localhost
+
+## Crear virtual host
+- En el directorio `/etc/httpd/conf/extra`
+- Abriremos el archivo httpd-vhosts.conf
+```
+sudo nano httpd-vhosts.conf
+```
+- Ya dentro del archivo, pegaremos el host virtual
+```
+<VirtualHost *:80>
+    DocumentRoot "/srv/http/phpInfo"
+    ServerName phpInfo
+</VirtualHost>
+```
+## Agregar domino al host
+- Agregaremos un host en el archivo hosts que esta ubicado en `/etc`
+~~~
+sudo nano hosts
+~~~
+- Si no abre el archivo, tendras que buscar el archivo hosts en alguna parte, y esa editaras
+Dentro del archivo, se agregara tu dominio
+~~~
+# Esta es la forma de agregar un dominio al host, n = numeros sucesivos
+127.0.0.n    'nombre dominio'
+# ejemplo 
+127.0.0.1   localhost
+127.0.0.2   joss (es el nombre de mi dominio)
+~~~
+- Guardamos el archivo despues de agregar tu dominio y reiniciamos el servidor apache de manjaro
+~~~
+sudo systemctl restart httpd
+~~~
+- En el navegador, en la barra escribimos...
+~~~
+'nombre dominio'/
+~~~
+
+# <p align="center">Virtual host para Laravel</p>
+- La creacion de virtual host son los mismos paso al de arriba, solo cambia al agregar el host virtual, se agregara este virtualhost
+```
+<VirtualHost *:80>
+    ServerName   your-domain.com
+    # El path cambia de acuerdo donde tengas alojado tu proyecto
+    DocumentRoot "/var/www/html/your-domain.com/public/"
+    ErrorLog     "/var/www/html/your-domain.com/error.log"
+    CustomLog    "/var/www/html/your-domain.com/access.log" combined
+    # este path tambien cambia
+    <Directory "/var/www/html/your-domain.com/public">
+        Options +Indexes +FollowSymLinks
+        DirectoryIndex index.php
+        AllowOverride None
+        Require all granted
+
+        <IfModule mod_rewrite.c>
+            <IfModule mod_negotiation.c>
+                Options -MultiViews
+            </IfModule>
+
+            RewriteEngine On
+
+            # Handle Front Controller...
+            RewriteCond %{REQUEST_FILENAME} !-d
+            RewriteCond %{REQUEST_FILENAME} !-f
+            RewriteRule ^ index.php [L]
+
+            # Handle Authorization Header
+            RewriteCond %{HTTP:Authorization} .
+            RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+        </IfModule>
+    </Directory>
+
+</VirtualHost>
+```
+- Apareceran unos errores de laravel debido a los permisos de las carpetas
+- Se usaran estos comando en tu proyecto de laravel
+```
+sudo chmod -R a+w storage
+sudo chmod a+w bootstrap/cache
+```
+- De esta forma ya se podra ver el proyecto de laravel sin necesidad de levantar el servidor
 
 ***[Regresar](/README.md)***
