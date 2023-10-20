@@ -167,16 +167,6 @@ sudo chmod a+w bootstrap/cache
     Require all granted
   </Directory>
 </VirtualHost>
-<VirtualHost 127.0.0.n:80>
-    DocumentRoot "C:/xampp/htdocs/nombre-del-proyecto-laravel/public"
-    DirectoryIndex index.php      
-    <Directory "C:/xampp/htdocs/nombre-del-proyecto-laravel/public">
-        Options All
-        AllowOverride All
-        Order Allow,Deny
-        Allow from all
-    </Directory>
-</VirtualHost>
 ```
 ## Configurar dominio
 - Antes de editar el archivo, se tiene que abrir el bloc de notas como administrador, posteriormente abriremos el archivo hosts que esta ubicado en `C:\Windows\System32\drivers\etc\hosts`.
@@ -201,6 +191,7 @@ sudo chmod a+w bootstrap/cache
 # sera el numero 2, asi se evitarian conflictos.
 <VirtualHost 127.0.0.n:80>
     DocumentRoot "C:/xampp/htdocs/nombre-del-proyecto-laravel/public"
+    ServerName nombre-que-quieras-llamar-tu-dominio
     DirectoryIndex index.php      
     <Directory "C:/xampp/htdocs/nombre-del-proyecto-laravel/public">
         Options All
