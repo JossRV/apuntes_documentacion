@@ -23,14 +23,3 @@ sin las vistas que tendra la pagina web -> en ello se usa siempre bt y html
 
 ***index***
 y nunca falta el index, la principal quien llamara las vistas o view
-
-~~aloo~~
-***aloo***
-_aloo_
-*alooo*
-`looo`
-\a \l \o
-@aloo
-### alooo
-
-## aloo

@@ -1,115 +1,97 @@
+# JavaScript
 - La palabra reservada **let** por convencion construiremos las variebles usando esta palabra, solo es una regla para nosotros.
+- Existen otras palabras reservadas como **var** indicando que es una variable y se puede modificar, **const** indicando que es una constante, no se puede volver a modificar.
 ```
-	resultado = true +45; 
+	resultado = true + 45; 
 ```
-- Esta operacion es **implicita** porque el `true` equivale a 1 por lo tanto se convierte y quedaria asi `1+45` por lo que da de resultado `46`.
-inclusive con false daria una conversion de `0` por lo que el resultado seria `45`.
+- Esta operacion es **implicita** porque el `true` equivale a 1 por lo tanto se convierte y quedaria asi `1 + 45` por lo que da de resultado `46`.
+- Inclusive con false daria una conversion de `0` por lo que el resultado seria `45`.
 
-_NaN_ significa No a Number (no es un numero), no hay que confundir la concatenacion en una resta, la concatenacion se hace con el signo +
-al usar otro te marcara NaN debido que al hacer la operacion con otro signo operador esta detectara si es numero o cadena.
+- **_NaN_** significa No a Number (no es un numero) 
+- No hay que confundir la concatenacion en una resta, la concatenacion se hace con el signo `+`.
+- Al usar otro sombolo para concatenar te marcara `NaN` debido que al hacer la operacion con otro signo operador esta detectara si es numero o cadena.
 
-Operadores complejos
-Son atajos que nos ayudan a tener nuestro codigo mas ordenado y mas eficiente.
+## Operadores complejos
+- Son atajos que nos ayudan a tener nuestro codigo mas ordenado y mas eficiente.
 
-+= Adiccion asignacion
-Suma el valor de la derecha a la variable izquierda y retorna el nuevo valor.
-ejemplo 
-let valor1 = 5;
-valor1+=3;
-lo de arriba es lo mismo a esto
-valor1=valor1+3;
-Resultado: 8 aplica en ambos.
--= Resta asignacion
-Resta el valor de la derecha a la valriable izquierda y retorna el nuevo valor.
-*= Multiplicacion asignacion
-Multiplica el valor de la derecha a la variable izquierda y retorna el nuevo valor.
-/=Division asignacion
-Divide el valor de la variable a la variable izquierda y retorna el nuevo valor.
-
-
- Operadores de comparacion
- Nosotros queremos ejecutar pruebas de verdadero o fasi para actuar de acuerdo a aquellos resultados.
+- `+=` **Adiccion asignacion**: suma el valor de la derecha a la variable izquierda y retorna el nuevo valor.
+- Ejemplo 
+``let valor1 = 5;``
+``valor1+=3;``
+- Lo de arriba es lo mismo a esto
+``valor1=valor1+3;``
+- Resultado: 8 aplica en ambos.
+- ``-=`` **Resta asignacion**: Resta el valor de la derecha a la valriable izquierda y retorna el nuevo valor.
+- ``*=`` **Multiplicacion asignacion**: Multiplica el valor de la derecha a la variable izquierda y retorna el nuevo valor.
+- ``/=``**Division asignacion**: Divide el valor de la variable a la variable izquierda y retorna el nuevo valor.
+  
+# Operadores de comparacion
+- Nosotros queremos ejecutar pruebas de verdadero o falsas para actuar de acuerdo a aquellos resultados.
  
-=== Igual estricto (igual restrictivo)
-Comprobar si los valores izquierdo y derecho son identicos entre si 
-= = igual que
-Comprobar si los valores izquierdo y derecho son identicos entre si
-!== Igual no estricto (diferente restrictivo)
-Comprueba si los valores izquierdo y derecho no son identicos entre si
-!= diferente que 
-Comprueba se los valores de la izquierda y derecha no son identicos entre si 
-==Diferencias== 
-[
-La diferencia es que en el restrictivo toma en cuenta el tipo de dato, si es entero debe ser entero identico, si es cadena debe ser cadena identico, mas sin embargo en igual que o diferente que, no toma en cuenta el tipo de dato, solo debe ser identic para asi dar un resultado verdadero o falso (true o false)
-]
+- ``===`` **Igual estricto (igual restrictivo)**: Comprobar si los valores izquierdo y derecho son identicos entre si.
+- ``==`` **Igual que**: Comprobar si los valores izquierdo y derecho son identicos entre si.
+- ``!==`` **Igual no estricto (diferente restrictivo)**: Comprueba si los valores izquierdo y derecho no son identicos entre si.
+- ``!=`` **diferente que**: Comprueba se los valores de la izquierda y derecha no son identicos entre si.
 
-if siempre evoluciona
-Siempre empezamos con una pregunta if [y si]
-De esta pregunta se puede trabajar para el lado positivo y negativo
-Pero se puede hacer mas preguntas usando la estructura if elseif else ya asi podemos seguir trbajando con esta particularidad de multiples preguntas
+$$Diferencias$$
 
-Recordar que javascript es un lenguaje interpretado, es identico a java pero toma mas fuerza en javascript
-hacer comentarios con "" o comillas simples invertidas [  `comilla invertida`]
+- La diferencia es que en el restrictivo toma en cuenta el tipo de dato, si es entero debe ser entero identico, si es cadena debe ser cadena identico, mas sin embargo en igual que o diferente que, no toma en cuenta el tipo de dato, solo debe ser identica para asi dar un resultado verdadero o falso (true o false)
+
+- **if** siempre evoluciona.
+- Siempre empezamos con una pregunta if [y si].
+- De esta pregunta se puede trabajar para el lado positivo y negativo.
+- Pero se puede hacer mas preguntas usando la estructura if elseif else ya asi podemos seguir trbajando con esta particularidad de multiples preguntas.
+
+- Recordar que javascript es un lenguaje interpretado, es identico a java pero toma mas fuerza en javascript
+hacer comentarios con ``""`` o comillas simples `''` comilla invertida ` `` `
 
 
-Tupla  
-2 elementos a comparar
-
+### Tupla  
+- 2 elementos a comparar
+```
 		 true
     false || true
 if( 4 > 5   ||   8 < 9){
 	Dentro de if
 }
-
-entonces 
-||
+```
+- Entonces:
+```
+|| or
 t o t = t
 t o f = t
 f o t = t
 f o f = f
-
-&&
+```
+```
+&& and
 t y t = t
 t y f = f
 f y t = f
 f y f = f
+```
 
-Estructura del if
-al momento de crear mi if primero tengo que tener mi pregunta y esta debe estar dentro de una parentesis para que lo tome en cuenta
-un if ternario siempre se representa con un ? al lado derecho de la pregunta
-y posteriormente sigue la respuesta en positivo
-al lado de la respuesta positiva van los : para avisar que hay otra respuesta
-y finalizo poniendo la respuesta negativa
+- Estructura del **if**
+- Al momento de crear mi if primero tengo que tener mi pregunta y esta debe estar dentro de una parentesis para que lo tome en cuenta.
+- Un if ternario siempre se representa con un ? al lado derecho de la pregunta y posteriormente sigue la respuesta en positivo, al lado de la respuesta positiva van los : para avisar que hay otra respuesta y finalizo poniendo la respuesta negativa.
+``pregunta ? true : false``
 
-%%Nuevo Apunte%%								07/10/2021
-Funciones
-En java trabajabamos con un concepto Método 
-Metodo es lo mismo que funcion al hablarlo estariamos hablando de un metodo debido que su comportamiento es igual.
-
-Existen funciones declarativas y funciones de expresion
-son simplemente un bloque de codigo destinado a una tarea especifica 
-esta tarea y su codigo se puede y debe reciclar
-
-Las funciones declarativas se pueden trabajar de manera muy facil  que hay de funciones que retornan y no reciben dato, funciones que reciben dato y retorna y funciones que reciben dato y no retorna y otra que no recibe nada.
-
-`typeof` es una palabra reservada que especifica el tipo de dato que es.
-
-
-%%Nuevo Apunte%%								08/10/2021
-Recordando que JS al usarlo de manera nativa es un leguaje INTERPRETADO
-Nuestro navegador va a leer todo lo que construyamos de arriba hacia abajo, no puedes usar cosas que no hayas construido, puedes crear un conflicto
-
-_Hosting_, tema viejo el error de querer usarlo antes de construirlo y no tener la seguridad y la certeza de que funcione.
-
-ECMAScript ellos son los que editan, estandarizan, le dan calidad al lenguaje hay diferentes versiones de ECMAScript
-en tema de hosting se realizaba hasta la version 5 de ECMAScript
-
-El hosting es utilizar algo antes de declarar.
-
-La red de logica no tiene un control concreto por ejemplo si se crea una etiqueta script antes de las funcionalidades por lo tanto se va a ejecutar primero.
-
-Vamos a estar usando var que es una palabra reservada para crear o definir variables
-otro ejemplo de hosting es el function que es una palabra reservada para definir funciones.
+### Funciones
+- En java trabajabamos con un concepto Método 
+- Metodo es lo mismo que funcion al hablarlo estariamos hablando de un metodo debido que su comportamiento es igual.
+- Existen funciones declarativas y funciones de expresion
+son simplemente un bloque de codigo destinado a una tarea especifica, esta tarea y su codigo se puede y debe reciclar.
+- Las funciones declarativas se pueden trabajar de manera muy facil, que hay de funciones que retornan y no reciben dato, funciones que reciben dato y retorna y funciones que reciben dato y no retorna y otra que no recibe nada.
+- `typeof` es una palabra reservada que especifica el tipo de dato que es.
+- Recordando que JS al usarlo de manera nativa es un leguaje INTERPRETADO.
+- Nuestro navegador va a leer todo lo que construyamos de arriba hacia abajo, no puedes usar cosas que no hayas construido, puedes crear un conflicto
+<!-- - **_Hosting_**, tema viejo el error de querer usarlo antes de construirlo y no tener la seguridad y la certeza de que funcione. -->
+- **ECMAScript** ellos son los que editan, estandarizan, le dan calidad al lenguaje hay diferentes versiones de ECMAScript
+<!-- - En tema de hosting se realizaba hasta la version 5 de ECMAScript -->
+- La red de logica no tiene un control concreto 
+- por ejemplo: si se crea una etiqueta script antes de las funcionalidades por lo tanto se va a ejecutar primero.
+- Vamos a estar usando ``var`` que es una palabra reservada para crear o definir variables
+- Otro ejemplo: Es function que es una palabra reservada para definir funciones.
 
 convecion de trabajo
 1- Declarar y depsues usar
