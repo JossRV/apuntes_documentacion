@@ -90,61 +90,54 @@ son simplemente un bloque de codigo destinado a una tarea especifica, esta tarea
 <!-- - En tema de hosting se realizaba hasta la version 5 de ECMAScript -->
 - La red de logica no tiene un control concreto 
 - por ejemplo: si se crea una etiqueta script antes de las funcionalidades por lo tanto se va a ejecutar primero.
-- Vamos a estar usando ``var`` que es una palabra reservada para crear o definir variables
+- Vamos a estar usando `var` que es una palabra reservada para crear o definir variables
 - Otro ejemplo: Es function que es una palabra reservada para definir funciones.
 
-convecion de trabajo
-1- Declarar y depsues usar
+Conveción de trabajo
+1. Declarar y depsues usar
 
-JS es una tecnologia de naturaleza asincrona, quiere decir que no todo necesita en el mismo momento.
-Para que un lenguaje sea asincrona nos tiene que grantizar que revise que ya termino sus actividades y para saber se apoya en bucle, hasta que descubra que esta todo se pueda compilar y decir que esta terminado correctamente.
+- JS es una tecnologia de naturaleza asincrona, quiere decir que no todo necesita en el mismo momento.
+- Para que un lenguaje sea asincrona nos tiene que grantizar que revise que ya termino sus actividades y para saber se apoya en bucle, hasta que descubra que esta todo se pueda compilar y decir que esta terminado correctamente.
 
-En resumen, nunca uses algo qu eno haz construido.
+- En resumen, nunca uses algo que no haz construido.
 
-Segundo tipo de funciones son funciones de expresion
-Se invocan igual que una funcion normal
-Le puedes pasar o no parametros de invocacion
-Varios autores la denominan como funciones anonimas
-Aplican los 4 tipos de funciones que vimos en la vez pasada
-Tambien hay una tipo corta y es la que mas usaremos
+- Segundo tipo de funciones son de expresion
+- Se invocan igual que una funcion normal
+- Le puedes pasar o no parametros de invocacion
+- Varios autores la denominan como funciones anonimas
+- Aplican los 4 tipos de funciones que vimos en la vez pasada
+- Tambien hay una tipo corta y es la que mas usaremos
 
-que se hace de esta manera 
-==let tipo_corta = () => console.log();==  o
-==let tipo_corta = () => "hola";==
+- Que se hace de esta manera 
+```
+let tipo_corta = () => console.log();
+let tipo_corta = () => "hola";
+```
+# `SCOPE`
 
-`SCOPE`
+- `scope global`: fuera de toda funcion, osea en cada funcion puedo tener acceso a la variable que tengo fuera de la funcion.
+- `scope local`: esta dentro de una funcion y no tengo acceso a ello, por lo que me marcaria error
 
-`scope global`: fuera de toda funcion, osea en cada funcion puedo tener acceso a la variable que tengo fuera de la funcion.
-`scope local`: esta dentro de una funcion y no tengo acceso a ello, por lo qeu me marcaria error
-
-JS tiene una forma de manipular el contenido
+- JS tiene una forma de manipular el contenido
 herramientas selectores (estructura de seleccion)
 
-%%Nuevo Apunte%% 										14/10/2021
+- Pensaremos que nosotros somos usuarios, usando una lapto que simula el sistema de entrada de un software, esta interfaz la controla el controlador, este controlador es un pequeño fragmento de software que monitorea u observa el comportamiento de la interfaz del usuario para saber que info nos proporciona para trabajar.
+- El modelo es la base de dato y esta trabaja en conjunto con el controlador para poder hacer maquetaciones y mas cosas interesantes.
 
-Pensaremos que nosotros somos usuarios, usando una lapto que simula el sistema de entrada de un softwer, esta interfaz la controla el controlador, este controlador es un pequeño fracmento de software que monitorea u observa el comportamiento de la interfaz del usuario para saber que info nos proporciona para trabajar.
-El modelo es la base de dato y esta trabaja en conjunto con el controlador para poder hacer maquetaciones y mas cosas interesantes.
+- label es una etiqueta de texto que muestra informacion.
+- input es un bloque en blanco que puedes insertar informacion, escribir datos, etc.
 
-label es una etiqueta de texto que muestra informacion.
-input es un bloque en blanco qu epuedes insertar informacion, escribir datos, etc.
-
-Convencion la nomenclatura de todos los botones es `btn_`
+- Convencion la nomenclatura de todos los botones es `btn_`
 esta convencion aun que no la pida simplemente estara mal el ejercicio.
-Los botones usaremos span.
+- Los botones usaremos span.
 
-Usar bootstrap (tiene un poder de capacidad de estructuracion, tiene capacidad relativa, artistica muy elevada y una capacidad funcional ).
+- Usar bootstrap (tiene un poder de capacidad de estructuracion, tiene capacidad relativa, artistica muy elevada y una capacidad funcional ).
 
-Los colores de bootstrap en botones es 
--primary -> azul
--success -> verde
--warning -> amarillo
--danger -> rojo
+- Antes usabamos el button de bootstrap y aparece de una forma muy cuadrada
+- `submit` : evento que pasa en la pagina, lo que sucede es que necesitas recargar la pagina para terminar de ejecutar.
 
-antes usabamos el button de bootstrap y aparece de una forma muy cuadrada
-`submit` : evento que pasa en la pagina, lo que sucede es que necesitas recargar la pagina para terminar de ejecutar.
+- En cambio la etiqueta span no requiere recarga si no que junto a js hace que solo recargue el elemento que tiene interes.
 
-En cambio la etiqueta span no requiere recarga si no que junto a js hace que solo recargue el elemento que tiene interes.
+- Idea de un cambio de paradigma radical.
 
-Idea de un cambio de paradigma radical.
-
-Porque no es sano construir adentro de una function, la variable creada dentro de la funcion hace que la computadora tenga un problema de lagueo o se trabe debido que se sature el navegador.
+- Porque no es sano construir adentro de una function, la variable creada dentro de la funcion hace que la computadora tenga un problema de lagueo o se trabe debido que se sature el navegador.
