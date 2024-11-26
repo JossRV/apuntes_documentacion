@@ -37,7 +37,7 @@ const setLocalStorage = value => {
     }
 }
 
-// crandoo hook useLocalStorage
+// creando hook useLocalStorage
 export function useLocalStorage (key, initialValue){
     const [storeValue, setStoreValue] = useState(() => {
         try {

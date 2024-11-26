@@ -13,7 +13,7 @@ function PaginaPricipal() {}
 
 Gracias a la template string dentro de JSX se puede inyectar código JS directamente
 ### Forma de poder utilizar una función en flecha
-![[Pasted image 20230829132008.png]]
+<img src="Pasted image 20230822124421.png" height="600px">
 
 #### Snipped a utilizar para crear componentes de flecha
 ```
@@ -36,9 +36,9 @@ Handler: Manejador de eventos**
 
 Desventajas que tienen las props: son el flujo que se tiene, un padre puede mandar datos, pero el componente hijo no puede mandar props
 
-#### Ejemplo en Árbol de trabajo
+### Ejemplo en Árbol de trabajo
 
-##### App
+#### App
 	Header
 	Card
 	Footer
@@ -61,7 +61,7 @@ Todo ello acompañado de su onclick
 
 > Se va a utilizar MAP por que este permite tener un retorno
 
-##### Dispatch
+#### Dispatch
 >función que nos va a ayudar a disparar acciones en el reduce, este va a evaluar el switch (reducer)
 
 $$8/09/2023$$
@@ -94,7 +94,7 @@ useEffect(() => {
 
 
 
-##### Dist: Es una carpeta de distribución
+#### Dist: Es una carpeta de distribución
 
 ![[Pasted image 20230922122852.png]]
 Todo esto se necesito para crear una aplicación terminada
@@ -111,9 +111,8 @@ export * from "./FormularioTareas/FormularioTareas"
 export * from "./Header/Header"
 ```
 
-Hooks: funciones que retornan funcionalidad
-
-Refactorizando: Simplificar la lógica del código
+- Hooks: funciones que retornan funcionalidad
+- Refactorizando: Simplificar la lógica del código
 
 
 #### Componentes de orden superior:
