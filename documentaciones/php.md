@@ -190,7 +190,7 @@
     $var="Jose Velazquez Nava";
     $fecha="17-10-2021";
 
- // Variable arreglo           evitar   variable a convertir
+    // Variable arreglo           evitar   variable a convertir
     $datos           =explode ( " ",           $var);
     $f=explode("-",$fecha);
 
@@ -455,4 +455,5 @@
         // el unset es con el proposito de evitar que al recargar la pagina se repita de nuevo la impresion de la alerta
         unset($_SESSION['x_nombre']);
     }
-?>
+    ?>
+~~~

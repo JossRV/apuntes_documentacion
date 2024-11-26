@@ -537,6 +537,9 @@ apellido_paterno entonces sera una propiedad del orm.
 ```
 - Salir del tinker con **q**
 
-### query builder eloquent
+### Ternarios en blade
+`{{ $edad >= 18 ? 'Eres mayor de edad' : 'Eres menor de edad' }}`
+- Forma de validar nulos
+`{{ $odt['foto_division'] ?? '' }}`
 
 ***[Regresar](/README.md)***
