@@ -2,10 +2,13 @@
 - **PHP** utiliza las etiquetas `<?php ?>`
 - De este modo podemos trabajar php en archivos de extension .html y .php
 - La impresion muestra en pantalla con echo
+
 ~~~
     echo "hola mundo\n";
 ~~~
+
 - Tambien podemos manejar etiquetas html dentro de php
+
 ~~~
     echo "<br>"; #salto de linea
     // \n espacio
@@ -20,20 +23,26 @@
 - Las variables (no necesitan tipo de dato)
 - Estas variables necesitan el simbolo de $ 
 - para ser reconocido como variable
+
 ~~~
     $variable1 = "Joss\n";
     echo $variable1;
 ~~~
+
 - Dos variables
+
 ~~~
     $variable2 = 18;
     $variable3 = 1;
 ~~~
+
 - Parentecis, hacer operacion
 - Sin parentecis, hacer una cadena
+
 ~~~
     echo ($variable2 + $variable3);
 ~~~
+
 # Sentencias IF
 - Sirve para validacion de sentencias
 - Signos: 
@@ -42,6 +51,7 @@
   - **<=** menor igual
   - **>=** mayor igual 
   - **=** igual
+
 ~~~
     $numero1 = 5;
     $numero2 = 15;
@@ -65,23 +75,29 @@
         echo "esto no es una letra";
     }
 ~~~
+
 - Para negar el dato al usar el `!` estas haciendo una negacion o lo estas convirtiendo en una negacion
 - Sirve para hacer una validacion de algo que no ocurra
+
 ~~~
     if(!$dato2){
         echo "dato no verdadero";
     }
 ~~~
+
 - Diferente, sirve para validar que un dato no corresponda a la canitidad o caracter
+
 ~~~
     if($dato1!=10){
         echo "dato bueno";
     }
 ~~~
+
 # Operadores logicos
 - Sirven para validar expresiones 
 - El `or` sirve para validar una sentencia u otra `||`
 - El `and` sirve para validar ambas sentencias `&&`
+
 ~~~
     $edad = 50;
     // pregunta ambas cosa y el caso es correcto
@@ -95,8 +111,10 @@
         echo "sexo valido";
     }
 ~~~
+
 # Estructura Switch case
 - Comportamiento, es parecido al if anidado pero es mas cuadrado, cada caso tiene un valor y esta respondera con el switch
+
 ~~~
     $variable = 1;
 
@@ -114,17 +132,21 @@
             break;
     }
 ~~~
+
 # Estructura for
 - Es una estructura de control iterativa
 - Donde necesitas tener un inicio, final y un contador
+
 ~~~
     #   inicio  final contador
     for ($i=0; $i < 5; $i++) { 
         echo "weeeeeeeeeeee XD";
     }
 ~~~
+
 # Estructura de control while
 - Es una estructura de control iterativa o repetitiva siempre y cuando una condicion sea valida
+
 ~~~
     $condicion = 0;
     while ($condicion < 4) {
@@ -134,37 +156,44 @@
         // es lo mismo que $condicion + $condicion + 1;
     }
 ~~~
+
 # Arreglos  
 - Es un tipo de dato que puede contener n datos apartir de un almacenamiento por indice
 - Declaracion...
 - En arreglos siempre empezaremos en 0 la cual es su primer lugar de alamcenamiento
+
 ~~~
     $arreglo = array();
     $arreglo[0] = "joss";
     $arreglo[1] = 20;
     $arreglo[2] = "aline";
 ~~~
+
 - Mostrar todo el dato del arreglo incluido o ver la informacion, no sirve para manipular los datos
+
 ~~~
     var_dump($arreglo);
 ~~~
+
 - De esta forma llamamos la posicion del arreglo y asi podemos manipular la info
+
 ~~~
     echo $arreglo[1] + 5;
 ~~~
+
 - Podemos usar un for para poder llenar arreglos o llamarlos
+
 ~~~
     for($i=0; $i < count($arreglo); $i++){
         echo $arreglo[$i];
         echo "<br>";
     }
 ~~~
-    // Arreglos asociativos
-    // tipo de dato que puede almacenar n datos
-    // pero en vez de guardarse por indice, se le proporciona
-    // una llave o nombre a dicho dato
 
-    // se forma el array
+- Arreglos asociativos: tipo de dato que puede almacenar n datos pero en vez de guardarse por indice, se le proporciona una llave o nombre a dicho dato.
+- Se forma el array
+
+~~~
     $arregloColores=array(
     //   llave      valor
         "coche" => "verde",
@@ -172,41 +201,45 @@
         "avio" => "blanco"
     );
     echo $arregloColores['coche'];
+~~~
 
-    // foreach
-    // Estructura de control iterativa
-    // que usa llaves o asociaciones como datos
-    // objeto valido es una coleccion de elementos
-    //       Objeto valido 
-    foreach ($arregloColores     as     $key) {
+
+- foreach : 
+- Estructura de control iterativa que usa llaves o asociaciones como datos objeto valido es una coleccion de elementos
+~~~
+    //Objeto valido 
+    foreach ($arregloColores as $key) {
         echo $key;
         echo "<br>";
     }
-
-    // EXPLODE
-    // Explode funcion que convierte un string a un arreglo 
-    // dependiendo de la construccion pedida
-
+~~~
+- EXPLODE: 
+- Funcion que convierte un string a un arreglo dependiendo de la construcción pedida
+~~~
     $var="Jose Velazquez Nava";
     $fecha="17-10-2021";
+    // Variable arreglo = evitar, variable a convertir
+    $datos = explode( " ", $var);
+    $f = explode("-",$fecha);
+~~~
 
-    // Variable arreglo           evitar   variable a convertir
-    $datos           =explode ( " ",           $var);
-    $f=explode("-",$fecha);
+- Configurar fecha default de mi ciudad
+    `date_default_timezone_set('America/Mexico_City');`
 
-    // configurar fecha default de mi ciudad
-    date_default_timezone_set('America/Mexico_City');
-
-    // configurar formato de fecha
+- Configurar formato de fecha
+~~~
     $fecha=date('d-m-y');
     // si quiero completo todo en mayusculas D-M-Y (mostrara en ingles xd)
+~~~
 
-    // FUNCIONES DE PHP
+### FUNCIONES DE PHP
+~~~
     // Normal
     function mifuncion(){
         // retorno de valor pero no recibo nada
         return 'estoe s un nombre';
     }
+
     // impresion
     echo mifuncion();
 
@@ -215,6 +248,7 @@
         $arreglo=array('1');
         return $arreglo;
     }
+
     // siempre se debe poner return y el print_r
     print_r(mifuncion2());
 
@@ -223,20 +257,18 @@
     function mifuncion3($valor1,$valor2,$opcion){
         # code...
     }
-
-    // PHP POO
-    // Clases son nuestro molde de trabajo para nuestros metodos y atributos
-
-
-        // camelcase *la segunda palabra inicia con mayus*
+~~~
+### PHP POO
+- Clases: 
+- Son nuestro molde de trabajo para nuestros metodos y atributos
+~~~
+    // camelcase *la segunda palabra inicia con mayus*
     class miClase{
         // definir atributos
-
         // definir metodos
     }
 
-
-        // pascalcase *ambas palabras inician con mayus*
+    // pascalcase *ambas palabras inician con mayus*
     class MiClase2{
 
     }
@@ -265,7 +297,7 @@
     class claseHijo extends clasePadre{
         public function metodoHijo(){
             // return self::metodo1(); //si uso self llamara al metodo que esta inicialmente, en este caso claseHijo
-            return parent::metodo1(); //si ysno parent llamara al metodo que esta despues de extends, en este caso clasePadre
+            return parent::metodo1(); //si uso parent llamara al metodo que esta despues de extends, en este caso clasePadre
         }
         public function metodo1(){
             return "este es metodo hijo";
@@ -407,42 +439,41 @@
     var_dump ($objeto->arreglo(3));
     echo '<hr>';
     var_dump ($objeto->json());
+~~~
+### Session
 
-    // Session
+- Sesiones con PHP: 
+- Variables super global (en toda la carpeta web)
+- Funciona como un arreglo
+- No se pueden utilizar si no se declara, `"session_start()"`
+- Para poder vaciar una sesión o destruir se puede utilizar: 
+~~~
+    unset
+    session_destroy
+~~~
+- Se almacena en el servidor web, A diferencia de las cookies, las cuales guardan la información en el cliente, 
+- los valores, se guardan en el servidor, de forma inaccesible al cliente.
+~~~
+    session_start();
+    echo $_SESSION['usuario'];
+    // unset($_SESSION['usuario']);
+    session_destroy();
+    echo '<br>';
+    echo $_SESSION['usuario'];
+    echo '<br>';
+    echo $_SESSION['rolusuario'];
 
-        /**
-         * Sesiones con PHP
-         * -> Variables super global (en toda la carpeta web)
-         * -> Funciona como un arreglo
-         * -> No se pueden utilizar si no se declara, "session_start()"
-         * -> Para poder vaciar una sesión o destruir se puede utilizar: 
-         *                                      -unset
-         *                                      -session_destroy
-         * -> Se almacena en el servidor web, A diferencia de las cookies, las cuales guardan la información en el cliente, 
-         * los valores, se guardan en el servidor, de forma inaccesible al cliente.
-         */
-
-        session_start();
-        echo $_SESSION['usuario'];
-        // unset($_SESSION['usuario']);
-        session_destroy();
-        echo '<br>';
-        echo $_SESSION['usuario'];
-        echo '<br>';
-        echo $_SESSION['rolusuario'];
-
-        // en otro documento
-        session_start();
-        // declarar una variable de session
-        echo $_SESSION['usuario']="Joss";
-        echo '<br>';
-        $_SESSION["rolusuario"]['rol1']= "admin";
-        $_SESSION["rolusuario"]["rol2"]= "cliente";
-        // $_SESSION["roluser"]["rol1"]="admin";
-        // $_SESSION['roluser']['rol2']="cliente";
-        // echo '<pre>';
-        print_r($_SESSION['rolusuario']);
-
+    // en otro documento
+    session_start();
+    // declarar una variable de session
+    echo $_SESSION['usuario']="Joss";
+    echo '<br>';
+    $_SESSION["rolusuario"]['rol1']= "admin";
+    $_SESSION["rolusuario"]["rol2"]= "cliente";
+    // $_SESSION["roluser"]["rol1"]="admin";
+    // $_SESSION['roluser']['rol2']="cliente";
+    // echo '<pre>';
+    print_r($_SESSION['rolusuario']);
 
     // hacer alertas foraneas sin js usando session
     session_start();
@@ -455,5 +486,4 @@
         // el unset es con el proposito de evitar que al recargar la pagina se repita de nuevo la impresion de la alerta
         unset($_SESSION['x_nombre']);
     }
-    ?>
 ~~~
