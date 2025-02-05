@@ -16,4 +16,4 @@
 - Para agregar imagenes se usa la etiqueta `<img>`, etiqueta vacia, no tiene cierre.
 - La etiqueta imagen, necesita un atributo para mostrar la imagen `src` que significa fuente
 - Se pueden usar atributos de tamaño `width` y `height`, los pixeles son predeterminados
-- 
+- probando
