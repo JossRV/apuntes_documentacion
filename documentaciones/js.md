@@ -1,6 +1,4 @@
-/**
- *tipos de datos
-*/
+# tipos de datos
 
 //Cadenas de texto
 //String
