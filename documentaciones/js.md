@@ -1,5 +1,7 @@
 # tipos de datos
 
+probando probando
+
 //Cadenas de texto
 //String
 let cadena = 'hola';
