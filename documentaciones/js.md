@@ -1,41 +1,46 @@
 # tipos de datos
 
-probando probando
-
-//Cadenas de texto
-//String
-let cadena = 'hola';
-cadena = 'w';
-
-//numerico
-let numero = 34;
-numero = 90.67;
-
-//logico
-let boleano = true;
-boleano = false;
-
-//null > nulo
-let nulo = null;
-numero = null;
-
-//undefined > indefinido (es porque no le estamos agregando valor)
-let promedio;
-
-// typeof es una palabra reservada que transforma de que tipo de variable es
-let numero3 = null;
-console.log(typeof(numero));
-
-// documento especifico del lenguaje JS
-
-/**
- * - no necesito usar la etiqueta <script></script>
- * - este contenido se exportará y se usara en otro lado
- */
-
-// alert es una ventana que aparece en el navegador
-alert("Codificando desde un doc de js")
-
+- Cadenas de texto:
+- String
+~~~
+    let cadena = 'hola';
+    cadena = 'w';
+~~~
+- numerico
+~~~
+    let numero = 34;
+    numero = 90.67;
+~~~
+- logico
+~~~
+    let boleano = true;
+    boleano = false;
+~~~
+- null > nulo
+~~~
+    let nulo = null;
+    numero = null;
+~~~
+- undefined > indefinido (es porque no le estamos agregando valor)
+~~~
+    let promedio;
+~~~
+- typeof es una palabra reservada que transforma de que tipo de variable es
+~~~
+    let numero3 = null;
+    console.log(typeof(numero));
+~~~
+- documento especifico del lenguaje JS
+~~~
+    /**
+    * - no necesito usar la etiqueta <script></script>
+    * - este contenido se exportará y se usara en otro lado
+    */
+~~~
+- **alert** es una ventana que aparece en el navegador:
+~~~
+    alert("Codificando desde un doc de js")
+~~~
 // codigo de impresion
 console.log("impresion");
 
