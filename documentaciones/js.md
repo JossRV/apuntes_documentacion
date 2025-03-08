@@ -41,25 +41,33 @@
 ~~~
     alert("Codificando desde un doc de js")
 ~~~
-// codigo de impresion
-console.log("impresion");
 
-//  let es una palabra reservada
-// hay 2 formas de crear variables, usando let, var, o incluso sin palabra reservada
-let mascota = "perrito";
-vehiculo = "spark 2014";
+- codigo de impresion:
+~~~
+    console.log("impresion");
+~~~
 
-// operadores aritmetricos
-let suma;
-let resta;
-let multiplicacion;
-let division;
-let modulo_resultado;
-let incremento = 0;
-let decremento = 1;
+- **let**: es una palabra reservada
+- Hay 2 formas de crear variables, usando let, var, o incluso sin palabra reservada
+~~~
+    let mascota = "perrito";
+    vehiculo = "spark 2014";
+~~~
 
-// Operador suma
-suma = 6+9;
+- Operadores aritmetricos:
+~~~
+    let suma;
+    let resta;
+    let multiplicacion;
+    let division;
+    let modulo_resultado;
+    let incremento = 0;
+    let decremento = 1;
+~~~
+- Operador suma
+~~~
+    suma = 6+9;
+~~~
 // operador resta
 resta = 20-15;
 // operador multiplicacion
