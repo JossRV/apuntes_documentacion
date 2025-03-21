@@ -66,146 +66,181 @@
 ~~~
 - Operador suma
 ~~~
-    suma = 6+9;
+    suma = 6 + 9;
 ~~~
-// operador resta
-resta = 20-15;
-// operador multiplicacion
-multiplicacion = 4*5;
-// operador division
-division = 10/2;
-// operador modulo
-// este operador mostrara el restante de la divicion que ha hecho
-modulo_resultado = 10%2; // si divido 10 / 2 es igual a 5 y el restante queda 0
-// operador de incremento
-incremento++; //tenemos 0 en la
-// operador de decremento
-decremento--;
-// ASIGNACIONES
-let asignacion;
-let asignacionSuma=0;
-let asignacionResta=5;
-let asignacionMultiplicacion=2;
-let asignacionDivision=10;
-// el = es una asignacion que puedes asignar numeros o letras o palabras o caracteres
+- Operador resta
+~~~
+    resta = 20 - 15;
+~~~
+- Operador multiplicacion
+~~~
+    multiplicacion = 4*5;
+~~~
+- Operador division
+~~~
+    division = 10 / 2;
+~~~
+- Operador modulo: este operador mostrara el restante de la division que ha hecho
+~~~
+    modulo_resultado = 10%2; // si divido 10 / 2 es igual a 5 y el restante queda 0
+~~~
+- Operador de incremento
+~~~
+    incremento++;
+~~~
+- Operador de decremento
+~~~
+    decremento--;
+~~~
+## ASIGNACIONES
+~~~
+    let asignacion;
+    let asignacionSuma=0;
+    let asignacionResta=5;
+    let asignacionMultiplicacion=2;
+    let asignacionDivision=10;
+~~~
+- El **=** es una asignacion, puedes asignar numeros o letras o palabras o caracteres
 asignacion = 10;
-// sumara directamente el numero derecho para tener un nuevo resultado
-// algo asi como remplazo por ejemplo asignacionSuma = 0 + 5 al final me mostrara 5
-asignacionSuma+=5;
-// restara directamente el numero derecho para tener un nuevo resultado
-// ejemplo asignacionResta = 5 - 5 al final me mostrara 0
-asignacionResta-=5;
-// multiplicara directamente el numero derecho para tener un nuevo resultado
-// ejemplo asignacionMultiplicacion = 2 * 5 al final me mostrara 10
-asignacionMultiplicacion*=5;
-// el numero derecho dividira directamente al izquierdo
-// ejemplo asignacionDivision = 10 / 2 al final me mostrara 5
-asignacionDivision/=2;
+- Sumara directamente el numero derecho para tener un nuevo resultado algo asi como remplazo por ejemplo asignacionSuma = 0 + 5 al final me mostrara 5
+~~~
+    asignacionSuma+=5;
+~~~
+- Restara directamente el numero derecho para tener un nuevo resultado, ejemplo asignacionResta = 5 - 5 al final me mostrara 0
+~~~
+    asignacionResta-=5;
+~~~
+- Multiplicara directamente el numero derecho para tener un nuevo resultado, ejemplo asignacionMultiplicacion = 2 * 5 al final me mostrara 10
+~~~
+    asignacionMultiplicacion*=5;
+~~~
+- El numero derecho dividira directamente al izquierdo, ejemplo asignacionDivision = 10 / 2 al final me mostrara 5
+~~~
+    asignacionDivision/=2;
+~~~
 
-let numero1 = 1;
-let numero2 = 2;
-// Operadores de comparacion son los que usaremos para obtener true o false
-// igual estricto Comprobara si los valores de lado derecho son identicos entre si
-//              1        2
-resultado1 = numero1===numero2;//devolvera false deben ser iguales los numeros para que se cumplan
-resultado2 = numero1!==numero2;//devolvera true son diferentes los numeros, si cumple
-resultado3 = numero1<numero2;//devolvera true porque el numero menor es 1
-resultado4 = numero1>numero2;//devolvera false porque el 1 no es mayor
-resultado5 = numero1>=numero2;//devolvera false porque el 1 no es mayor ni igual al 2
-resultado6 = numero1<=numero2;//devolvera true porque el 1 es menor
-resultado7 = numero1==numero2;// devolvera false este debe ser igual en ambos lados sin importar si esta comentado o con ""
-resultado8 = numero1!=numero2;//si tiene otra cosa que no lo hace ser identico ya sea texto u otro numero sera true
+- Operadores de comparacion son los que usaremos para obtener true o false
+- Igual estricto Comprobara si los valores de lado derecho son identicos entre si
 
-// ------------------------------------------
-// Como se crea un if
-// pregunta si 2 es mayor a 1
-if(            2      >     1){//respuesta true
-    // aqui va la respuesta verdadera
-    console.log("Dentro de IF");
-}
+~~~
+    let numero1 = 1;
+    let numero2 = 2;
 
-// como se crea un if else
-// pregunta si 2 es menor a 1
-if(            2      <     1){//respuesta falso
-    // aqui va la respuesta verdadera
-    console.log("Dentro de IF");
-}else {//cuando el caso es falso entarra a este bloque para responder la respuesta negativa
-    // aqui va la respuesta negativa (falso)
-    console.log("dentro del ELSE");
-}
+    resultado1 = numero1===numero2;//devolvera false deben ser iguales los numeros para que se cumplan
 
-let opcion = 8;
+    resultado2 = numero1!==numero2;//devolvera true son diferentes los numeros, si cumple
 
-// se puede hacer if else if para poner varias preguntas y varias respuestas
-//ejemplo
-if(opcion==2){
-    console.log('opcion es igual a 2');
-}else if(opcion == '8'){
-    console.log("opcion es igual a '8'");
-}else if(opcion == 8){
-    console.log('opcion es igual a 8');
-}else{
-    console.log('ninguno de las anteriores.')
-}
+    resultado3 = numero1<numero2;//devolvera true porque el numero menor es 1
 
-// un if de 2 preguntas or || o tambien and & tomando en cuenta las tuplas
-if(4>5 || 8<9){
-    console.log('dentro del if...');
-}
+    resultado4 = numero1>numero2;//devolvera false porque el 1 no es mayor
 
-/**
- * Tupla
- * son dos elementos a comparar
- */
+    resultado5 = numero1>=numero2;//devolvera false porque el 1 no es mayor ni igual al 2
 
-/**
- * ||
- *
- * t o t = t
- * t o f = t
- * f o t = t
- * f o f = f
- *
- * &&
- *
- * t y t = t
- * t y f = f
- * f y t = f
- * f y f = f
- */
+    resultado6 = numero1<=numero2;//devolvera true porque el 1 es menor
 
-// el if anidado se crea haciendo mas preguntas deltro de un if
-if(4>5 || 8<9){
-    console.log('dentro del if...');
-    if(5<8){
-        console.log("ando mas dentro del if...");
+    resultado7 = numero1==numero2;// devolvera false este debe ser igual en ambos lados sin importar si esta comentado o con ""
+
+    resultado8 = numero1!=numero2;//si tiene otra cosa que no lo hace ser identico ya sea texto u otro numero sera true
+~~~
+
+------------------------------------------
+## crear un if
+~~~
+    // pregunta si 2 es mayor a 1
+    if(            2      >     1){
+        // respuesta true
+        // aqui va la respuesta verdadera
+        console.log("Dentro de IF");
     }
-}
+~~~
 
-// este es un if ternario
-//              Pregunta        R positiva             R negativa
-console.log((4 > 5 || 8 < 9)? "Dentro de if ..." : "Dentro del else...");
+## Crear un if-else
+~~~
+    // pregunta si 2 es menor a 1
+    if(            2      <     1){
+        // respuesta falso
+        // aqui va la respuesta verdadera
+        console.log("Dentro de IF");
+    }else {
+        //cuando el caso es falso entrara a este bloque para responder la respuesta negativa
+        // aqui va la respuesta negativa (falso)
+        console.log("dentro del ELSE");
+    }
+~~~
 
-// FUNCIONES
-// hay 2 tipos de funciones
-// Funciones declarativas
-// Funciones de expresion
+- Se puede hacer if else if para poner varias preguntas y varias respuestas
+~~~
+    let opcion = 8;
 
-// FUNCIONES DECLARATIVAS
+    if(opcion==2){
+        console.log('opcion es igual a 2');
+    }else if(opcion == '8'){
+        console.log("opcion es igual a '8'");
+    }else if(opcion == 8){
+        console.log('opcion es igual a 8');
+    }else{
+        console.log('ninguno de las anteriores.')
+    }
+~~~
 
-// Primer tipo de funcion: no regresa nada y que no recibe nada
-// firma (creando funcion)
-    // V.R          P.I
-function mi_funcion(   ){
-    // todo lo que quede dentro de las llaves de la funcion se denomina bloque de trabajo
-    console.log("Dentro de mi funcion");
-    // el V.R significa variables de retorno
-    // el P.I significa parametros de invocacion
-}
-// invocacion o llamar la funcion
-mi_funcion();
+- Un if de 2 preguntas or || o tambien and & tomando en cuenta las tuplas
+~~~
+    if(4>5 || 8<9){
+        console.log('dentro del if...');
+    }
+~~~
 
-// Segundo tipo: Regresa informacion peor no recibe nada
+- Tupla: Son dos elementos a comparar
+~~~
+    // or
+    true || true = true
+    true || false = true
+    false || true = true
+    false || false = false
+
+    // and
+    true & true = true
+    true & false = false
+    false & true = false
+    false & false = false
+~~~
+
+- if anidado se crea haciendo mas preguntas deltro de un if
+~~~
+    if(4>5 || 8<9){
+        console.log('dentro del if...');
+        if(5<8){
+            console.log("ando mas dentro del if...");
+        }
+    }
+~~~
+
+- Este es un if ternario
+~~~
+    //              Pregunta        R positiva             R negativa
+    console.log((4 > 5 || 8 < 9)? "Dentro de if ..." : "Dentro del else...");
+~~~
+
+## FUNCIONES
+- Hay 2 tipos de funciones
+- Funciones **declarativas**
+- Funciones de **expresion**
+
+### FUNCIONES DECLARATIVAS
+- Primer tipo de funcion: no regresa nada y que no recibe nada
+~~~
+        // V.R          P.I
+    function mi_funcion(   ){
+        // todo lo que quede dentro de las llaves de la funcion se denomina bloque de trabajo
+        console.log("Dentro de mi funcion");
+        // el V.R significa variables de retorno
+        // el P.I significa parametros de invocacion
+    }
+    // invocacion o llamar la funcion
+    mi_funcion();
+~~~
+
+- Segundo tipo: Regresa informacion pero no recibe nada
 function funcion_tipo_dos(){
     // el return me indica que quiero regresar algo
     return "Regresando esta cadena de texto";
