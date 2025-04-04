@@ -530,3 +530,11 @@ console.log("El resultado de la suma es: "+resultado_suma);
 - **Alerta sencilla:**
 `swal("hola mundo");`
 
+## Obtener fecha de js
+- Fecha actual: `const currentDate = new Date();`
+- Formatear fecha proporcionada o de DB: `const dateCreate = new Date(created_at);`
+- Obtener el dia: `const date = currentDate.getDate();`
+- Obtener el mes: `const month = currentDate.getMonth() + 1;` - Se agrega un incremento ya que comenzara con 0
+- Obtener el año: `const year = currenDate.getFullYear();`
+- Obtener las horas: `const hours = dateCreate.getHours();`
+- Obtener los minutos: `const minutes = dateCreate.getMinutes();`
