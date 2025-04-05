@@ -82,3 +82,64 @@ xhr.open("PUT", "https://url-get-users.com/users");
 ~~~ 
 xhr.open("DELETE", "https://url-get-users.com/users");
 ~~~
+
+# Peticion HTTP usando jQuery
+- Simplifica el proceso de envio y obtencion de datos de los servidores haciendo la sintaxis mas corta y sencilla.
+
+## Peticion GET
+- Nos proporcionan el metodo `$.get()`
+~~~
+$.get("https://url-a-consultar", (data, status) => {
+    console.log(data);
+});
+~~~
+
+## Peticion POST
+- Se utiliza el metodo `$.post()`
+- Pero se debera crear el cuerpo de informacion a pandar
+~~~
+// body 
+const body = JSOSN.stringify({
+    title: "hello world",
+    body: "my post request",
+    userId: 500,
+});
+// peticion
+$.post("https://url-a-consultar", body, (data, status) => {
+    console.log(data);
+});
+~~~
+
+## Peticiones asincronas
+- Metodo `$.ajax()`, Se utiliza para hacer peticiones asincronas, tiene una sintaxis diferente
+
+## Peticion PATCH con ajax
+- Tiene diferentes parametros a utilizar en ajax
+~~~
+// creando cuerpo de datos
+const body = JSON.stringify({
+    body: "my PATCH Request",
+});
+
+// peticion
+$.ajax({
+    // url del servidor
+    url: "url-server",
+    // tipo de solicitud
+    type: "PATCH", // POST, PUT, GET, DELETE
+    // envio de datos
+    data: body,
+    // devolucion de llamada
+    success: function(result){
+        console.log(result)
+    }
+});
+~~~
+
+## Peticion getJSON
+- Peticion que registrara en la consola una matriz de objetos
+~~~
+$.getJSON("https://url-a-consultar", function (result) {
+    console.log(result);
+});
+~~~
