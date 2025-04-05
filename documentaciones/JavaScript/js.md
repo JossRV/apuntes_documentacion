@@ -538,3 +538,6 @@ console.log("El resultado de la suma es: "+resultado_suma);
 - Obtener el año: `const year = currenDate.getFullYear();`
 - Obtener las horas: `const hours = dateCreate.getHours();`
 - Obtener los minutos: `const minutes = dateCreate.getMinutes();`
+
+## Parsear  a Json
+- `JSON.parse('texto plano a convertir en json');`
