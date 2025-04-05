@@ -540,4 +540,6 @@ console.log("El resultado de la suma es: "+resultado_suma);
 - Obtener los minutos: `const minutes = dateCreate.getMinutes();`
 
 ## Parsear  a Json
-- `JSON.parse('texto plano a convertir en json');`
+- **JSON**: significa JavaScript Object Notation, es un formato de texto ligero para representar datos estructurados como APIS o BD.
+- `JSON.parse();`, convierte una cadena JSON a un objeto JS.
+- `JSON.stringify()`, es un metodo de JS que convierte un objeto o array a una cadena JSON.
