@@ -143,3 +143,36 @@ $.getJSON("https://url-a-consultar", function (result) {
     console.log(result);
 });
 ~~~
+
+# Peticiones HTTP FETCH
+- Api nativa de JS para interactuar con los servidores, tiene soporte para promesas
+  
+## Solicitud GET
+- El envio para Get solo require la url y devolvera una promesa a la que puedes acceder utilizando `then()`
+~~~
+fetch('url-get')
+.then((response) => response.json())
+.then((json) => console.log(json));
+~~~
+
+## Solicitudes POST
+- Hay que proporcionar los datos que se van a actualizar y se pasan como valor en la opcion body
+~~~
+fetch("https://jsonplaceholder.typicode.com/posts/1", {
+  method: "PUT", // POST, PATCH, DELETE
+  // proporcionando datos
+  body: JSON.stringify({
+    id: 1,
+    title: "My PUT request",
+    body: "Updating the entire object",
+    userId: 1,
+  }),
+  // cabezales
+  headers: {
+    "Content-type": "application/json; charset=UTF-8",
+  },
+})
+// respuestas
+.then((response) => response.json())
+.then((json) => console.log(json));
+~~~
