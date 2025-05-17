@@ -23,7 +23,7 @@ php artisan make:livewire counter
 - Registrar una ruta para el componente, se hace la importacion del arcivo dentro de la carpeta livewire
 - Crear diseño de plantilla, comando: `php artisan livewire:layout`
 - Se creara el archivo `resources/views/components/layouts/app.blade.php`
-- Con el siguiente contenido
+- Con el siguiente contenido  
 ~~~
     <!DOCTYPE html>
     <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
