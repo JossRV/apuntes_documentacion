@@ -24,6 +24,7 @@ php artisan make:livewire counter
 - Crear diseño de plantilla, comando: `php artisan livewire:layout`
 - Se creara el archivo `resources/views/components/layouts/app.blade.php`
 - Con el siguiente contenido  
+
 ~~~
     <!DOCTYPE html>
     <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
